@@ -80,6 +80,7 @@
 
 	<modules>
 		<module>eu.hohenegger.template.model</module>
+		<module>eu.hohenegger.template.edit</module>
 		<module>eu.hohenegger.template.parser</module>
 		<module>eu.hohenegger.template.parser.tests</module>
 		<module>eu.hohenegger.template.parser.ui</module>
