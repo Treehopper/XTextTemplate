@@ -5,21 +5,12 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: eu.hohenegger.template.parser; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext;visibility:=reexport,
- org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
- org.eclipse.xtext.generator;resolution:=optional,
- org.apache.commons.logging;bundle-version="1.0.4";resolution:=optional,
- org.eclipse.emf.codegen.ecore;resolution:=optional,
- org.eclipse.emf.mwe.utils;resolution:=optional,
- org.eclipse.emf.mwe2.launch;resolution:=optional,
+Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
  org.antlr.runtime,
  org.eclipse.xtext.common.types,
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
- org.eclipse.emf.ecore.xcore.lib,
- org.eclipse.emf.ecore.xcore,
  org.eclipse.xtext.ecore,
  org.eclipse.emf.codegen.ecore.xtext,
  eu.hohenegger.template.model;bundle-version="0.1.0"
@@ -31,8 +22,4 @@ Export-Package: eu.hohenegger.template.parser,
  eu.hohenegger.template.parser.serializer,
  eu.hohenegger.template.parser.parser.antlr,
  eu.hohenegger.template.parser.parser.antlr.internal,
- eu.hohenegger.template.parser.validation,
- eu.hohenegger.template.parser.scoping,
- eu.hohenegger.template.parser.generator,
- eu.hohenegger.template.parser.formatting
-
+ eu.hohenegger.template.parser.validation
