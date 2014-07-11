@@ -1,0 +1,35 @@
+@Ecore(nsURI="http://www.hohenegger.eu/template/parser/JSON")
+@GenModel(editDirectory="/eu.hohenegger.template.edit/xcore-gen")
+@GenModel(modelDirectory="/eu.hohenegger.template.model/xcore-gen")
+@GenModel(testsDirectory="/eu.hohenegger.template.test/xcore-gen", generateExampleClass="false")
+@GenModel(editPluginID="eu.hohenegger.template.edit")
+@GenModel(testsPluginID="eu.hohenegger.template.test")
+@GenModel(complianceLevel="7.0", runtimeVersion="2.9")
+@GenModel(modelPluginVariables="org.eclipse.xtext.xbase.lib org.eclipse.emf.ecore.xcore.lib")
+@GenModel(forceOverwrite="false")
+@GenModel(fileExtensions="json", updateClasspath="false")
+package eu.hohenegger.template.json.model
+
+class Root {
+	contains JObject content
+}
+
+interface Value {
+	
+}
+
+class JObject extends Value {
+	contains Entry[] entries
+}
+
+class Entry {
+	String key
+	contains Value value
+}
+
+class JTerminal extends Value {
+}
+
+class Array extends Value {
+	contains Value[] values	
+}

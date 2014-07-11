@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: eu.hohenegger.template.model
+Bundle-SymbolicName: eu.hohenegger.template.model; singleton:=true
+Bundle-Version: 0.1.0.qualifier
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.eclipse.emf.ecore.xcore.lib
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7,
+ JavaSE-1.8
+Export-Package: eu.hohenegger.template.json.model,
+ eu.hohenegger.template.json.model.impl,
+ eu.hohenegger.template.json.model.util
