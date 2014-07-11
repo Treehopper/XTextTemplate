@@ -30,20 +30,9 @@ Workflow {
     	directory = "${runtimeProject}/model/generated"
     }
     
-    component = DirectoryCleaner {
-    	directory = "${runtimeProject}.ui/src-gen"
-    }
-    
-    component = DirectoryCleaner {
-    	directory = "${runtimeProject}.tests/src-gen"
-    }
-    
     component = Generator {
     	pathRtProject = runtimeProject
-    	pathUiProject = "${runtimeProject}.ui"
-    	pathTestProject = "${runtimeProject}.tests"
     	projectNameRt = projectName
-    	projectNameUi = "${projectName}.ui"
     	encoding = encoding
     	language = auto-inject {
     		// for resolving references to XAnnotationDirective 'Ecore' and 'GenModel'
@@ -88,52 +77,52 @@ Workflow {
     		// fragment = exporting.SimpleNamesFragment auto-inject {}
     
     		// scoping and exporting API
-    		fragment = scoping.ImportNamespacesScopingFragment auto-inject {}
-    		fragment = exporting.QualifiedNamesFragment auto-inject {}
-    		fragment = builder.BuilderIntegrationFragment auto-inject {}
+//    		fragment = scoping.ImportNamespacesScopingFragment auto-inject {}
+//    		fragment = exporting.QualifiedNamesFragment auto-inject {}
+//    		fragment = builder.BuilderIntegrationFragment auto-inject {}
     
     		// generator API
-    		fragment = generator.GeneratorFragment auto-inject {}
+//    		fragment = generator.GeneratorFragment auto-inject {}
     
     		// formatter API
-    		fragment = formatting.FormatterFragment auto-inject {}
+//    		fragment = formatting.FormatterFragment auto-inject {}
     
     		// labeling API
-    		fragment = labeling.LabelProviderFragment auto-inject {}
+//    		fragment = labeling.LabelProviderFragment auto-inject {}
     
     		// outline API
-    		fragment = outline.OutlineTreeProviderFragment auto-inject {}
-    		fragment = outline.QuickOutlineFragment auto-inject {}
+//    		fragment = outline.OutlineTreeProviderFragment auto-inject {}
+//    		fragment = outline.QuickOutlineFragment auto-inject {}
     
     		// quickfix API
-    		fragment = quickfix.QuickfixProviderFragment auto-inject {}
+//    		fragment = quickfix.QuickfixProviderFragment auto-inject {}
     
     		// content assist API
-    		fragment = contentAssist.ContentAssistFragment auto-inject {}
+//    		fragment = contentAssist.ContentAssistFragment auto-inject {}
     
     		// generates a more lightweight Antlr parser and lexer tailored for content assist
-    		fragment = parser.antlr.XtextAntlrUiGeneratorFragment auto-inject {}
+//    		fragment = parser.antlr.XtextAntlrUiGeneratorFragment auto-inject {}
     
     		// generates junit test support classes into Generator#pathTestProject
-    		fragment = junit.Junit4Fragment auto-inject {}
+//    		fragment = junit.Junit4Fragment auto-inject {}
     
     		// rename refactoring
-    		fragment = refactoring.RefactorElementNameFragment auto-inject {}
+//    		fragment = refactoring.RefactorElementNameFragment auto-inject {}
     
     		// provides the necessary bindings for java types integration
-    		fragment = types.TypesGeneratorFragment auto-inject {}
+//    		fragment = types.TypesGeneratorFragment auto-inject {}
     
     		// generates the required bindings only if the grammar inherits from Xbase
-    		fragment = xbase.XbaseGeneratorFragment auto-inject {}
+//    		fragment = xbase.XbaseGeneratorFragment auto-inject {}
     		
     		// generates the required bindings only if the grammar inherits from Xtype
-    		fragment = xbase.XtypeGeneratorFragment auto-inject {}
+//    		fragment = xbase.XtypeGeneratorFragment auto-inject {}
     
     		// provides a preference page for template proposals
-    		fragment = templates.CodetemplatesGeneratorFragment auto-inject {}
+//    		fragment = templates.CodetemplatesGeneratorFragment auto-inject {}
     
     		// provides a compare view
-    		fragment = compare.CompareFragment auto-inject {}
+//    		fragment = compare.CompareFragment auto-inject {}
     	}
     }
 }

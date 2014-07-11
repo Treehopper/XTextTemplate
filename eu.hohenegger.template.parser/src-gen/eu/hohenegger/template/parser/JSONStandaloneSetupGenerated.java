@@ -47,6 +47,5 @@ public class JSONStandaloneSetupGenerated implements ISetup {
 		org.eclipse.xtext.resource.IResourceServiceProvider.Registry.INSTANCE.getExtensionToFactoryMap().put("json", serviceProvider);
 		
 
-
 	}
 }
