@@ -153,21 +153,21 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleRoot"
 
 
-    // $ANTLR start "entryRuleObject"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:88:1: entryRuleObject : ruleObject EOF ;
-    public final void entryRuleObject() throws RecognitionException {
+    // $ANTLR start "entryRuleJObject"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:88:1: entryRuleJObject : ruleJObject EOF ;
+    public final void entryRuleJObject() throws RecognitionException {
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:89:1: ( ruleObject EOF )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:90:1: ruleObject EOF
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:89:1: ( ruleJObject EOF )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:90:1: ruleJObject EOF
             {
-             before(grammarAccess.getObjectRule()); 
-            pushFollow(FOLLOW_ruleObject_in_entryRuleObject121);
-            ruleObject();
+             before(grammarAccess.getJObjectRule()); 
+            pushFollow(FOLLOW_ruleJObject_in_entryRuleJObject121);
+            ruleJObject();
 
             state._fsp--;
 
-             after(grammarAccess.getObjectRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleObject128); 
+             after(grammarAccess.getJObjectRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJObject128); 
 
             }
 
@@ -180,35 +180,35 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleObject"
+    // $ANTLR end "entryRuleJObject"
 
 
-    // $ANTLR start "ruleObject"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:97:1: ruleObject : ( ( rule__Object__Group__0 ) ) ;
-    public final void ruleObject() throws RecognitionException {
+    // $ANTLR start "ruleJObject"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:97:1: ruleJObject : ( ( rule__JObject__Group__0 ) ) ;
+    public final void ruleJObject() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:101:2: ( ( ( rule__Object__Group__0 ) ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:102:1: ( ( rule__Object__Group__0 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:101:2: ( ( ( rule__JObject__Group__0 ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:102:1: ( ( rule__JObject__Group__0 ) )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:102:1: ( ( rule__Object__Group__0 ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:103:1: ( rule__Object__Group__0 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:102:1: ( ( rule__JObject__Group__0 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:103:1: ( rule__JObject__Group__0 )
             {
-             before(grammarAccess.getObjectAccess().getGroup()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:104:1: ( rule__Object__Group__0 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:104:2: rule__Object__Group__0
+             before(grammarAccess.getJObjectAccess().getGroup()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:104:1: ( rule__JObject__Group__0 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:104:2: rule__JObject__Group__0
             {
-            pushFollow(FOLLOW_rule__Object__Group__0_in_ruleObject154);
-            rule__Object__Group__0();
+            pushFollow(FOLLOW_rule__JObject__Group__0_in_ruleJObject154);
+            rule__JObject__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getObjectAccess().getGroup()); 
+             after(grammarAccess.getJObjectAccess().getGroup()); 
 
             }
 
@@ -227,7 +227,7 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleObject"
+    // $ANTLR end "ruleJObject"
 
 
     // $ANTLR start "entryRuleEntry"
@@ -461,21 +461,98 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleArray"
 
 
+    // $ANTLR start "entryRuleJTerminal"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:200:1: entryRuleJTerminal : ruleJTerminal EOF ;
+    public final void entryRuleJTerminal() throws RecognitionException {
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:201:1: ( ruleJTerminal EOF )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:202:1: ruleJTerminal EOF
+            {
+             before(grammarAccess.getJTerminalRule()); 
+            pushFollow(FOLLOW_ruleJTerminal_in_entryRuleJTerminal361);
+            ruleJTerminal();
+
+            state._fsp--;
+
+             after(grammarAccess.getJTerminalRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleJTerminal368); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleJTerminal"
+
+
+    // $ANTLR start "ruleJTerminal"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:209:1: ruleJTerminal : ( ( rule__JTerminal__Alternatives ) ) ;
+    public final void ruleJTerminal() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:213:2: ( ( ( rule__JTerminal__Alternatives ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:214:1: ( ( rule__JTerminal__Alternatives ) )
+            {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:214:1: ( ( rule__JTerminal__Alternatives ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:215:1: ( rule__JTerminal__Alternatives )
+            {
+             before(grammarAccess.getJTerminalAccess().getAlternatives()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:216:1: ( rule__JTerminal__Alternatives )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:216:2: rule__JTerminal__Alternatives
+            {
+            pushFollow(FOLLOW_rule__JTerminal__Alternatives_in_ruleJTerminal394);
+            rule__JTerminal__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getJTerminalAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleJTerminal"
+
+
     // $ANTLR start "entryRuleBoolean"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:200:1: entryRuleBoolean : ruleBoolean EOF ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:228:1: entryRuleBoolean : ruleBoolean EOF ;
     public final void entryRuleBoolean() throws RecognitionException {
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:201:1: ( ruleBoolean EOF )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:202:1: ruleBoolean EOF
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:229:1: ( ruleBoolean EOF )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:230:1: ruleBoolean EOF
             {
              before(grammarAccess.getBooleanRule()); 
-            pushFollow(FOLLOW_ruleBoolean_in_entryRuleBoolean361);
+            pushFollow(FOLLOW_ruleBoolean_in_entryRuleBoolean421);
             ruleBoolean();
 
             state._fsp--;
 
              after(grammarAccess.getBooleanRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolean368); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolean428); 
 
             }
 
@@ -492,23 +569,23 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:209:1: ruleBoolean : ( ( rule__Boolean__Alternatives ) ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:237:1: ruleBoolean : ( ( rule__Boolean__Alternatives ) ) ;
     public final void ruleBoolean() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:213:2: ( ( ( rule__Boolean__Alternatives ) ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:214:1: ( ( rule__Boolean__Alternatives ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:241:2: ( ( ( rule__Boolean__Alternatives ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:242:1: ( ( rule__Boolean__Alternatives ) )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:214:1: ( ( rule__Boolean__Alternatives ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:215:1: ( rule__Boolean__Alternatives )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:242:1: ( ( rule__Boolean__Alternatives ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:243:1: ( rule__Boolean__Alternatives )
             {
              before(grammarAccess.getBooleanAccess().getAlternatives()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:216:1: ( rule__Boolean__Alternatives )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:216:2: rule__Boolean__Alternatives
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:244:1: ( rule__Boolean__Alternatives )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:244:2: rule__Boolean__Alternatives
             {
-            pushFollow(FOLLOW_rule__Boolean__Alternatives_in_ruleBoolean394);
+            pushFollow(FOLLOW_rule__Boolean__Alternatives_in_ruleBoolean454);
             rule__Boolean__Alternatives();
 
             state._fsp--;
@@ -539,20 +616,20 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "entryRuleNull"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:228:1: entryRuleNull : ruleNull EOF ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:256:1: entryRuleNull : ruleNull EOF ;
     public final void entryRuleNull() throws RecognitionException {
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:229:1: ( ruleNull EOF )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:230:1: ruleNull EOF
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:257:1: ( ruleNull EOF )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:258:1: ruleNull EOF
             {
              before(grammarAccess.getNullRule()); 
-            pushFollow(FOLLOW_ruleNull_in_entryRuleNull421);
+            pushFollow(FOLLOW_ruleNull_in_entryRuleNull481);
             ruleNull();
 
             state._fsp--;
 
              after(grammarAccess.getNullRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNull428); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNull488); 
 
             }
 
@@ -569,20 +646,20 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleNull"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:237:1: ruleNull : ( 'null' ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:265:1: ruleNull : ( 'null' ) ;
     public final void ruleNull() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:241:2: ( ( 'null' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:242:1: ( 'null' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:269:2: ( ( 'null' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:270:1: ( 'null' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:242:1: ( 'null' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:243:1: 'null'
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:270:1: ( 'null' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:271:1: 'null'
             {
              before(grammarAccess.getNullAccess().getNullKeyword()); 
-            match(input,8,FOLLOW_8_in_ruleNull455); 
+            match(input,8,FOLLOW_8_in_ruleNull515); 
              after(grammarAccess.getNullAccess().getNullKeyword()); 
 
             }
@@ -606,44 +683,32 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Value__Alternatives"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:258:1: rule__Value__Alternatives : ( ( ruleObject ) | ( RULE_STRING ) | ( ruleArray ) | ( ruleBoolean ) | ( RULE_NUMBER ) | ( ruleNull ) );
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:286:1: rule__Value__Alternatives : ( ( ruleJObject ) | ( ruleArray ) | ( ruleJTerminal ) );
     public final void rule__Value__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:262:1: ( ( ruleObject ) | ( RULE_STRING ) | ( ruleArray ) | ( ruleBoolean ) | ( RULE_NUMBER ) | ( ruleNull ) )
-            int alt1=6;
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:290:1: ( ( ruleJObject ) | ( ruleArray ) | ( ruleJTerminal ) )
+            int alt1=3;
             switch ( input.LA(1) ) {
             case 11:
                 {
                 alt1=1;
                 }
                 break;
-            case RULE_STRING:
+            case 15:
                 {
                 alt1=2;
                 }
                 break;
-            case 15:
-                {
-                alt1=3;
-                }
-                break;
+            case RULE_STRING:
+            case RULE_NUMBER:
+            case 8:
             case 9:
             case 10:
                 {
-                alt1=4;
-                }
-                break;
-            case RULE_NUMBER:
-                {
-                alt1=5;
-                }
-                break;
-            case 8:
-                {
-                alt1=6;
+                alt1=3;
                 }
                 break;
             default:
@@ -655,18 +720,18 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
             switch (alt1) {
                 case 1 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:263:1: ( ruleObject )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:291:1: ( ruleJObject )
                     {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:263:1: ( ruleObject )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:264:1: ruleObject
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:291:1: ( ruleJObject )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:292:1: ruleJObject
                     {
-                     before(grammarAccess.getValueAccess().getObjectParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleObject_in_rule__Value__Alternatives492);
-                    ruleObject();
+                     before(grammarAccess.getValueAccess().getJObjectParserRuleCall_0()); 
+                    pushFollow(FOLLOW_ruleJObject_in_rule__Value__Alternatives552);
+                    ruleJObject();
 
                     state._fsp--;
 
-                     after(grammarAccess.getValueAccess().getObjectParserRuleCall_0()); 
+                     after(grammarAccess.getValueAccess().getJObjectParserRuleCall_0()); 
 
                     }
 
@@ -674,14 +739,18 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:269:6: ( RULE_STRING )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:297:6: ( ruleArray )
                     {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:269:6: ( RULE_STRING )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:270:1: RULE_STRING
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:297:6: ( ruleArray )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:298:1: ruleArray
                     {
-                     before(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
-                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Value__Alternatives509); 
-                     after(grammarAccess.getValueAccess().getSTRINGTerminalRuleCall_1()); 
+                     before(grammarAccess.getValueAccess().getArrayParserRuleCall_1()); 
+                    pushFollow(FOLLOW_ruleArray_in_rule__Value__Alternatives569);
+                    ruleArray();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getValueAccess().getArrayParserRuleCall_1()); 
 
                     }
 
@@ -689,71 +758,18 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:275:6: ( ruleArray )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:303:6: ( ruleJTerminal )
                     {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:275:6: ( ruleArray )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:276:1: ruleArray
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:303:6: ( ruleJTerminal )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:304:1: ruleJTerminal
                     {
-                     before(grammarAccess.getValueAccess().getArrayParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleArray_in_rule__Value__Alternatives526);
-                    ruleArray();
+                     before(grammarAccess.getValueAccess().getJTerminalParserRuleCall_2()); 
+                    pushFollow(FOLLOW_ruleJTerminal_in_rule__Value__Alternatives586);
+                    ruleJTerminal();
 
                     state._fsp--;
 
-                     after(grammarAccess.getValueAccess().getArrayParserRuleCall_2()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 4 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:281:6: ( ruleBoolean )
-                    {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:281:6: ( ruleBoolean )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:282:1: ruleBoolean
-                    {
-                     before(grammarAccess.getValueAccess().getBooleanParserRuleCall_3()); 
-                    pushFollow(FOLLOW_ruleBoolean_in_rule__Value__Alternatives543);
-                    ruleBoolean();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getValueAccess().getBooleanParserRuleCall_3()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 5 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:287:6: ( RULE_NUMBER )
-                    {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:287:6: ( RULE_NUMBER )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:288:1: RULE_NUMBER
-                    {
-                     before(grammarAccess.getValueAccess().getNUMBERTerminalRuleCall_4()); 
-                    match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__Value__Alternatives560); 
-                     after(grammarAccess.getValueAccess().getNUMBERTerminalRuleCall_4()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 6 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:293:6: ( ruleNull )
-                    {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:293:6: ( ruleNull )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:294:1: ruleNull
-                    {
-                     before(grammarAccess.getValueAccess().getNullParserRuleCall_5()); 
-                    pushFollow(FOLLOW_ruleNull_in_rule__Value__Alternatives577);
-                    ruleNull();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getValueAccess().getNullParserRuleCall_5()); 
+                     after(grammarAccess.getValueAccess().getJTerminalParserRuleCall_2()); 
 
                     }
 
@@ -777,38 +793,162 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Value__Alternatives"
 
 
-    // $ANTLR start "rule__Boolean__Alternatives"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:304:1: rule__Boolean__Alternatives : ( ( 'true' ) | ( 'false' ) );
-    public final void rule__Boolean__Alternatives() throws RecognitionException {
+    // $ANTLR start "rule__JTerminal__Alternatives"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:314:1: rule__JTerminal__Alternatives : ( ( RULE_STRING ) | ( ruleBoolean ) | ( RULE_NUMBER ) | ( ruleNull ) );
+    public final void rule__JTerminal__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:308:1: ( ( 'true' ) | ( 'false' ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==9) ) {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:318:1: ( ( RULE_STRING ) | ( ruleBoolean ) | ( RULE_NUMBER ) | ( ruleNull ) )
+            int alt2=4;
+            switch ( input.LA(1) ) {
+            case RULE_STRING:
+                {
                 alt2=1;
-            }
-            else if ( (LA2_0==10) ) {
+                }
+                break;
+            case 9:
+            case 10:
+                {
                 alt2=2;
-            }
-            else {
+                }
+                break;
+            case RULE_NUMBER:
+                {
+                alt2=3;
+                }
+                break;
+            case 8:
+                {
+                alt2=4;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
                     new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
+
             switch (alt2) {
                 case 1 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:309:1: ( 'true' )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:319:1: ( RULE_STRING )
                     {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:309:1: ( 'true' )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:310:1: 'true'
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:319:1: ( RULE_STRING )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:320:1: RULE_STRING
+                    {
+                     before(grammarAccess.getJTerminalAccess().getSTRINGTerminalRuleCall_0()); 
+                    match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__JTerminal__Alternatives618); 
+                     after(grammarAccess.getJTerminalAccess().getSTRINGTerminalRuleCall_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:325:6: ( ruleBoolean )
+                    {
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:325:6: ( ruleBoolean )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:326:1: ruleBoolean
+                    {
+                     before(grammarAccess.getJTerminalAccess().getBooleanParserRuleCall_1()); 
+                    pushFollow(FOLLOW_ruleBoolean_in_rule__JTerminal__Alternatives635);
+                    ruleBoolean();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getJTerminalAccess().getBooleanParserRuleCall_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:331:6: ( RULE_NUMBER )
+                    {
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:331:6: ( RULE_NUMBER )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:332:1: RULE_NUMBER
+                    {
+                     before(grammarAccess.getJTerminalAccess().getNUMBERTerminalRuleCall_2()); 
+                    match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_rule__JTerminal__Alternatives652); 
+                     after(grammarAccess.getJTerminalAccess().getNUMBERTerminalRuleCall_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:337:6: ( ruleNull )
+                    {
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:337:6: ( ruleNull )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:338:1: ruleNull
+                    {
+                     before(grammarAccess.getJTerminalAccess().getNullParserRuleCall_3()); 
+                    pushFollow(FOLLOW_ruleNull_in_rule__JTerminal__Alternatives669);
+                    ruleNull();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getJTerminalAccess().getNullParserRuleCall_3()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JTerminal__Alternatives"
+
+
+    // $ANTLR start "rule__Boolean__Alternatives"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:348:1: rule__Boolean__Alternatives : ( ( 'true' ) | ( 'false' ) );
+    public final void rule__Boolean__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:352:1: ( ( 'true' ) | ( 'false' ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
+
+            if ( (LA3_0==9) ) {
+                alt3=1;
+            }
+            else if ( (LA3_0==10) ) {
+                alt3=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 3, 0, input);
+
+                throw nvae;
+            }
+            switch (alt3) {
+                case 1 :
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:353:1: ( 'true' )
+                    {
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:353:1: ( 'true' )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:354:1: 'true'
                     {
                      before(grammarAccess.getBooleanAccess().getTrueKeyword_0()); 
-                    match(input,9,FOLLOW_9_in_rule__Boolean__Alternatives610); 
+                    match(input,9,FOLLOW_9_in_rule__Boolean__Alternatives702); 
                      after(grammarAccess.getBooleanAccess().getTrueKeyword_0()); 
 
                     }
@@ -817,13 +957,13 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:317:6: ( 'false' )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:361:6: ( 'false' )
                     {
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:317:6: ( 'false' )
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:318:1: 'false'
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:361:6: ( 'false' )
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:362:1: 'false'
                     {
                      before(grammarAccess.getBooleanAccess().getFalseKeyword_1()); 
-                    match(input,10,FOLLOW_10_in_rule__Boolean__Alternatives630); 
+                    match(input,10,FOLLOW_10_in_rule__Boolean__Alternatives722); 
                      after(grammarAccess.getBooleanAccess().getFalseKeyword_1()); 
 
                     }
@@ -848,98 +988,23 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Boolean__Alternatives"
 
 
-    // $ANTLR start "rule__Object__Group__0"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:332:1: rule__Object__Group__0 : rule__Object__Group__0__Impl rule__Object__Group__1 ;
-    public final void rule__Object__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group__0"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:376:1: rule__JObject__Group__0 : rule__JObject__Group__0__Impl rule__JObject__Group__1 ;
+    public final void rule__JObject__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:336:1: ( rule__Object__Group__0__Impl rule__Object__Group__1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:337:2: rule__Object__Group__0__Impl rule__Object__Group__1
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:380:1: ( rule__JObject__Group__0__Impl rule__JObject__Group__1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:381:2: rule__JObject__Group__0__Impl rule__JObject__Group__1
             {
-            pushFollow(FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__0662);
-            rule__Object__Group__0__Impl();
+            pushFollow(FOLLOW_rule__JObject__Group__0__Impl_in_rule__JObject__Group__0754);
+            rule__JObject__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__1_in_rule__Object__Group__0665);
-            rule__Object__Group__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Object__Group__0"
-
-
-    // $ANTLR start "rule__Object__Group__0__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:344:1: rule__Object__Group__0__Impl : ( '{' ) ;
-    public final void rule__Object__Group__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:348:1: ( ( '{' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:349:1: ( '{' )
-            {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:349:1: ( '{' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:350:1: '{'
-            {
-             before(grammarAccess.getObjectAccess().getLeftCurlyBracketKeyword_0()); 
-            match(input,11,FOLLOW_11_in_rule__Object__Group__0__Impl693); 
-             after(grammarAccess.getObjectAccess().getLeftCurlyBracketKeyword_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Object__Group__0__Impl"
-
-
-    // $ANTLR start "rule__Object__Group__1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:363:1: rule__Object__Group__1 : rule__Object__Group__1__Impl rule__Object__Group__2 ;
-    public final void rule__Object__Group__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:367:1: ( rule__Object__Group__1__Impl rule__Object__Group__2 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:368:2: rule__Object__Group__1__Impl rule__Object__Group__2
-            {
-            pushFollow(FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__1724);
-            rule__Object__Group__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Object__Group__2_in_rule__Object__Group__1727);
-            rule__Object__Group__2();
+            pushFollow(FOLLOW_rule__JObject__Group__1_in_rule__JObject__Group__0757);
+            rule__JObject__Group__1();
 
             state._fsp--;
 
@@ -958,36 +1023,186 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group__1"
+    // $ANTLR end "rule__JObject__Group__0"
 
 
-    // $ANTLR start "rule__Object__Group__1__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:375:1: rule__Object__Group__1__Impl : ( ( rule__Object__EntriesAssignment_1 )? ) ;
-    public final void rule__Object__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group__0__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:388:1: rule__JObject__Group__0__Impl : ( '{' ) ;
+    public final void rule__JObject__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:379:1: ( ( ( rule__Object__EntriesAssignment_1 )? ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:380:1: ( ( rule__Object__EntriesAssignment_1 )? )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:392:1: ( ( '{' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:393:1: ( '{' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:380:1: ( ( rule__Object__EntriesAssignment_1 )? )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:381:1: ( rule__Object__EntriesAssignment_1 )?
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:393:1: ( '{' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:394:1: '{'
             {
-             before(grammarAccess.getObjectAccess().getEntriesAssignment_1()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:382:1: ( rule__Object__EntriesAssignment_1 )?
-            int alt3=2;
-            int LA3_0 = input.LA(1);
+             before(grammarAccess.getJObjectAccess().getLeftCurlyBracketKeyword_0()); 
+            match(input,11,FOLLOW_11_in_rule__JObject__Group__0__Impl785); 
+             after(grammarAccess.getJObjectAccess().getLeftCurlyBracketKeyword_0()); 
 
-            if ( (LA3_0==RULE_STRING) ) {
-                alt3=1;
             }
-            switch (alt3) {
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JObject__Group__0__Impl"
+
+
+    // $ANTLR start "rule__JObject__Group__1"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:407:1: rule__JObject__Group__1 : rule__JObject__Group__1__Impl rule__JObject__Group__2 ;
+    public final void rule__JObject__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:411:1: ( rule__JObject__Group__1__Impl rule__JObject__Group__2 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:412:2: rule__JObject__Group__1__Impl rule__JObject__Group__2
+            {
+            pushFollow(FOLLOW_rule__JObject__Group__1__Impl_in_rule__JObject__Group__1816);
+            rule__JObject__Group__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__JObject__Group__2_in_rule__JObject__Group__1819);
+            rule__JObject__Group__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JObject__Group__1"
+
+
+    // $ANTLR start "rule__JObject__Group__1__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:419:1: rule__JObject__Group__1__Impl : ( () ) ;
+    public final void rule__JObject__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:423:1: ( ( () ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:424:1: ( () )
+            {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:424:1: ( () )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:425:1: ()
+            {
+             before(grammarAccess.getJObjectAccess().getJObjectAction_1()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:426:1: ()
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:428:1: 
+            {
+            }
+
+             after(grammarAccess.getJObjectAccess().getJObjectAction_1()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JObject__Group__1__Impl"
+
+
+    // $ANTLR start "rule__JObject__Group__2"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:438:1: rule__JObject__Group__2 : rule__JObject__Group__2__Impl rule__JObject__Group__3 ;
+    public final void rule__JObject__Group__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:442:1: ( rule__JObject__Group__2__Impl rule__JObject__Group__3 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:443:2: rule__JObject__Group__2__Impl rule__JObject__Group__3
+            {
+            pushFollow(FOLLOW_rule__JObject__Group__2__Impl_in_rule__JObject__Group__2877);
+            rule__JObject__Group__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__JObject__Group__3_in_rule__JObject__Group__2880);
+            rule__JObject__Group__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JObject__Group__2"
+
+
+    // $ANTLR start "rule__JObject__Group__2__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:450:1: rule__JObject__Group__2__Impl : ( ( rule__JObject__EntriesAssignment_2 )? ) ;
+    public final void rule__JObject__Group__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:454:1: ( ( ( rule__JObject__EntriesAssignment_2 )? ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:455:1: ( ( rule__JObject__EntriesAssignment_2 )? )
+            {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:455:1: ( ( rule__JObject__EntriesAssignment_2 )? )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:456:1: ( rule__JObject__EntriesAssignment_2 )?
+            {
+             before(grammarAccess.getJObjectAccess().getEntriesAssignment_2()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:457:1: ( rule__JObject__EntriesAssignment_2 )?
+            int alt4=2;
+            int LA4_0 = input.LA(1);
+
+            if ( (LA4_0==RULE_STRING) ) {
+                alt4=1;
+            }
+            switch (alt4) {
                 case 1 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:382:2: rule__Object__EntriesAssignment_1
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:457:2: rule__JObject__EntriesAssignment_2
                     {
-                    pushFollow(FOLLOW_rule__Object__EntriesAssignment_1_in_rule__Object__Group__1__Impl754);
-                    rule__Object__EntriesAssignment_1();
+                    pushFollow(FOLLOW_rule__JObject__EntriesAssignment_2_in_rule__JObject__Group__2__Impl907);
+                    rule__JObject__EntriesAssignment_2();
 
                     state._fsp--;
 
@@ -997,7 +1212,7 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
             }
 
-             after(grammarAccess.getObjectAccess().getEntriesAssignment_1()); 
+             after(grammarAccess.getJObjectAccess().getEntriesAssignment_2()); 
 
             }
 
@@ -1016,26 +1231,26 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group__1__Impl"
+    // $ANTLR end "rule__JObject__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Object__Group__2"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:392:1: rule__Object__Group__2 : rule__Object__Group__2__Impl rule__Object__Group__3 ;
-    public final void rule__Object__Group__2() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group__3"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:467:1: rule__JObject__Group__3 : rule__JObject__Group__3__Impl rule__JObject__Group__4 ;
+    public final void rule__JObject__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:396:1: ( rule__Object__Group__2__Impl rule__Object__Group__3 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:397:2: rule__Object__Group__2__Impl rule__Object__Group__3
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:471:1: ( rule__JObject__Group__3__Impl rule__JObject__Group__4 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:472:2: rule__JObject__Group__3__Impl rule__JObject__Group__4
             {
-            pushFollow(FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__2785);
-            rule__Object__Group__2__Impl();
+            pushFollow(FOLLOW_rule__JObject__Group__3__Impl_in_rule__JObject__Group__3938);
+            rule__JObject__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group__3_in_rule__Object__Group__2788);
-            rule__Object__Group__3();
+            pushFollow(FOLLOW_rule__JObject__Group__4_in_rule__JObject__Group__3941);
+            rule__JObject__Group__4();
 
             state._fsp--;
 
@@ -1054,40 +1269,40 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group__2"
+    // $ANTLR end "rule__JObject__Group__3"
 
 
-    // $ANTLR start "rule__Object__Group__2__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:404:1: rule__Object__Group__2__Impl : ( ( rule__Object__Group_2__0 )* ) ;
-    public final void rule__Object__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group__3__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:479:1: rule__JObject__Group__3__Impl : ( ( rule__JObject__Group_3__0 )* ) ;
+    public final void rule__JObject__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:408:1: ( ( ( rule__Object__Group_2__0 )* ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:409:1: ( ( rule__Object__Group_2__0 )* )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:483:1: ( ( ( rule__JObject__Group_3__0 )* ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:484:1: ( ( rule__JObject__Group_3__0 )* )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:409:1: ( ( rule__Object__Group_2__0 )* )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:410:1: ( rule__Object__Group_2__0 )*
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:484:1: ( ( rule__JObject__Group_3__0 )* )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:485:1: ( rule__JObject__Group_3__0 )*
             {
-             before(grammarAccess.getObjectAccess().getGroup_2()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:411:1: ( rule__Object__Group_2__0 )*
-            loop4:
+             before(grammarAccess.getJObjectAccess().getGroup_3()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:486:1: ( rule__JObject__Group_3__0 )*
+            loop5:
             do {
-                int alt4=2;
-                int LA4_0 = input.LA(1);
+                int alt5=2;
+                int LA5_0 = input.LA(1);
 
-                if ( (LA4_0==13) ) {
-                    alt4=1;
+                if ( (LA5_0==13) ) {
+                    alt5=1;
                 }
 
 
-                switch (alt4) {
+                switch (alt5) {
             	case 1 :
-            	    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:411:2: rule__Object__Group_2__0
+            	    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:486:2: rule__JObject__Group_3__0
             	    {
-            	    pushFollow(FOLLOW_rule__Object__Group_2__0_in_rule__Object__Group__2__Impl815);
-            	    rule__Object__Group_2__0();
+            	    pushFollow(FOLLOW_rule__JObject__Group_3__0_in_rule__JObject__Group__3__Impl968);
+            	    rule__JObject__Group_3__0();
 
             	    state._fsp--;
 
@@ -1096,11 +1311,11 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop4;
+            	    break loop5;
                 }
             } while (true);
 
-             after(grammarAccess.getObjectAccess().getGroup_2()); 
+             after(grammarAccess.getJObjectAccess().getGroup_3()); 
 
             }
 
@@ -1119,21 +1334,21 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group__2__Impl"
+    // $ANTLR end "rule__JObject__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Object__Group__3"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:421:1: rule__Object__Group__3 : rule__Object__Group__3__Impl ;
-    public final void rule__Object__Group__3() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group__4"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:496:1: rule__JObject__Group__4 : rule__JObject__Group__4__Impl ;
+    public final void rule__JObject__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:425:1: ( rule__Object__Group__3__Impl )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:426:2: rule__Object__Group__3__Impl
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:500:1: ( rule__JObject__Group__4__Impl )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:501:2: rule__JObject__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Object__Group__3__Impl_in_rule__Object__Group__3846);
-            rule__Object__Group__3__Impl();
+            pushFollow(FOLLOW_rule__JObject__Group__4__Impl_in_rule__JObject__Group__4999);
+            rule__JObject__Group__4__Impl();
 
             state._fsp--;
 
@@ -1152,25 +1367,25 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group__3"
+    // $ANTLR end "rule__JObject__Group__4"
 
 
-    // $ANTLR start "rule__Object__Group__3__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:432:1: rule__Object__Group__3__Impl : ( '}' ) ;
-    public final void rule__Object__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group__4__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:507:1: rule__JObject__Group__4__Impl : ( '}' ) ;
+    public final void rule__JObject__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:436:1: ( ( '}' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:437:1: ( '}' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:511:1: ( ( '}' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:512:1: ( '}' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:437:1: ( '}' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:438:1: '}'
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:512:1: ( '}' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:513:1: '}'
             {
-             before(grammarAccess.getObjectAccess().getRightCurlyBracketKeyword_3()); 
-            match(input,12,FOLLOW_12_in_rule__Object__Group__3__Impl874); 
-             after(grammarAccess.getObjectAccess().getRightCurlyBracketKeyword_3()); 
+             before(grammarAccess.getJObjectAccess().getRightCurlyBracketKeyword_4()); 
+            match(input,12,FOLLOW_12_in_rule__JObject__Group__4__Impl1027); 
+             after(grammarAccess.getJObjectAccess().getRightCurlyBracketKeyword_4()); 
 
             }
 
@@ -1189,96 +1404,26 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group__3__Impl"
+    // $ANTLR end "rule__JObject__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Object__Group_2__0"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:459:1: rule__Object__Group_2__0 : rule__Object__Group_2__0__Impl rule__Object__Group_2__1 ;
-    public final void rule__Object__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group_3__0"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:536:1: rule__JObject__Group_3__0 : rule__JObject__Group_3__0__Impl rule__JObject__Group_3__1 ;
+    public final void rule__JObject__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:463:1: ( rule__Object__Group_2__0__Impl rule__Object__Group_2__1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:464:2: rule__Object__Group_2__0__Impl rule__Object__Group_2__1
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:540:1: ( rule__JObject__Group_3__0__Impl rule__JObject__Group_3__1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:541:2: rule__JObject__Group_3__0__Impl rule__JObject__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Object__Group_2__0__Impl_in_rule__Object__Group_2__0913);
-            rule__Object__Group_2__0__Impl();
+            pushFollow(FOLLOW_rule__JObject__Group_3__0__Impl_in_rule__JObject__Group_3__01068);
+            rule__JObject__Group_3__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Object__Group_2__1_in_rule__Object__Group_2__0916);
-            rule__Object__Group_2__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Object__Group_2__0"
-
-
-    // $ANTLR start "rule__Object__Group_2__0__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:471:1: rule__Object__Group_2__0__Impl : ( ',' ) ;
-    public final void rule__Object__Group_2__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:475:1: ( ( ',' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:476:1: ( ',' )
-            {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:476:1: ( ',' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:477:1: ','
-            {
-             before(grammarAccess.getObjectAccess().getCommaKeyword_2_0()); 
-            match(input,13,FOLLOW_13_in_rule__Object__Group_2__0__Impl944); 
-             after(grammarAccess.getObjectAccess().getCommaKeyword_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Object__Group_2__0__Impl"
-
-
-    // $ANTLR start "rule__Object__Group_2__1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:490:1: rule__Object__Group_2__1 : rule__Object__Group_2__1__Impl ;
-    public final void rule__Object__Group_2__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:494:1: ( rule__Object__Group_2__1__Impl )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:495:2: rule__Object__Group_2__1__Impl
-            {
-            pushFollow(FOLLOW_rule__Object__Group_2__1__Impl_in_rule__Object__Group_2__1975);
-            rule__Object__Group_2__1__Impl();
+            pushFollow(FOLLOW_rule__JObject__Group_3__1_in_rule__JObject__Group_3__01071);
+            rule__JObject__Group_3__1();
 
             state._fsp--;
 
@@ -1297,35 +1442,25 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group_2__1"
+    // $ANTLR end "rule__JObject__Group_3__0"
 
 
-    // $ANTLR start "rule__Object__Group_2__1__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:501:1: rule__Object__Group_2__1__Impl : ( ( rule__Object__EntriesAssignment_2_1 ) ) ;
-    public final void rule__Object__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__JObject__Group_3__0__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:548:1: rule__JObject__Group_3__0__Impl : ( ',' ) ;
+    public final void rule__JObject__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:505:1: ( ( ( rule__Object__EntriesAssignment_2_1 ) ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:506:1: ( ( rule__Object__EntriesAssignment_2_1 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:552:1: ( ( ',' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:553:1: ( ',' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:506:1: ( ( rule__Object__EntriesAssignment_2_1 ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:507:1: ( rule__Object__EntriesAssignment_2_1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:553:1: ( ',' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:554:1: ','
             {
-             before(grammarAccess.getObjectAccess().getEntriesAssignment_2_1()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:508:1: ( rule__Object__EntriesAssignment_2_1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:508:2: rule__Object__EntriesAssignment_2_1
-            {
-            pushFollow(FOLLOW_rule__Object__EntriesAssignment_2_1_in_rule__Object__Group_2__1__Impl1002);
-            rule__Object__EntriesAssignment_2_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getObjectAccess().getEntriesAssignment_2_1()); 
+             before(grammarAccess.getJObjectAccess().getCommaKeyword_3_0()); 
+            match(input,13,FOLLOW_13_in_rule__JObject__Group_3__0__Impl1099); 
+             after(grammarAccess.getJObjectAccess().getCommaKeyword_3_0()); 
 
             }
 
@@ -1344,25 +1479,105 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__Group_2__1__Impl"
+    // $ANTLR end "rule__JObject__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__JObject__Group_3__1"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:567:1: rule__JObject__Group_3__1 : rule__JObject__Group_3__1__Impl ;
+    public final void rule__JObject__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:571:1: ( rule__JObject__Group_3__1__Impl )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:572:2: rule__JObject__Group_3__1__Impl
+            {
+            pushFollow(FOLLOW_rule__JObject__Group_3__1__Impl_in_rule__JObject__Group_3__11130);
+            rule__JObject__Group_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JObject__Group_3__1"
+
+
+    // $ANTLR start "rule__JObject__Group_3__1__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:578:1: rule__JObject__Group_3__1__Impl : ( ( rule__JObject__EntriesAssignment_3_1 ) ) ;
+    public final void rule__JObject__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:582:1: ( ( ( rule__JObject__EntriesAssignment_3_1 ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:583:1: ( ( rule__JObject__EntriesAssignment_3_1 ) )
+            {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:583:1: ( ( rule__JObject__EntriesAssignment_3_1 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:584:1: ( rule__JObject__EntriesAssignment_3_1 )
+            {
+             before(grammarAccess.getJObjectAccess().getEntriesAssignment_3_1()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:585:1: ( rule__JObject__EntriesAssignment_3_1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:585:2: rule__JObject__EntriesAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__JObject__EntriesAssignment_3_1_in_rule__JObject__Group_3__1__Impl1157);
+            rule__JObject__EntriesAssignment_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getJObjectAccess().getEntriesAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__JObject__Group_3__1__Impl"
 
 
     // $ANTLR start "rule__Entry__Group__0"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:522:1: rule__Entry__Group__0 : rule__Entry__Group__0__Impl rule__Entry__Group__1 ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:599:1: rule__Entry__Group__0 : rule__Entry__Group__0__Impl rule__Entry__Group__1 ;
     public final void rule__Entry__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:526:1: ( rule__Entry__Group__0__Impl rule__Entry__Group__1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:527:2: rule__Entry__Group__0__Impl rule__Entry__Group__1
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:603:1: ( rule__Entry__Group__0__Impl rule__Entry__Group__1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:604:2: rule__Entry__Group__0__Impl rule__Entry__Group__1
             {
-            pushFollow(FOLLOW_rule__Entry__Group__0__Impl_in_rule__Entry__Group__01036);
+            pushFollow(FOLLOW_rule__Entry__Group__0__Impl_in_rule__Entry__Group__01191);
             rule__Entry__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Entry__Group__1_in_rule__Entry__Group__01039);
+            pushFollow(FOLLOW_rule__Entry__Group__1_in_rule__Entry__Group__01194);
             rule__Entry__Group__1();
 
             state._fsp--;
@@ -1386,23 +1601,23 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entry__Group__0__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:534:1: rule__Entry__Group__0__Impl : ( ( rule__Entry__KeyAssignment_0 ) ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:611:1: rule__Entry__Group__0__Impl : ( ( rule__Entry__KeyAssignment_0 ) ) ;
     public final void rule__Entry__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:538:1: ( ( ( rule__Entry__KeyAssignment_0 ) ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:539:1: ( ( rule__Entry__KeyAssignment_0 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:615:1: ( ( ( rule__Entry__KeyAssignment_0 ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:616:1: ( ( rule__Entry__KeyAssignment_0 ) )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:539:1: ( ( rule__Entry__KeyAssignment_0 ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:540:1: ( rule__Entry__KeyAssignment_0 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:616:1: ( ( rule__Entry__KeyAssignment_0 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:617:1: ( rule__Entry__KeyAssignment_0 )
             {
              before(grammarAccess.getEntryAccess().getKeyAssignment_0()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:541:1: ( rule__Entry__KeyAssignment_0 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:541:2: rule__Entry__KeyAssignment_0
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:618:1: ( rule__Entry__KeyAssignment_0 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:618:2: rule__Entry__KeyAssignment_0
             {
-            pushFollow(FOLLOW_rule__Entry__KeyAssignment_0_in_rule__Entry__Group__0__Impl1066);
+            pushFollow(FOLLOW_rule__Entry__KeyAssignment_0_in_rule__Entry__Group__0__Impl1221);
             rule__Entry__KeyAssignment_0();
 
             state._fsp--;
@@ -1433,21 +1648,21 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entry__Group__1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:551:1: rule__Entry__Group__1 : rule__Entry__Group__1__Impl rule__Entry__Group__2 ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:628:1: rule__Entry__Group__1 : rule__Entry__Group__1__Impl rule__Entry__Group__2 ;
     public final void rule__Entry__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:555:1: ( rule__Entry__Group__1__Impl rule__Entry__Group__2 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:556:2: rule__Entry__Group__1__Impl rule__Entry__Group__2
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:632:1: ( rule__Entry__Group__1__Impl rule__Entry__Group__2 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:633:2: rule__Entry__Group__1__Impl rule__Entry__Group__2
             {
-            pushFollow(FOLLOW_rule__Entry__Group__1__Impl_in_rule__Entry__Group__11096);
+            pushFollow(FOLLOW_rule__Entry__Group__1__Impl_in_rule__Entry__Group__11251);
             rule__Entry__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Entry__Group__2_in_rule__Entry__Group__11099);
+            pushFollow(FOLLOW_rule__Entry__Group__2_in_rule__Entry__Group__11254);
             rule__Entry__Group__2();
 
             state._fsp--;
@@ -1471,20 +1686,20 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entry__Group__1__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:563:1: rule__Entry__Group__1__Impl : ( ':' ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:640:1: rule__Entry__Group__1__Impl : ( ':' ) ;
     public final void rule__Entry__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:567:1: ( ( ':' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:568:1: ( ':' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:644:1: ( ( ':' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:645:1: ( ':' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:568:1: ( ':' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:569:1: ':'
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:645:1: ( ':' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:646:1: ':'
             {
              before(grammarAccess.getEntryAccess().getColonKeyword_1()); 
-            match(input,14,FOLLOW_14_in_rule__Entry__Group__1__Impl1127); 
+            match(input,14,FOLLOW_14_in_rule__Entry__Group__1__Impl1282); 
              after(grammarAccess.getEntryAccess().getColonKeyword_1()); 
 
             }
@@ -1508,16 +1723,16 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entry__Group__2"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:582:1: rule__Entry__Group__2 : rule__Entry__Group__2__Impl ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:659:1: rule__Entry__Group__2 : rule__Entry__Group__2__Impl ;
     public final void rule__Entry__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:586:1: ( rule__Entry__Group__2__Impl )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:587:2: rule__Entry__Group__2__Impl
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:663:1: ( rule__Entry__Group__2__Impl )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:664:2: rule__Entry__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Entry__Group__2__Impl_in_rule__Entry__Group__21158);
+            pushFollow(FOLLOW_rule__Entry__Group__2__Impl_in_rule__Entry__Group__21313);
             rule__Entry__Group__2__Impl();
 
             state._fsp--;
@@ -1541,23 +1756,23 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entry__Group__2__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:593:1: rule__Entry__Group__2__Impl : ( ( rule__Entry__ValueAssignment_2 ) ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:670:1: rule__Entry__Group__2__Impl : ( ( rule__Entry__ValueAssignment_2 ) ) ;
     public final void rule__Entry__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:597:1: ( ( ( rule__Entry__ValueAssignment_2 ) ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:598:1: ( ( rule__Entry__ValueAssignment_2 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:674:1: ( ( ( rule__Entry__ValueAssignment_2 ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:675:1: ( ( rule__Entry__ValueAssignment_2 ) )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:598:1: ( ( rule__Entry__ValueAssignment_2 ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:599:1: ( rule__Entry__ValueAssignment_2 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:675:1: ( ( rule__Entry__ValueAssignment_2 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:676:1: ( rule__Entry__ValueAssignment_2 )
             {
              before(grammarAccess.getEntryAccess().getValueAssignment_2()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:600:1: ( rule__Entry__ValueAssignment_2 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:600:2: rule__Entry__ValueAssignment_2
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:677:1: ( rule__Entry__ValueAssignment_2 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:677:2: rule__Entry__ValueAssignment_2
             {
-            pushFollow(FOLLOW_rule__Entry__ValueAssignment_2_in_rule__Entry__Group__2__Impl1185);
+            pushFollow(FOLLOW_rule__Entry__ValueAssignment_2_in_rule__Entry__Group__2__Impl1340);
             rule__Entry__ValueAssignment_2();
 
             state._fsp--;
@@ -1588,21 +1803,21 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:616:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:693:1: rule__Array__Group__0 : rule__Array__Group__0__Impl rule__Array__Group__1 ;
     public final void rule__Array__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:620:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:621:2: rule__Array__Group__0__Impl rule__Array__Group__1
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:697:1: ( rule__Array__Group__0__Impl rule__Array__Group__1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:698:2: rule__Array__Group__0__Impl rule__Array__Group__1
             {
-            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01221);
+            pushFollow(FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01376);
             rule__Array__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01224);
+            pushFollow(FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01379);
             rule__Array__Group__1();
 
             state._fsp--;
@@ -1626,20 +1841,20 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__0__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:628:1: rule__Array__Group__0__Impl : ( '[' ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:705:1: rule__Array__Group__0__Impl : ( '[' ) ;
     public final void rule__Array__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:632:1: ( ( '[' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:633:1: ( '[' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:709:1: ( ( '[' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:710:1: ( '[' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:633:1: ( '[' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:634:1: '['
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:710:1: ( '[' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:711:1: '['
             {
              before(grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_0()); 
-            match(input,15,FOLLOW_15_in_rule__Array__Group__0__Impl1252); 
+            match(input,15,FOLLOW_15_in_rule__Array__Group__0__Impl1407); 
              after(grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_0()); 
 
             }
@@ -1663,21 +1878,21 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:647:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:724:1: rule__Array__Group__1 : rule__Array__Group__1__Impl rule__Array__Group__2 ;
     public final void rule__Array__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:651:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:652:2: rule__Array__Group__1__Impl rule__Array__Group__2
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:728:1: ( rule__Array__Group__1__Impl rule__Array__Group__2 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:729:2: rule__Array__Group__1__Impl rule__Array__Group__2
             {
-            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11283);
+            pushFollow(FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11438);
             rule__Array__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11286);
+            pushFollow(FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11441);
             rule__Array__Group__2();
 
             state._fsp--;
@@ -1701,52 +1916,31 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__1__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:659:1: rule__Array__Group__1__Impl : ( ( rule__Array__ValuesAssignment_1 )? ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:736:1: rule__Array__Group__1__Impl : ( () ) ;
     public final void rule__Array__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:663:1: ( ( ( rule__Array__ValuesAssignment_1 )? ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:664:1: ( ( rule__Array__ValuesAssignment_1 )? )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:740:1: ( ( () ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:741:1: ( () )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:664:1: ( ( rule__Array__ValuesAssignment_1 )? )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:665:1: ( rule__Array__ValuesAssignment_1 )?
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:741:1: ( () )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:742:1: ()
             {
-             before(grammarAccess.getArrayAccess().getValuesAssignment_1()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:666:1: ( rule__Array__ValuesAssignment_1 )?
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( ((LA5_0>=RULE_STRING && LA5_0<=RULE_NUMBER)||(LA5_0>=8 && LA5_0<=11)||LA5_0==15) ) {
-                alt5=1;
-            }
-            switch (alt5) {
-                case 1 :
-                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:666:2: rule__Array__ValuesAssignment_1
-                    {
-                    pushFollow(FOLLOW_rule__Array__ValuesAssignment_1_in_rule__Array__Group__1__Impl1313);
-                    rule__Array__ValuesAssignment_1();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
+             before(grammarAccess.getArrayAccess().getArrayAction_1()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:743:1: ()
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:745:1: 
+            {
             }
 
-             after(grammarAccess.getArrayAccess().getValuesAssignment_1()); 
+             after(grammarAccess.getArrayAccess().getArrayAction_1()); 
 
             }
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
         }
         finally {
 
@@ -1759,21 +1953,21 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:676:1: rule__Array__Group__2 : rule__Array__Group__2__Impl rule__Array__Group__3 ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:755:1: rule__Array__Group__2 : rule__Array__Group__2__Impl rule__Array__Group__3 ;
     public final void rule__Array__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:680:1: ( rule__Array__Group__2__Impl rule__Array__Group__3 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:681:2: rule__Array__Group__2__Impl rule__Array__Group__3
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:759:1: ( rule__Array__Group__2__Impl rule__Array__Group__3 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:760:2: rule__Array__Group__2__Impl rule__Array__Group__3
             {
-            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21344);
+            pushFollow(FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21499);
             rule__Array__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Array__Group__3_in_rule__Array__Group__21347);
+            pushFollow(FOLLOW_rule__Array__Group__3_in_rule__Array__Group__21502);
             rule__Array__Group__3();
 
             state._fsp--;
@@ -1797,49 +1991,42 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__2__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:688:1: rule__Array__Group__2__Impl : ( ( rule__Array__Group_2__0 )* ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:767:1: rule__Array__Group__2__Impl : ( ( rule__Array__ValuesAssignment_2 )? ) ;
     public final void rule__Array__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:692:1: ( ( ( rule__Array__Group_2__0 )* ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:693:1: ( ( rule__Array__Group_2__0 )* )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:771:1: ( ( ( rule__Array__ValuesAssignment_2 )? ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:772:1: ( ( rule__Array__ValuesAssignment_2 )? )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:693:1: ( ( rule__Array__Group_2__0 )* )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:694:1: ( rule__Array__Group_2__0 )*
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:772:1: ( ( rule__Array__ValuesAssignment_2 )? )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:773:1: ( rule__Array__ValuesAssignment_2 )?
             {
-             before(grammarAccess.getArrayAccess().getGroup_2()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:695:1: ( rule__Array__Group_2__0 )*
-            loop6:
-            do {
-                int alt6=2;
-                int LA6_0 = input.LA(1);
+             before(grammarAccess.getArrayAccess().getValuesAssignment_2()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:774:1: ( rule__Array__ValuesAssignment_2 )?
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==13) ) {
-                    alt6=1;
-                }
+            if ( ((LA6_0>=RULE_STRING && LA6_0<=RULE_NUMBER)||(LA6_0>=8 && LA6_0<=11)||LA6_0==15) ) {
+                alt6=1;
+            }
+            switch (alt6) {
+                case 1 :
+                    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:774:2: rule__Array__ValuesAssignment_2
+                    {
+                    pushFollow(FOLLOW_rule__Array__ValuesAssignment_2_in_rule__Array__Group__2__Impl1529);
+                    rule__Array__ValuesAssignment_2();
 
-
-                switch (alt6) {
-            	case 1 :
-            	    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:695:2: rule__Array__Group_2__0
-            	    {
-            	    pushFollow(FOLLOW_rule__Array__Group_2__0_in_rule__Array__Group__2__Impl1374);
-            	    rule__Array__Group_2__0();
-
-            	    state._fsp--;
+                    state._fsp--;
 
 
-            	    }
-            	    break;
+                    }
+                    break;
 
-            	default :
-            	    break loop6;
-                }
-            } while (true);
+            }
 
-             after(grammarAccess.getArrayAccess().getGroup_2()); 
+             after(grammarAccess.getArrayAccess().getValuesAssignment_2()); 
 
             }
 
@@ -1862,17 +2049,22 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__3"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:705:1: rule__Array__Group__3 : rule__Array__Group__3__Impl ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:784:1: rule__Array__Group__3 : rule__Array__Group__3__Impl rule__Array__Group__4 ;
     public final void rule__Array__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:709:1: ( rule__Array__Group__3__Impl )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:710:2: rule__Array__Group__3__Impl
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:788:1: ( rule__Array__Group__3__Impl rule__Array__Group__4 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:789:2: rule__Array__Group__3__Impl rule__Array__Group__4
             {
-            pushFollow(FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__31405);
+            pushFollow(FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__31560);
             rule__Array__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Array__Group__4_in_rule__Array__Group__31563);
+            rule__Array__Group__4();
 
             state._fsp--;
 
@@ -1895,21 +2087,49 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Array__Group__3__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:716:1: rule__Array__Group__3__Impl : ( ']' ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:796:1: rule__Array__Group__3__Impl : ( ( rule__Array__Group_3__0 )* ) ;
     public final void rule__Array__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:720:1: ( ( ']' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:721:1: ( ']' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:800:1: ( ( ( rule__Array__Group_3__0 )* ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:801:1: ( ( rule__Array__Group_3__0 )* )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:721:1: ( ']' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:722:1: ']'
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:801:1: ( ( rule__Array__Group_3__0 )* )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:802:1: ( rule__Array__Group_3__0 )*
             {
-             before(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_3()); 
-            match(input,16,FOLLOW_16_in_rule__Array__Group__3__Impl1433); 
-             after(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_3()); 
+             before(grammarAccess.getArrayAccess().getGroup_3()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:803:1: ( rule__Array__Group_3__0 )*
+            loop7:
+            do {
+                int alt7=2;
+                int LA7_0 = input.LA(1);
+
+                if ( (LA7_0==13) ) {
+                    alt7=1;
+                }
+
+
+                switch (alt7) {
+            	case 1 :
+            	    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:803:2: rule__Array__Group_3__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Array__Group_3__0_in_rule__Array__Group__3__Impl1590);
+            	    rule__Array__Group_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop7;
+                }
+            } while (true);
+
+             after(grammarAccess.getArrayAccess().getGroup_3()); 
 
             }
 
@@ -1931,23 +2151,18 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Array__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Array__Group_2__0"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:743:1: rule__Array__Group_2__0 : rule__Array__Group_2__0__Impl rule__Array__Group_2__1 ;
-    public final void rule__Array__Group_2__0() throws RecognitionException {
+    // $ANTLR start "rule__Array__Group__4"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:813:1: rule__Array__Group__4 : rule__Array__Group__4__Impl ;
+    public final void rule__Array__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:747:1: ( rule__Array__Group_2__0__Impl rule__Array__Group_2__1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:748:2: rule__Array__Group_2__0__Impl rule__Array__Group_2__1
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:817:1: ( rule__Array__Group__4__Impl )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:818:2: rule__Array__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__Array__Group_2__0__Impl_in_rule__Array__Group_2__01472);
-            rule__Array__Group_2__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Array__Group_2__1_in_rule__Array__Group_2__01475);
-            rule__Array__Group_2__1();
+            pushFollow(FOLLOW_rule__Array__Group__4__Impl_in_rule__Array__Group__41621);
+            rule__Array__Group__4__Impl();
 
             state._fsp--;
 
@@ -1966,25 +2181,25 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Array__Group_2__0"
+    // $ANTLR end "rule__Array__Group__4"
 
 
-    // $ANTLR start "rule__Array__Group_2__0__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:755:1: rule__Array__Group_2__0__Impl : ( ',' ) ;
-    public final void rule__Array__Group_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Array__Group__4__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:824:1: rule__Array__Group__4__Impl : ( ']' ) ;
+    public final void rule__Array__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:759:1: ( ( ',' ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:760:1: ( ',' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:828:1: ( ( ']' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:829:1: ( ']' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:760:1: ( ',' )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:761:1: ','
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:829:1: ( ']' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:830:1: ']'
             {
-             before(grammarAccess.getArrayAccess().getCommaKeyword_2_0()); 
-            match(input,13,FOLLOW_13_in_rule__Array__Group_2__0__Impl1503); 
-             after(grammarAccess.getArrayAccess().getCommaKeyword_2_0()); 
+             before(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_4()); 
+            match(input,16,FOLLOW_16_in_rule__Array__Group__4__Impl1649); 
+             after(grammarAccess.getArrayAccess().getRightSquareBracketKeyword_4()); 
 
             }
 
@@ -2003,21 +2218,26 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Array__Group_2__0__Impl"
+    // $ANTLR end "rule__Array__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Array__Group_2__1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:774:1: rule__Array__Group_2__1 : rule__Array__Group_2__1__Impl ;
-    public final void rule__Array__Group_2__1() throws RecognitionException {
+    // $ANTLR start "rule__Array__Group_3__0"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:853:1: rule__Array__Group_3__0 : rule__Array__Group_3__0__Impl rule__Array__Group_3__1 ;
+    public final void rule__Array__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:778:1: ( rule__Array__Group_2__1__Impl )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:779:2: rule__Array__Group_2__1__Impl
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:857:1: ( rule__Array__Group_3__0__Impl rule__Array__Group_3__1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:858:2: rule__Array__Group_3__0__Impl rule__Array__Group_3__1
             {
-            pushFollow(FOLLOW_rule__Array__Group_2__1__Impl_in_rule__Array__Group_2__11534);
-            rule__Array__Group_2__1__Impl();
+            pushFollow(FOLLOW_rule__Array__Group_3__0__Impl_in_rule__Array__Group_3__01690);
+            rule__Array__Group_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Array__Group_3__1_in_rule__Array__Group_3__01693);
+            rule__Array__Group_3__1();
 
             state._fsp--;
 
@@ -2036,35 +2256,25 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Array__Group_2__1"
+    // $ANTLR end "rule__Array__Group_3__0"
 
 
-    // $ANTLR start "rule__Array__Group_2__1__Impl"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:785:1: rule__Array__Group_2__1__Impl : ( ( rule__Array__ValuesAssignment_2_1 ) ) ;
-    public final void rule__Array__Group_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Array__Group_3__0__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:865:1: rule__Array__Group_3__0__Impl : ( ',' ) ;
+    public final void rule__Array__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:789:1: ( ( ( rule__Array__ValuesAssignment_2_1 ) ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:790:1: ( ( rule__Array__ValuesAssignment_2_1 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:869:1: ( ( ',' ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:870:1: ( ',' )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:790:1: ( ( rule__Array__ValuesAssignment_2_1 ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:791:1: ( rule__Array__ValuesAssignment_2_1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:870:1: ( ',' )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:871:1: ','
             {
-             before(grammarAccess.getArrayAccess().getValuesAssignment_2_1()); 
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:792:1: ( rule__Array__ValuesAssignment_2_1 )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:792:2: rule__Array__ValuesAssignment_2_1
-            {
-            pushFollow(FOLLOW_rule__Array__ValuesAssignment_2_1_in_rule__Array__Group_2__1__Impl1561);
-            rule__Array__ValuesAssignment_2_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getArrayAccess().getValuesAssignment_2_1()); 
+             before(grammarAccess.getArrayAccess().getCommaKeyword_3_0()); 
+            match(input,13,FOLLOW_13_in_rule__Array__Group_3__0__Impl1721); 
+             after(grammarAccess.getArrayAccess().getCommaKeyword_3_0()); 
 
             }
 
@@ -2083,29 +2293,109 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Array__Group_2__1__Impl"
+    // $ANTLR end "rule__Array__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__Array__Group_3__1"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:884:1: rule__Array__Group_3__1 : rule__Array__Group_3__1__Impl ;
+    public final void rule__Array__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:888:1: ( rule__Array__Group_3__1__Impl )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:889:2: rule__Array__Group_3__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Array__Group_3__1__Impl_in_rule__Array__Group_3__11752);
+            rule__Array__Group_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Array__Group_3__1"
+
+
+    // $ANTLR start "rule__Array__Group_3__1__Impl"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:895:1: rule__Array__Group_3__1__Impl : ( ( rule__Array__ValuesAssignment_3_1 ) ) ;
+    public final void rule__Array__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:899:1: ( ( ( rule__Array__ValuesAssignment_3_1 ) ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:900:1: ( ( rule__Array__ValuesAssignment_3_1 ) )
+            {
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:900:1: ( ( rule__Array__ValuesAssignment_3_1 ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:901:1: ( rule__Array__ValuesAssignment_3_1 )
+            {
+             before(grammarAccess.getArrayAccess().getValuesAssignment_3_1()); 
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:902:1: ( rule__Array__ValuesAssignment_3_1 )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:902:2: rule__Array__ValuesAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__Array__ValuesAssignment_3_1_in_rule__Array__Group_3__1__Impl1779);
+            rule__Array__ValuesAssignment_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getArrayAccess().getValuesAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Array__Group_3__1__Impl"
 
 
     // $ANTLR start "rule__Root__ContentAssignment"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:807:1: rule__Root__ContentAssignment : ( ruleObject ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:917:1: rule__Root__ContentAssignment : ( ruleJObject ) ;
     public final void rule__Root__ContentAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:811:1: ( ( ruleObject ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:812:1: ( ruleObject )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:921:1: ( ( ruleJObject ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:922:1: ( ruleJObject )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:812:1: ( ruleObject )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:813:1: ruleObject
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:922:1: ( ruleJObject )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:923:1: ruleJObject
             {
-             before(grammarAccess.getRootAccess().getContentObjectParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleObject_in_rule__Root__ContentAssignment1600);
-            ruleObject();
+             before(grammarAccess.getRootAccess().getContentJObjectParserRuleCall_0()); 
+            pushFollow(FOLLOW_ruleJObject_in_rule__Root__ContentAssignment1818);
+            ruleJObject();
 
             state._fsp--;
 
-             after(grammarAccess.getRootAccess().getContentObjectParserRuleCall_0()); 
+             after(grammarAccess.getRootAccess().getContentJObjectParserRuleCall_0()); 
 
             }
 
@@ -2127,26 +2417,26 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Root__ContentAssignment"
 
 
-    // $ANTLR start "rule__Object__EntriesAssignment_1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:822:1: rule__Object__EntriesAssignment_1 : ( ruleEntry ) ;
-    public final void rule__Object__EntriesAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__JObject__EntriesAssignment_2"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:932:1: rule__JObject__EntriesAssignment_2 : ( ruleEntry ) ;
+    public final void rule__JObject__EntriesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:826:1: ( ( ruleEntry ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:827:1: ( ruleEntry )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:936:1: ( ( ruleEntry ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:937:1: ( ruleEntry )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:827:1: ( ruleEntry )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:828:1: ruleEntry
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:937:1: ( ruleEntry )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:938:1: ruleEntry
             {
-             before(grammarAccess.getObjectAccess().getEntriesEntryParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleEntry_in_rule__Object__EntriesAssignment_11631);
+             before(grammarAccess.getJObjectAccess().getEntriesEntryParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleEntry_in_rule__JObject__EntriesAssignment_21849);
             ruleEntry();
 
             state._fsp--;
 
-             after(grammarAccess.getObjectAccess().getEntriesEntryParserRuleCall_1_0()); 
+             after(grammarAccess.getJObjectAccess().getEntriesEntryParserRuleCall_2_0()); 
 
             }
 
@@ -2165,29 +2455,29 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__EntriesAssignment_1"
+    // $ANTLR end "rule__JObject__EntriesAssignment_2"
 
 
-    // $ANTLR start "rule__Object__EntriesAssignment_2_1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:837:1: rule__Object__EntriesAssignment_2_1 : ( ruleEntry ) ;
-    public final void rule__Object__EntriesAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__JObject__EntriesAssignment_3_1"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:947:1: rule__JObject__EntriesAssignment_3_1 : ( ruleEntry ) ;
+    public final void rule__JObject__EntriesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:841:1: ( ( ruleEntry ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:842:1: ( ruleEntry )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:951:1: ( ( ruleEntry ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:952:1: ( ruleEntry )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:842:1: ( ruleEntry )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:843:1: ruleEntry
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:952:1: ( ruleEntry )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:953:1: ruleEntry
             {
-             before(grammarAccess.getObjectAccess().getEntriesEntryParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleEntry_in_rule__Object__EntriesAssignment_2_11662);
+             before(grammarAccess.getJObjectAccess().getEntriesEntryParserRuleCall_3_1_0()); 
+            pushFollow(FOLLOW_ruleEntry_in_rule__JObject__EntriesAssignment_3_11880);
             ruleEntry();
 
             state._fsp--;
 
-             after(grammarAccess.getObjectAccess().getEntriesEntryParserRuleCall_2_1_0()); 
+             after(grammarAccess.getJObjectAccess().getEntriesEntryParserRuleCall_3_1_0()); 
 
             }
 
@@ -2206,24 +2496,24 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Object__EntriesAssignment_2_1"
+    // $ANTLR end "rule__JObject__EntriesAssignment_3_1"
 
 
     // $ANTLR start "rule__Entry__KeyAssignment_0"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:852:1: rule__Entry__KeyAssignment_0 : ( RULE_STRING ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:962:1: rule__Entry__KeyAssignment_0 : ( RULE_STRING ) ;
     public final void rule__Entry__KeyAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:856:1: ( ( RULE_STRING ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:857:1: ( RULE_STRING )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:966:1: ( ( RULE_STRING ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:967:1: ( RULE_STRING )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:857:1: ( RULE_STRING )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:858:1: RULE_STRING
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:967:1: ( RULE_STRING )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:968:1: RULE_STRING
             {
              before(grammarAccess.getEntryAccess().getKeySTRINGTerminalRuleCall_0_0()); 
-            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Entry__KeyAssignment_01693); 
+            match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rule__Entry__KeyAssignment_01911); 
              after(grammarAccess.getEntryAccess().getKeySTRINGTerminalRuleCall_0_0()); 
 
             }
@@ -2247,20 +2537,20 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Entry__ValueAssignment_2"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:867:1: rule__Entry__ValueAssignment_2 : ( ruleValue ) ;
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:977:1: rule__Entry__ValueAssignment_2 : ( ruleValue ) ;
     public final void rule__Entry__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:871:1: ( ( ruleValue ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:872:1: ( ruleValue )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:981:1: ( ( ruleValue ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:982:1: ( ruleValue )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:872:1: ( ruleValue )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:873:1: ruleValue
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:982:1: ( ruleValue )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:983:1: ruleValue
             {
              before(grammarAccess.getEntryAccess().getValueValueParserRuleCall_2_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Entry__ValueAssignment_21724);
+            pushFollow(FOLLOW_ruleValue_in_rule__Entry__ValueAssignment_21942);
             ruleValue();
 
             state._fsp--;
@@ -2287,26 +2577,26 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Entry__ValueAssignment_2"
 
 
-    // $ANTLR start "rule__Array__ValuesAssignment_1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:882:1: rule__Array__ValuesAssignment_1 : ( ruleValue ) ;
-    public final void rule__Array__ValuesAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Array__ValuesAssignment_2"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:992:1: rule__Array__ValuesAssignment_2 : ( ruleValue ) ;
+    public final void rule__Array__ValuesAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:886:1: ( ( ruleValue ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:887:1: ( ruleValue )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:996:1: ( ( ruleValue ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:997:1: ( ruleValue )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:887:1: ( ruleValue )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:888:1: ruleValue
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:997:1: ( ruleValue )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:998:1: ruleValue
             {
-             before(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_11755);
+             before(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_21973);
             ruleValue();
 
             state._fsp--;
 
-             after(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_1_0()); 
+             after(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_2_0()); 
 
             }
 
@@ -2325,29 +2615,29 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Array__ValuesAssignment_1"
+    // $ANTLR end "rule__Array__ValuesAssignment_2"
 
 
-    // $ANTLR start "rule__Array__ValuesAssignment_2_1"
-    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:897:1: rule__Array__ValuesAssignment_2_1 : ( ruleValue ) ;
-    public final void rule__Array__ValuesAssignment_2_1() throws RecognitionException {
+    // $ANTLR start "rule__Array__ValuesAssignment_3_1"
+    // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:1007:1: rule__Array__ValuesAssignment_3_1 : ( ruleValue ) ;
+    public final void rule__Array__ValuesAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:901:1: ( ( ruleValue ) )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:902:1: ( ruleValue )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:1011:1: ( ( ruleValue ) )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:1012:1: ( ruleValue )
             {
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:902:1: ( ruleValue )
-            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:903:1: ruleValue
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:1012:1: ( ruleValue )
+            // ../eu.hohenegger.template.parser.ui/src-gen/eu/hohenegger/template/parser/ui/contentassist/antlr/internal/InternalJSON.g:1013:1: ruleValue
             {
-             before(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_2_1_0()); 
-            pushFollow(FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_2_11786);
+             before(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_3_1_0()); 
+            pushFollow(FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_3_12004);
             ruleValue();
 
             state._fsp--;
 
-             after(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_2_1_0()); 
+             after(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_3_1_0()); 
 
             }
 
@@ -2366,7 +2656,7 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Array__ValuesAssignment_2_1"
+    // $ANTLR end "rule__Array__ValuesAssignment_3_1"
 
     // Delegated rules
 
@@ -2376,9 +2666,9 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleRoot_in_entryRuleRoot61 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleRoot68 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Root__ContentAssignment_in_ruleRoot94 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_entryRuleObject121 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleObject128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__0_in_ruleObject154 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJObject_in_entryRuleJObject121 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJObject128 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group__0_in_ruleJObject154 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleEntry_in_entryRuleEntry181 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleEntry188 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Entry__Group__0_in_ruleEntry214 = new BitSet(new long[]{0x0000000000000002L});
@@ -2388,66 +2678,74 @@ public class InternalJSONParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleArray_in_entryRuleArray301 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleArray308 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Array__Group__0_in_ruleArray334 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolean_in_entryRuleBoolean361 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolean368 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Boolean__Alternatives_in_ruleBoolean394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNull_in_entryRuleNull421 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNull428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_8_in_ruleNull455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__Value__Alternatives492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Value__Alternatives509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_rule__Value__Alternatives526 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolean_in_rule__Value__Alternatives543 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__Value__Alternatives560 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNull_in_rule__Value__Alternatives577 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_9_in_rule__Boolean__Alternatives610 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_10_in_rule__Boolean__Alternatives630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__0__Impl_in_rule__Object__Group__0662 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_rule__Object__Group__1_in_rule__Object__Group__0665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_11_in_rule__Object__Group__0__Impl693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__1__Impl_in_rule__Object__Group__1724 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_rule__Object__Group__2_in_rule__Object__Group__1727 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__EntriesAssignment_1_in_rule__Object__Group__1__Impl754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group__2__Impl_in_rule__Object__Group__2785 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_rule__Object__Group__3_in_rule__Object__Group__2788 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__0_in_rule__Object__Group__2__Impl815 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_rule__Object__Group__3__Impl_in_rule__Object__Group__3846 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__Object__Group__3__Impl874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__0__Impl_in_rule__Object__Group_2__0913 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__1_in_rule__Object__Group_2__0916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Object__Group_2__0__Impl944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__Group_2__1__Impl_in_rule__Object__Group_2__1975 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Object__EntriesAssignment_2_1_in_rule__Object__Group_2__1__Impl1002 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entry__Group__0__Impl_in_rule__Entry__Group__01036 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_rule__Entry__Group__1_in_rule__Entry__Group__01039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entry__KeyAssignment_0_in_rule__Entry__Group__0__Impl1066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entry__Group__1__Impl_in_rule__Entry__Group__11096 = new BitSet(new long[]{0x0000000000008F30L});
-    public static final BitSet FOLLOW_rule__Entry__Group__2_in_rule__Entry__Group__11099 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Entry__Group__1__Impl1127 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entry__Group__2__Impl_in_rule__Entry__Group__21158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Entry__ValueAssignment_2_in_rule__Entry__Group__2__Impl1185 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01221 = new BitSet(new long[]{0x000000000001AF30L});
-    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01224 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Array__Group__0__Impl1252 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11283 = new BitSet(new long[]{0x000000000001AF30L});
-    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__ValuesAssignment_1_in_rule__Array__Group__1__Impl1313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21344 = new BitSet(new long[]{0x000000000001AF30L});
-    public static final BitSet FOLLOW_rule__Array__Group__3_in_rule__Array__Group__21347 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_2__0_in_rule__Array__Group__2__Impl1374 = new BitSet(new long[]{0x0000000000002002L});
-    public static final BitSet FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__31405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Array__Group__3__Impl1433 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_2__0__Impl_in_rule__Array__Group_2__01472 = new BitSet(new long[]{0x0000000000008F30L});
-    public static final BitSet FOLLOW_rule__Array__Group_2__1_in_rule__Array__Group_2__01475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__Array__Group_2__0__Impl1503 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__Group_2__1__Impl_in_rule__Array__Group_2__11534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Array__ValuesAssignment_2_1_in_rule__Array__Group_2__1__Impl1561 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleObject_in_rule__Root__ContentAssignment1600 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntry_in_rule__Object__EntriesAssignment_11631 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEntry_in_rule__Object__EntriesAssignment_2_11662 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rule__Entry__KeyAssignment_01693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Entry__ValueAssignment_21724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_11755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_2_11786 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJTerminal_in_entryRuleJTerminal361 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleJTerminal368 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JTerminal__Alternatives_in_ruleJTerminal394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolean_in_entryRuleBoolean421 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoolean428 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Boolean__Alternatives_in_ruleBoolean454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNull_in_entryRuleNull481 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNull488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_8_in_ruleNull515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJObject_in_rule__Value__Alternatives552 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_rule__Value__Alternatives569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJTerminal_in_rule__Value__Alternatives586 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__JTerminal__Alternatives618 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolean_in_rule__JTerminal__Alternatives635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_NUMBER_in_rule__JTerminal__Alternatives652 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNull_in_rule__JTerminal__Alternatives669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_9_in_rule__Boolean__Alternatives702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_10_in_rule__Boolean__Alternatives722 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group__0__Impl_in_rule__JObject__Group__0754 = new BitSet(new long[]{0x0000000000003010L});
+    public static final BitSet FOLLOW_rule__JObject__Group__1_in_rule__JObject__Group__0757 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rule__JObject__Group__0__Impl785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group__1__Impl_in_rule__JObject__Group__1816 = new BitSet(new long[]{0x0000000000003010L});
+    public static final BitSet FOLLOW_rule__JObject__Group__2_in_rule__JObject__Group__1819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group__2__Impl_in_rule__JObject__Group__2877 = new BitSet(new long[]{0x0000000000003010L});
+    public static final BitSet FOLLOW_rule__JObject__Group__3_in_rule__JObject__Group__2880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__EntriesAssignment_2_in_rule__JObject__Group__2__Impl907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group__3__Impl_in_rule__JObject__Group__3938 = new BitSet(new long[]{0x0000000000003010L});
+    public static final BitSet FOLLOW_rule__JObject__Group__4_in_rule__JObject__Group__3941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group_3__0_in_rule__JObject__Group__3__Impl968 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__JObject__Group__4__Impl_in_rule__JObject__Group__4999 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__JObject__Group__4__Impl1027 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group_3__0__Impl_in_rule__JObject__Group_3__01068 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__JObject__Group_3__1_in_rule__JObject__Group_3__01071 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__JObject__Group_3__0__Impl1099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__Group_3__1__Impl_in_rule__JObject__Group_3__11130 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__JObject__EntriesAssignment_3_1_in_rule__JObject__Group_3__1__Impl1157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entry__Group__0__Impl_in_rule__Entry__Group__01191 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_rule__Entry__Group__1_in_rule__Entry__Group__01194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entry__KeyAssignment_0_in_rule__Entry__Group__0__Impl1221 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entry__Group__1__Impl_in_rule__Entry__Group__11251 = new BitSet(new long[]{0x0000000000008F30L});
+    public static final BitSet FOLLOW_rule__Entry__Group__2_in_rule__Entry__Group__11254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__Entry__Group__1__Impl1282 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entry__Group__2__Impl_in_rule__Entry__Group__21313 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Entry__ValueAssignment_2_in_rule__Entry__Group__2__Impl1340 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__0__Impl_in_rule__Array__Group__01376 = new BitSet(new long[]{0x000000000001AF30L});
+    public static final BitSet FOLLOW_rule__Array__Group__1_in_rule__Array__Group__01379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__Array__Group__0__Impl1407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__1__Impl_in_rule__Array__Group__11438 = new BitSet(new long[]{0x000000000001AF30L});
+    public static final BitSet FOLLOW_rule__Array__Group__2_in_rule__Array__Group__11441 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__2__Impl_in_rule__Array__Group__21499 = new BitSet(new long[]{0x000000000001AF30L});
+    public static final BitSet FOLLOW_rule__Array__Group__3_in_rule__Array__Group__21502 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__ValuesAssignment_2_in_rule__Array__Group__2__Impl1529 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group__3__Impl_in_rule__Array__Group__31560 = new BitSet(new long[]{0x000000000001AF30L});
+    public static final BitSet FOLLOW_rule__Array__Group__4_in_rule__Array__Group__31563 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_3__0_in_rule__Array__Group__3__Impl1590 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_rule__Array__Group__4__Impl_in_rule__Array__Group__41621 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__Array__Group__4__Impl1649 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_3__0__Impl_in_rule__Array__Group_3__01690 = new BitSet(new long[]{0x0000000000008F30L});
+    public static final BitSet FOLLOW_rule__Array__Group_3__1_in_rule__Array__Group_3__01693 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__Array__Group_3__0__Impl1721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__Group_3__1__Impl_in_rule__Array__Group_3__11752 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Array__ValuesAssignment_3_1_in_rule__Array__Group_3__1__Impl1779 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleJObject_in_rule__Root__ContentAssignment1818 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntry_in_rule__JObject__EntriesAssignment_21849 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEntry_in_rule__JObject__EntriesAssignment_3_11880 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rule__Entry__KeyAssignment_01911 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Entry__ValueAssignment_21942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_21973 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleValue_in_rule__Array__ValuesAssignment_3_12004 = new BitSet(new long[]{0x0000000000000002L});
 
 }

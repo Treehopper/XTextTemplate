@@ -369,7 +369,7 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		return getNullAccess().getRule();
 	}
 
-	//terminal NUMBER:
+	//terminal NUMBER returns ecore::EString:
 	//	"-"? INT? "." INT (("E" | "e") "-"? INT)?;
 	public TerminalRule getNUMBERRule() {
 		return (tNUMBER != null) ? tNUMBER : (tNUMBER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NUMBER"));
@@ -381,13 +381,13 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		return (tINT != null) ? tINT : (tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT"));
 	} 
 
-	//terminal STRING:
+	//terminal STRING returns ecore::EString:
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"";
 	public TerminalRule getSTRINGRule() {
 		return (tSTRING != null) ? tSTRING : (tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING"));
 	} 
 
-	//terminal WS:
+	//terminal WS returns ecore::EString:
 	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
 		return (tWS != null) ? tWS : (tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS"));

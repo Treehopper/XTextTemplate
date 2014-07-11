@@ -12,7 +12,7 @@ public class AbstractJSONValidator extends org.eclipse.xtext.validation.Abstract
 	@Override
 	protected List<EPackage> getEPackages() {
 	    List<EPackage> result = new ArrayList<EPackage>();
-	    result.add(eu.hohenegger.template.parser.jSON.JSONPackage.eINSTANCE);
+	    result.add(EPackage.Registry.INSTANCE.getEPackage("http://www.hohenegger.eu/template/parser/JSON"));
 		return result;
 	}
 }

@@ -38,19 +38,20 @@ public class JSONParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getValueAccess().getAlternatives(), "rule__Value__Alternatives");
+					put(grammarAccess.getJTerminalAccess().getAlternatives(), "rule__JTerminal__Alternatives");
 					put(grammarAccess.getBooleanAccess().getAlternatives(), "rule__Boolean__Alternatives");
-					put(grammarAccess.getObjectAccess().getGroup(), "rule__Object__Group__0");
-					put(grammarAccess.getObjectAccess().getGroup_2(), "rule__Object__Group_2__0");
+					put(grammarAccess.getJObjectAccess().getGroup(), "rule__JObject__Group__0");
+					put(grammarAccess.getJObjectAccess().getGroup_3(), "rule__JObject__Group_3__0");
 					put(grammarAccess.getEntryAccess().getGroup(), "rule__Entry__Group__0");
 					put(grammarAccess.getArrayAccess().getGroup(), "rule__Array__Group__0");
-					put(grammarAccess.getArrayAccess().getGroup_2(), "rule__Array__Group_2__0");
+					put(grammarAccess.getArrayAccess().getGroup_3(), "rule__Array__Group_3__0");
 					put(grammarAccess.getRootAccess().getContentAssignment(), "rule__Root__ContentAssignment");
-					put(grammarAccess.getObjectAccess().getEntriesAssignment_1(), "rule__Object__EntriesAssignment_1");
-					put(grammarAccess.getObjectAccess().getEntriesAssignment_2_1(), "rule__Object__EntriesAssignment_2_1");
+					put(grammarAccess.getJObjectAccess().getEntriesAssignment_2(), "rule__JObject__EntriesAssignment_2");
+					put(grammarAccess.getJObjectAccess().getEntriesAssignment_3_1(), "rule__JObject__EntriesAssignment_3_1");
 					put(grammarAccess.getEntryAccess().getKeyAssignment_0(), "rule__Entry__KeyAssignment_0");
 					put(grammarAccess.getEntryAccess().getValueAssignment_2(), "rule__Entry__ValueAssignment_2");
-					put(grammarAccess.getArrayAccess().getValuesAssignment_1(), "rule__Array__ValuesAssignment_1");
-					put(grammarAccess.getArrayAccess().getValuesAssignment_2_1(), "rule__Array__ValuesAssignment_2_1");
+					put(grammarAccess.getArrayAccess().getValuesAssignment_2(), "rule__Array__ValuesAssignment_2");
+					put(grammarAccess.getArrayAccess().getValuesAssignment_3_1(), "rule__Array__ValuesAssignment_3_1");
 				}
 			};
 		}

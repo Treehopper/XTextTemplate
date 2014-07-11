@@ -40,9 +40,6 @@ public class JSONStandaloneSetupGenerated implements ISetup {
 	}
 	
 	public void register(Injector injector) {
-	if (!EPackage.Registry.INSTANCE.containsKey("http://www.hohenegger.eu/template/parser/JSON")) {
-		EPackage.Registry.INSTANCE.put("http://www.hohenegger.eu/template/parser/JSON", eu.hohenegger.template.parser.jSON.JSONPackage.eINSTANCE);
-	}
 
 		org.eclipse.xtext.resource.IResourceFactory resourceFactory = injector.getInstance(org.eclipse.xtext.resource.IResourceFactory.class);
 		org.eclipse.xtext.resource.IResourceServiceProvider serviceProvider = injector.getInstance(org.eclipse.xtext.resource.IResourceServiceProvider.class);

@@ -17,16 +17,17 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.emf.common,
  org.antlr.runtime,
  org.eclipse.xtext.common.types,
- org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional
+ org.objectweb.asm;bundle-version="[5.0.1,6.0.0)";resolution:=optional,
+ org.eclipse.emf.ecore.xcore.lib,
+ org.eclipse.emf.ecore.xcore,
+ org.eclipse.xtext.ecore,
+ org.eclipse.emf.codegen.ecore.xtext,
+ eu.hohenegger.template.model;bundle-version="0.1.0"
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
- JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,JavaSE-1.7
 Export-Package: eu.hohenegger.template.parser,
  eu.hohenegger.template.parser.services,
- eu.hohenegger.template.parser.jSON,
- eu.hohenegger.template.parser.jSON.impl,
- eu.hohenegger.template.parser.jSON.util,
  eu.hohenegger.template.parser.serializer,
  eu.hohenegger.template.parser.parser.antlr,
  eu.hohenegger.template.parser.parser.antlr.internal,
