@@ -13,7 +13,7 @@ Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.common.types,
  org.eclipse.xtext.ecore,
  org.eclipse.emf.codegen.ecore.xtext,
- eu.hohenegger.template.model;bundle-version="0.1.0"
+ eu.hohenegger.template.model
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8,JavaSE-1.7
