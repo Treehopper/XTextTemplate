@@ -6,8 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.eclipse.emf.ecore,
  org.eclipse.xtext.xbase.lib,
  org.eclipse.emf.ecore.xcore.lib
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7,
- JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ JavaSE-1.7
 Export-Package: eu.hohenegger.template.json.model,
  eu.hohenegger.template.json.model.impl,
  eu.hohenegger.template.json.model.util
