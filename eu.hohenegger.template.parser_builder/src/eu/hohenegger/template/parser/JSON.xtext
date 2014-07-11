@@ -1,0 +1,43 @@
+grammar eu.hohenegger.template.parser.JSON hidden(WS)
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+import "http://www.hohenegger.eu/template/parser/JSON"
+
+Root: content=JObject;
+
+JObject:
+	'{' {JObject}
+	(entries+=Entry)?
+	(',' entries+=Entry)*
+	'}';
+
+Entry:
+	key=STRING ':' value=Value;
+
+Value:
+	JObject | Array | JTerminal;
+
+Array:
+	'[' {Array} (values+=Value)? (',' values+=Value)* ']';
+
+
+JTerminal:
+	STRING | Boolean | NUMBER | Null
+; 
+
+Boolean:
+	'true' | 'false';
+
+Null:
+	'null';
+
+terminal NUMBER:
+	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?;
+	
+terminal INT returns ecore::EInt: ('0'..'9')+;
+
+terminal STRING	: 
+			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"'
+		; 
+
+terminal WS	: (' '|'\t'|'\r'|'\n')+;
