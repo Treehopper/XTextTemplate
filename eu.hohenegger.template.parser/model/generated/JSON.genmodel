@@ -10,8 +10,8 @@
     <genClasses ecoreClass="JSON.ecore#//Root">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JSON.ecore#//Root/content"/>
     </genClasses>
-    <genClasses ecoreClass="JSON.ecore#//Object">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JSON.ecore#//Object/entries"/>
+    <genClasses ecoreClass="JSON.ecore#//JObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JSON.ecore#//JObject/entries"/>
     </genClasses>
     <genClasses ecoreClass="JSON.ecore#//Entry">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JSON.ecore#//Entry/key"/>

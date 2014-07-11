@@ -4,6 +4,7 @@ package eu.hohenegger.template.parser.jSON.impl;
 
 import eu.hohenegger.template.parser.jSON.Array;
 import eu.hohenegger.template.parser.jSON.Entry;
+import eu.hohenegger.template.parser.jSON.JObject;
 import eu.hohenegger.template.parser.jSON.JSONFactory;
 import eu.hohenegger.template.parser.jSON.JSONPackage;
 import eu.hohenegger.template.parser.jSON.Root;
@@ -36,7 +37,7 @@ public class JSONPackageImpl extends EPackageImpl implements JSONPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass objectEClass = null;
+  private EClass jObjectEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -147,9 +148,9 @@ public class JSONPackageImpl extends EPackageImpl implements JSONPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getObject()
+  public EClass getJObject()
   {
-    return objectEClass;
+    return jObjectEClass;
   }
 
   /**
@@ -157,9 +158,9 @@ public class JSONPackageImpl extends EPackageImpl implements JSONPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getObject_Entries()
+  public EReference getJObject_Entries()
   {
-    return (EReference)objectEClass.getEStructuralFeatures().get(0);
+    return (EReference)jObjectEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -255,8 +256,8 @@ public class JSONPackageImpl extends EPackageImpl implements JSONPackage
     rootEClass = createEClass(ROOT);
     createEReference(rootEClass, ROOT__CONTENT);
 
-    objectEClass = createEClass(OBJECT);
-    createEReference(objectEClass, OBJECT__ENTRIES);
+    jObjectEClass = createEClass(JOBJECT);
+    createEReference(jObjectEClass, JOBJECT__ENTRIES);
 
     entryEClass = createEClass(ENTRY);
     createEAttribute(entryEClass, ENTRY__KEY);
@@ -297,15 +298,15 @@ public class JSONPackageImpl extends EPackageImpl implements JSONPackage
     // Set bounds for type parameters
 
     // Add supertypes to classes
-    objectEClass.getESuperTypes().add(this.getValue());
+    jObjectEClass.getESuperTypes().add(this.getValue());
     arrayEClass.getESuperTypes().add(this.getValue());
 
     // Initialize classes and features; add operations and parameters
     initEClass(rootEClass, Root.class, "Root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getRoot_Content(), this.getObject(), null, "content", null, 0, 1, Root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRoot_Content(), this.getJObject(), null, "content", null, 0, 1, Root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(objectEClass, eu.hohenegger.template.parser.jSON.Object.class, "Object", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getObject_Entries(), this.getEntry(), null, "entries", null, 0, -1, eu.hohenegger.template.parser.jSON.Object.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(jObjectEClass, JObject.class, "JObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getJObject_Entries(), this.getEntry(), null, "entries", null, 0, -1, JObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(entryEClass, Entry.class, "Entry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEntry_Key(), ecorePackage.getEString(), "key", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

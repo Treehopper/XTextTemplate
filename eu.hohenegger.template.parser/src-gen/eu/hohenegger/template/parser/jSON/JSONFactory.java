@@ -32,13 +32,13 @@ public interface JSONFactory extends EFactory
   Root createRoot();
 
   /**
-   * Returns a new object of class '<em>Object</em>'.
+   * Returns a new object of class '<em>JObject</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Object</em>'.
+   * @return a new object of class '<em>JObject</em>'.
    * @generated
    */
-  Object createObject();
+  JObject createJObject();
 
   /**
    * Returns a new object of class '<em>Entry</em>'.

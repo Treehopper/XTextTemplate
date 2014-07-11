@@ -31,12 +31,12 @@ public interface Root extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Content</em>' containment reference.
-   * @see #setContent(eu.hohenegger.template.parser.jSON.Object)
+   * @see #setContent(JObject)
    * @see eu.hohenegger.template.parser.jSON.JSONPackage#getRoot_Content()
    * @model containment="true"
    * @generated
    */
-  eu.hohenegger.template.parser.jSON.Object getContent();
+  JObject getContent();
 
   /**
    * Sets the value of the '{@link eu.hohenegger.template.parser.jSON.Root#getContent <em>Content</em>}' containment reference.
@@ -46,6 +46,6 @@ public interface Root extends EObject
    * @see #getContent()
    * @generated
    */
-  void setContent(eu.hohenegger.template.parser.jSON.Object value);
+  void setContent(JObject value);
 
 } // Root

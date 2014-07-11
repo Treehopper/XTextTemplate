@@ -104,14 +104,14 @@ public interface JSONPackage extends EPackage
   int VALUE_FEATURE_COUNT = 0;
 
   /**
-   * The meta object id for the '{@link eu.hohenegger.template.parser.jSON.impl.ObjectImpl <em>Object</em>}' class.
+   * The meta object id for the '{@link eu.hohenegger.template.parser.jSON.impl.JObjectImpl <em>JObject</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see eu.hohenegger.template.parser.jSON.impl.ObjectImpl
-   * @see eu.hohenegger.template.parser.jSON.impl.JSONPackageImpl#getObject()
+   * @see eu.hohenegger.template.parser.jSON.impl.JObjectImpl
+   * @see eu.hohenegger.template.parser.jSON.impl.JSONPackageImpl#getJObject()
    * @generated
    */
-  int OBJECT = 1;
+  int JOBJECT = 1;
 
   /**
    * The feature id for the '<em><b>Entries</b></em>' containment reference list.
@@ -120,16 +120,16 @@ public interface JSONPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OBJECT__ENTRIES = VALUE_FEATURE_COUNT + 0;
+  int JOBJECT__ENTRIES = VALUE_FEATURE_COUNT + 0;
 
   /**
-   * The number of structural features of the '<em>Object</em>' class.
+   * The number of structural features of the '<em>JObject</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OBJECT_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
+  int JOBJECT_FEATURE_COUNT = VALUE_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link eu.hohenegger.template.parser.jSON.impl.EntryImpl <em>Entry</em>}' class.
@@ -219,25 +219,25 @@ public interface JSONPackage extends EPackage
   EReference getRoot_Content();
 
   /**
-   * Returns the meta object for class '{@link eu.hohenegger.template.parser.jSON.Object <em>Object</em>}'.
+   * Returns the meta object for class '{@link eu.hohenegger.template.parser.jSON.JObject <em>JObject</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Object</em>'.
-   * @see eu.hohenegger.template.parser.jSON.Object
+   * @return the meta object for class '<em>JObject</em>'.
+   * @see eu.hohenegger.template.parser.jSON.JObject
    * @generated
    */
-  EClass getObject();
+  EClass getJObject();
 
   /**
-   * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.parser.jSON.Object#getEntries <em>Entries</em>}'.
+   * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.parser.jSON.JObject#getEntries <em>Entries</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference list '<em>Entries</em>'.
-   * @see eu.hohenegger.template.parser.jSON.Object#getEntries()
-   * @see #getObject()
+   * @see eu.hohenegger.template.parser.jSON.JObject#getEntries()
+   * @see #getJObject()
    * @generated
    */
-  EReference getObject_Entries();
+  EReference getJObject_Entries();
 
   /**
    * Returns the meta object for class '{@link eu.hohenegger.template.parser.jSON.Entry <em>Entry</em>}'.
@@ -344,14 +344,14 @@ public interface JSONPackage extends EPackage
     EReference ROOT__CONTENT = eINSTANCE.getRoot_Content();
 
     /**
-     * The meta object literal for the '{@link eu.hohenegger.template.parser.jSON.impl.ObjectImpl <em>Object</em>}' class.
+     * The meta object literal for the '{@link eu.hohenegger.template.parser.jSON.impl.JObjectImpl <em>JObject</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see eu.hohenegger.template.parser.jSON.impl.ObjectImpl
-     * @see eu.hohenegger.template.parser.jSON.impl.JSONPackageImpl#getObject()
+     * @see eu.hohenegger.template.parser.jSON.impl.JObjectImpl
+     * @see eu.hohenegger.template.parser.jSON.impl.JSONPackageImpl#getJObject()
      * @generated
      */
-    EClass OBJECT = eINSTANCE.getObject();
+    EClass JOBJECT = eINSTANCE.getJObject();
 
     /**
      * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
@@ -359,7 +359,7 @@ public interface JSONPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OBJECT__ENTRIES = eINSTANCE.getObject_Entries();
+    EReference JOBJECT__ENTRIES = eINSTANCE.getJObject_Entries();
 
     /**
      * The meta object literal for the '{@link eu.hohenegger.template.parser.jSON.impl.EntryImpl <em>Entry</em>}' class.

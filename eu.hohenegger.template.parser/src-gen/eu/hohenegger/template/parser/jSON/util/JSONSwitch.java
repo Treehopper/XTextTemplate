@@ -2,11 +2,7 @@
  */
 package eu.hohenegger.template.parser.jSON.util;
 
-import eu.hohenegger.template.parser.jSON.Array;
-import eu.hohenegger.template.parser.jSON.Entry;
-import eu.hohenegger.template.parser.jSON.JSONPackage;
-import eu.hohenegger.template.parser.jSON.Root;
-import eu.hohenegger.template.parser.jSON.Value;
+import eu.hohenegger.template.parser.jSON.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -83,11 +79,11 @@ public class JSONSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case JSONPackage.OBJECT:
+      case JSONPackage.JOBJECT:
       {
-        eu.hohenegger.template.parser.jSON.Object object = (eu.hohenegger.template.parser.jSON.Object)theEObject;
-        T result = caseObject(object);
-        if (result == null) result = caseValue(object);
+        JObject jObject = (JObject)theEObject;
+        T result = caseJObject(jObject);
+        if (result == null) result = caseValue(jObject);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -134,17 +130,17 @@ public class JSONSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Object</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>JObject</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Object</em>'.
+   * @return the result of interpreting the object as an instance of '<em>JObject</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseObject(eu.hohenegger.template.parser.jSON.Object object)
+  public T caseJObject(JObject object)
   {
     return null;
   }

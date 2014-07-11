@@ -4,6 +4,7 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import eu.hohenegger.template.parser.jSON.Array;
 import eu.hohenegger.template.parser.jSON.Entry;
+import eu.hohenegger.template.parser.jSON.JObject;
 import eu.hohenegger.template.parser.jSON.JSONPackage;
 import eu.hohenegger.template.parser.jSON.Root;
 import eu.hohenegger.template.parser.services.JSONGrammarAccess;
@@ -40,10 +41,10 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 					return; 
 				}
 				else break;
-			case JSONPackage.OBJECT:
-				if(context == grammarAccess.getObjectRule() ||
+			case JSONPackage.JOBJECT:
+				if(context == grammarAccess.getJObjectRule() ||
 				   context == grammarAccess.getValueRule()) {
-					sequence_Object(context, (eu.hohenegger.template.parser.jSON.Object) semanticObject); 
+					sequence_JObject(context, (JObject) semanticObject); 
 					return; 
 				}
 				else break;
@@ -89,14 +90,14 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (entries+=Entry? entries+=Entry*)
 	 */
-	protected void sequence_Object(EObject context, eu.hohenegger.template.parser.jSON.Object semanticObject) {
+	protected void sequence_JObject(EObject context, JObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     content=Object
+	 *     content=JObject
 	 */
 	protected void sequence_Root(EObject context, Root semanticObject) {
 		if(errorAcceptor != null) {
@@ -105,7 +106,7 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRootAccess().getContentObjectParserRuleCall_0(), semanticObject.getContent());
+		feeder.accept(grammarAccess.getRootAccess().getContentJObjectParserRuleCall_0(), semanticObject.getContent());
 		feeder.finish();
 	}
 }

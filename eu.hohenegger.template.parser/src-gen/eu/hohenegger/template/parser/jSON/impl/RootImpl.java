@@ -2,6 +2,7 @@
  */
 package eu.hohenegger.template.parser.jSON.impl;
 
+import eu.hohenegger.template.parser.jSON.JObject;
 import eu.hohenegger.template.parser.jSON.JSONPackage;
 import eu.hohenegger.template.parser.jSON.Root;
 
@@ -37,7 +38,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
    * @generated
    * @ordered
    */
-  protected eu.hohenegger.template.parser.jSON.Object content;
+  protected JObject content;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,7 +66,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
    * <!-- end-user-doc -->
    * @generated
    */
-  public eu.hohenegger.template.parser.jSON.Object getContent()
+  public JObject getContent()
   {
     return content;
   }
@@ -75,9 +76,9 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetContent(eu.hohenegger.template.parser.jSON.Object newContent, NotificationChain msgs)
+  public NotificationChain basicSetContent(JObject newContent, NotificationChain msgs)
   {
-    eu.hohenegger.template.parser.jSON.Object oldContent = content;
+    JObject oldContent = content;
     content = newContent;
     if (eNotificationRequired())
     {
@@ -92,7 +93,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setContent(eu.hohenegger.template.parser.jSON.Object newContent)
+  public void setContent(JObject newContent)
   {
     if (newContent != content)
     {
@@ -151,7 +152,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
     switch (featureID)
     {
       case JSONPackage.ROOT__CONTENT:
-        setContent((eu.hohenegger.template.parser.jSON.Object)newValue);
+        setContent((JObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,7 +169,7 @@ public class RootImpl extends MinimalEObjectImpl.Container implements Root
     switch (featureID)
     {
       case JSONPackage.ROOT__CONTENT:
-        setContent((eu.hohenegger.template.parser.jSON.Object)null);
+        setContent((JObject)null);
         return;
     }
     super.eUnset(featureID);

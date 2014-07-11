@@ -2,11 +2,7 @@
  */
 package eu.hohenegger.template.parser.jSON.util;
 
-import eu.hohenegger.template.parser.jSON.Array;
-import eu.hohenegger.template.parser.jSON.Entry;
-import eu.hohenegger.template.parser.jSON.JSONPackage;
-import eu.hohenegger.template.parser.jSON.Root;
-import eu.hohenegger.template.parser.jSON.Value;
+import eu.hohenegger.template.parser.jSON.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -84,9 +80,9 @@ public class JSONAdapterFactory extends AdapterFactoryImpl
         return createRootAdapter();
       }
       @Override
-      public Adapter caseObject(eu.hohenegger.template.parser.jSON.Object object)
+      public Adapter caseJObject(JObject object)
       {
-        return createObjectAdapter();
+        return createJObjectAdapter();
       }
       @Override
       public Adapter caseEntry(Entry object)
@@ -141,16 +137,16 @@ public class JSONAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link eu.hohenegger.template.parser.jSON.Object <em>Object</em>}'.
+   * Creates a new adapter for an object of class '{@link eu.hohenegger.template.parser.jSON.JObject <em>JObject</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see eu.hohenegger.template.parser.jSON.Object
+   * @see eu.hohenegger.template.parser.jSON.JObject
    * @generated
    */
-  public Adapter createObjectAdapter()
+  public Adapter createJObjectAdapter()
   {
     return null;
   }

@@ -2,12 +2,7 @@
  */
 package eu.hohenegger.template.parser.jSON.impl;
 
-import eu.hohenegger.template.parser.jSON.Array;
-import eu.hohenegger.template.parser.jSON.Entry;
-import eu.hohenegger.template.parser.jSON.JSONFactory;
-import eu.hohenegger.template.parser.jSON.JSONPackage;
-import eu.hohenegger.template.parser.jSON.Root;
-import eu.hohenegger.template.parser.jSON.Value;
+import eu.hohenegger.template.parser.jSON.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -70,7 +65,7 @@ public class JSONFactoryImpl extends EFactoryImpl implements JSONFactory
     switch (eClass.getClassifierID())
     {
       case JSONPackage.ROOT: return createRoot();
-      case JSONPackage.OBJECT: return createObject();
+      case JSONPackage.JOBJECT: return createJObject();
       case JSONPackage.ENTRY: return createEntry();
       case JSONPackage.VALUE: return createValue();
       case JSONPackage.ARRAY: return createArray();
@@ -95,10 +90,10 @@ public class JSONFactoryImpl extends EFactoryImpl implements JSONFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public eu.hohenegger.template.parser.jSON.Object createObject()
+  public JObject createJObject()
   {
-    ObjectImpl object = new ObjectImpl();
-    return object;
+    JObjectImpl jObject = new JObjectImpl();
+    return jObject;
   }
 
   /**
