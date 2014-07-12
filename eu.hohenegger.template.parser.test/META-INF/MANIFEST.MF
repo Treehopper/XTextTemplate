@@ -4,5 +4,6 @@ Bundle-Name: Test
 Bundle-SymbolicName: eu.hohenegger.template.parser.test
 Bundle-Version: 1.0.0.qualifier
 Fragment-Host: eu.hohenegger.template.parser
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ JavaSE-1.7
 Require-Bundle: org.junit
