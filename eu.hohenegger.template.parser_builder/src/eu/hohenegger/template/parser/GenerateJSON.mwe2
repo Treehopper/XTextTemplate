@@ -26,10 +26,6 @@ Workflow {
     	exclude = "json"
     }
     
-    component = DirectoryCleaner {
-    	directory = "${runtimeProject}/model/generated"
-    }
-    
     component = Generator {
     	pathRtProject = runtimeProject
     	projectNameRt = projectName
