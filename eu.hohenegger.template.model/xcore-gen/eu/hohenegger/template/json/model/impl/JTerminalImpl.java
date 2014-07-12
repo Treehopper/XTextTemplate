@@ -4,10 +4,7 @@ package eu.hohenegger.template.json.model.impl;
 
 import eu.hohenegger.template.json.model.JTerminal;
 import eu.hohenegger.template.json.model.ModelPackage;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class JTerminalImpl extends MinimalEObjectImpl.Container implements JTerminal {
+public class JTerminalImpl extends ValueImpl implements JTerminal {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

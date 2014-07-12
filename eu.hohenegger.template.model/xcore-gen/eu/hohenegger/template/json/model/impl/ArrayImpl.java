@@ -5,18 +5,11 @@ package eu.hohenegger.template.json.model.impl;
 import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Value;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -33,7 +26,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ArrayImpl extends MinimalEObjectImpl.Container implements Array {
+public class ArrayImpl extends ValueImpl implements Array {
 	/**
 	 * The cached value of the '{@link #getValues() <em>Values</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

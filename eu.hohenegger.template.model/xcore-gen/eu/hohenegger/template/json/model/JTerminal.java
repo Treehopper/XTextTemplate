@@ -3,6 +3,7 @@
 package eu.hohenegger.template.json.model;
 
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>JTerminal</b></em>'.

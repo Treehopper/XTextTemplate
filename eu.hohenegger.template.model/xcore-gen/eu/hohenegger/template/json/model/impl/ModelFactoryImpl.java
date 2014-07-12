@@ -3,13 +3,10 @@
 package eu.hohenegger.template.json.model.impl;
 
 import eu.hohenegger.template.json.model.*;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 /**
@@ -57,6 +54,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ModelPackage.ROOT: return createRoot();
+			case ModelPackage.VALUE: return createValue();
 			case ModelPackage.JOBJECT: return createJObject();
 			case ModelPackage.ENTRY: return createEntry();
 			case ModelPackage.JTERMINAL: return createJTerminal();
@@ -74,6 +72,16 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Root createRoot() {
 		RootImpl root = new RootImpl();
 		return root;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Value createValue() {
+		ValueImpl value = new ValueImpl();
+		return value;
 	}
 
 	/**

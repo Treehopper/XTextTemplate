@@ -10,12 +10,17 @@
 @GenModel(fileExtensions="json", updateClasspath="false")
 package eu.hohenegger.template.json.model
 
+//import org.eclipse.emf.ecore.EObject
+
+//type Item wraps EObject
+
+
 class Root {
 	contains JObject content
 }
 
-interface Value {
-	
+class Value {
+	Object value
 }
 
 class JObject extends Value {
