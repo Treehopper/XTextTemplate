@@ -59,43 +59,6 @@ public interface ModelPackage extends EPackage {
 	ModelPackage eINSTANCE = eu.hohenegger.template.json.model.impl.ModelPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.RootImpl <em>Root</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see eu.hohenegger.template.json.model.impl.RootImpl
-	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getRoot()
-	 * @generated
-	 */
-	int ROOT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOT__CONTENT = 0;
-
-	/**
-	 * The number of structural features of the '<em>Root</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOT_FEATURE_COUNT = 1;
-
-	/**
-	 * The number of operations of the '<em>Root</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROOT_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link eu.hohenegger.template.json.model.Node <em>Node</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,7 +66,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getNode()
 	 * @generated
 	 */
-	int NODE = 1;
+	int NODE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Node</em>' class.
@@ -131,7 +94,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getJObject()
 	 * @generated
 	 */
-	int JOBJECT = 2;
+	int JOBJECT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Entries</b></em>' containment reference list.
@@ -177,7 +140,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getEntry()
 	 * @generated
 	 */
-	int ENTRY = 3;
+	int ENTRY = 2;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -241,7 +204,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getValue()
 	 * @generated
 	 */
-	int VALUE = 4;
+	int VALUE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Child</b></em>' containment reference.
@@ -287,7 +250,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getArray()
 	 * @generated
 	 */
-	int ARRAY = 5;
+	int ARRAY = 4;
 
 	/**
 	 * The feature id for the '<em><b>Values</b></em>' containment reference list.
@@ -324,27 +287,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 1;
-
-	/**
-	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Root <em>Root</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Root</em>'.
-	 * @see eu.hohenegger.template.json.model.Root
-	 * @generated
-	 */
-	EClass getRoot();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link eu.hohenegger.template.json.model.Root#getContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Content</em>'.
-	 * @see eu.hohenegger.template.json.model.Root#getContent()
-	 * @see #getRoot()
-	 * @generated
-	 */
-	EReference getRoot_Content();
 
 	/**
 	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Node <em>Node</em>}'.
@@ -527,24 +469,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	interface Literals {
-		/**
-		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.RootImpl <em>Root</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see eu.hohenegger.template.json.model.impl.RootImpl
-		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getRoot()
-		 * @generated
-		 */
-		EClass ROOT = eINSTANCE.getRoot();
-
-		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROOT__CONTENT = eINSTANCE.getRoot_Content();
-
 		/**
 		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.Node <em>Node</em>}' class.
 		 * <!-- begin-user-doc -->

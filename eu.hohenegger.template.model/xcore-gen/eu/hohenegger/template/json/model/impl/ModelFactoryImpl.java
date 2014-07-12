@@ -53,7 +53,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ModelPackage.ROOT: return createRoot();
 			case ModelPackage.JOBJECT: return createJObject();
 			case ModelPackage.ENTRY: return createEntry();
 			case ModelPackage.VALUE: return createValue();
@@ -61,16 +60,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Root createRoot() {
-		RootImpl root = new RootImpl();
-		return root;
 	}
 
 	/**

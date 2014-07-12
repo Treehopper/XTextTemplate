@@ -44,7 +44,7 @@ import eu.hohenegger.template.parser.services.JSONGrammarAccess;
     
     @Override
     protected String getFirstRuleName() {
-    	return "Root";	
+    	return "JObject";	
    	}
    	
    	@Override
@@ -59,45 +59,6 @@ import eu.hohenegger.template.parser.services.JSONGrammarAccess;
         appendSkippedTokens();
     } 
 }
-
-
-
-
-// Entry rule entryRuleRoot
-entryRuleRoot returns [EObject current=null] 
-	:
-	{ newCompositeNode(grammarAccess.getRootRule()); }
-	 iv_ruleRoot=ruleRoot 
-	 { $current=$iv_ruleRoot.current; } 
-	 EOF 
-;
-
-// Rule Root
-ruleRoot returns [EObject current=null] 
-    @init { enterRule(); 
-    }
-    @after { leaveRule(); }:
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getRootAccess().getContentJObjectParserRuleCall_0()); 
-	    }
-		lv_content_0_0=ruleJObject		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getRootRule());
-	        }
-       		set(
-       			$current, 
-       			"content",
-        		lv_content_0_0, 
-        		"JObject");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-)
-;
-
 
 
 

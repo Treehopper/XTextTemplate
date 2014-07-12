@@ -31,6 +31,9 @@ public class ModelTests extends TestSuite {
 	 */
 	public static Test suite() {
 		TestSuite suite = new ModelTests("model Tests");
+		suite.addTestSuite(JObjectTest.class);
+		suite.addTestSuite(EntryTest.class);
+		suite.addTestSuite(ArrayTest.class);
 		return suite;
 	}
 

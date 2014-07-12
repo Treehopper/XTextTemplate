@@ -6,20 +6,16 @@ import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.JObject;
 import eu.hohenegger.template.json.model.ModelPackage;
-import eu.hohenegger.template.json.model.Root;
 import eu.hohenegger.template.json.model.Value;
 import eu.hohenegger.template.parser.services.JSONGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
-import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
-import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
-import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -44,12 +40,6 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case ModelPackage.JOBJECT:
 				if(context == grammarAccess.getJObjectRule()) {
 					sequence_JObject(context, (JObject) semanticObject); 
-					return; 
-				}
-				else break;
-			case ModelPackage.ROOT:
-				if(context == grammarAccess.getRootRule()) {
-					sequence_Root(context, (Root) semanticObject); 
 					return; 
 				}
 				else break;
@@ -87,22 +77,6 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_JObject(EObject context, JObject semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     content=JObject
-	 */
-	protected void sequence_Root(EObject context, Root semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, ModelPackage.Literals.ROOT__CONTENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.ROOT__CONTENT));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getRootAccess().getContentJObjectParserRuleCall_0(), semanticObject.getContent());
-		feeder.finish();
 	}
 	
 	

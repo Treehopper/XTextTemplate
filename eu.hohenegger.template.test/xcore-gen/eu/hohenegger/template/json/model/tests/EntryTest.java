@@ -13,6 +13,13 @@ import junit.textui.TestRunner;
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Entry</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are tested:
+ * <ul>
+ *   <li>{@link eu.hohenegger.template.json.model.Entry#getValue() <em>Value</em>}</li>
+ *   <li>{@link eu.hohenegger.template.json.model.Entry#getChild() <em>Child</em>}</li>
+ * </ul>
+ * </p>
  * @generated
  */
 public class EntryTest extends TestCase {
@@ -84,6 +91,32 @@ public class EntryTest extends TestCase {
 	@Override
 	protected void tearDown() throws Exception {
 		setFixture(null);
+	}
+
+	/**
+	 * Tests the '{@link eu.hohenegger.template.json.model.Entry#getValue() <em>Value</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see eu.hohenegger.template.json.model.Entry#getValue()
+	 * @generated
+	 */
+	public void testGetValue() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
+	}
+
+	/**
+	 * Tests the '{@link eu.hohenegger.template.json.model.Entry#getChild() <em>Child</em>}' feature getter.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see eu.hohenegger.template.json.model.Entry#getChild()
+	 * @generated
+	 */
+	public void testGetChild() {
+		// TODO: implement this feature getter test method
+		// Ensure that you remove @generated or mark it @generated NOT
+		fail();
 	}
 
 } //EntryTest

@@ -6,17 +6,12 @@ package eu.hohenegger.template.json.model.provider;
 import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.ModelFactory;
 import eu.hohenegger.template.json.model.ModelPackage;
-
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -64,6 +59,8 @@ public class EntryItemProvider
 			super.getPropertyDescriptors(object);
 
 			addKeyPropertyDescriptor(object);
+			addValuePropertyDescriptor(object);
+			addChildPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,6 +88,50 @@ public class EntryItemProvider
 	}
 
 	/**
+	 * This adds a property descriptor for the Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addValuePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Entry_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_value_feature", "_UI_Entry_type"),
+				 ModelPackage.Literals.ENTRY__VALUE,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Child feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addChildPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Entry_child_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_child_feature", "_UI_Entry_type"),
+				 ModelPackage.Literals.ENTRY__CHILD,
+				 false,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -102,7 +143,7 @@ public class EntryItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModelPackage.Literals.ENTRY__VALUE);
+			childrenFeatures.add(ModelPackage.Literals.ENTRY__CONTENT);
 		}
 		return childrenFeatures;
 	}
@@ -159,9 +200,11 @@ public class EntryItemProvider
 
 		switch (notification.getFeatureID(Entry.class)) {
 			case ModelPackage.ENTRY__KEY:
+			case ModelPackage.ENTRY__VALUE:
+			case ModelPackage.ENTRY__CHILD:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
-			case ModelPackage.ENTRY__VALUE:
+			case ModelPackage.ENTRY__CONTENT:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -181,18 +224,8 @@ public class EntryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ModelPackage.Literals.ENTRY__VALUE,
-				 ModelFactory.eINSTANCE.createJObject()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModelPackage.Literals.ENTRY__VALUE,
-				 ModelFactory.eINSTANCE.createJTerminal()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModelPackage.Literals.ENTRY__VALUE,
-				 ModelFactory.eINSTANCE.createArray()));
+				(ModelPackage.Literals.ENTRY__CONTENT,
+				 ModelFactory.eINSTANCE.createValue()));
 	}
 
 	/**

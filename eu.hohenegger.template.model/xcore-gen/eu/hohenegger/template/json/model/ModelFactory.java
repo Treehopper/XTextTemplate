@@ -22,15 +22,6 @@ public interface ModelFactory extends EFactory {
 	ModelFactory eINSTANCE = eu.hohenegger.template.json.model.impl.ModelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>Root</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Root</em>'.
-	 * @generated
-	 */
-	Root createRoot();
-
-	/**
 	 * Returns a new object of class '<em>JObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -10,10 +10,6 @@
 @GenModel(fileExtensions="json", updateClasspath="false")
 package eu.hohenegger.template.json.model
 
-class Root {
-	contains JObject content
-}
-
 interface Node {}
 
 class JObject extends Node {

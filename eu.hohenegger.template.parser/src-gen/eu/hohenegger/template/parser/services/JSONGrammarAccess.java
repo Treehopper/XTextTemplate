@@ -17,22 +17,6 @@ import org.eclipse.xtext.service.AbstractElementFinder.*;
 public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
-	public class RootElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Root");
-		private final Assignment cContentAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cContentJObjectParserRuleCall_0 = (RuleCall)cContentAssignment.eContents().get(0);
-		
-		//Root:
-		//	content=JObject;
-		public ParserRule getRule() { return rule; }
-
-		//content=JObject
-		public Assignment getContentAssignment() { return cContentAssignment; }
-
-		//JObject
-		public RuleCall getContentJObjectParserRuleCall_0() { return cContentJObjectParserRuleCall_0; }
-	}
-
 	public class JObjectElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "JObject");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -133,13 +117,6 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNullParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
 		private final Action cValueAction_1_1 = (Action)cGroup_1.eContents().get(1);
 		
-		////Entry:
-		////	key=STRING ':' value=Foobar
-		////;
-		////
-		////Foobar returns ecore::EObject:
-		////	(STRING | Boolean | NUMBER | INT)
-		////;
 		//Value:
 		//	(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value};
 		public ParserRule getRule() { return rule; }
@@ -277,7 +254,6 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	
-	private RootElements pRoot;
 	private JObjectElements pJObject;
 	private EntryElements pEntry;
 	private ValueElements pValue;
@@ -319,16 +295,6 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	
 
 	
-	//Root:
-	//	content=JObject;
-	public RootElements getRootAccess() {
-		return (pRoot != null) ? pRoot : (pRoot = new RootElements());
-	}
-	
-	public ParserRule getRootRule() {
-		return getRootAccess().getRule();
-	}
-
 	//JObject:
 	//	"{" {JObject} entries+=Entry? ("," entries+=Entry)* "}";
 	public JObjectElements getJObjectAccess() {
@@ -349,13 +315,6 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntryAccess().getRule();
 	}
 
-	////Entry:
-	////	key=STRING ':' value=Foobar
-	////;
-	////
-	////Foobar returns ecore::EObject:
-	////	(STRING | Boolean | NUMBER | INT)
-	////;
 	//Value:
 	//	(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value};
 	public ValueElements getValueAccess() {

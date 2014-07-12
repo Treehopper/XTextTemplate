@@ -6,7 +6,6 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -17,9 +16,9 @@ import org.junit.Test;
 
 import com.google.inject.Injector;
 
+import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.Entry;
-import eu.hohenegger.template.json.model.Root;
-import eu.hohenegger.template.json.model.Value;
+import eu.hohenegger.template.json.model.JObject;
 
 public class TestStandaloneSetup {
 	static final String ISO_8859_1 = "ISO-8859-1";
@@ -27,11 +26,21 @@ public class TestStandaloneSetup {
 	static final String Cp1252 = "Cp1252";
 	private static final String SCHEME = "foo";
 	private Resource resource;
-	private String encoding;
 	private XtextResourceSet rs;
+	private String encoding;
+
+	private JObject parse(String string) throws IOException,
+	UnsupportedEncodingException {
+		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
+				rs.getLoadOptions());
+
+		EObject dataRoot = resource.getContents().get(0);
+		JObject root = (JObject) dataRoot;
+		return root;
+	}
 
 	@Before
-	public void test() throws UnsupportedEncodingException, IOException {
+	public void setup() throws UnsupportedEncodingException, IOException {
 		encoding = ISO_8859_1;
 
 		Injector injector = new JSONStandaloneSetup()
@@ -47,87 +56,61 @@ public class TestStandaloneSetup {
 	@Test
 	public void testString() throws UnsupportedEncodingException, IOException {
 		String string = "{\"key\" : \"value\"}";
-		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
-				rs.getLoadOptions());
+		JObject root = parse(string);
 
-		EObject dataRoot = resource.getContents().get(0);
-		Root root = (Root) dataRoot;
-
-		Entry entry = root.getContent().getEntries().get(0);
+		Entry entry = root.getValue("key");
 		assertEquals("key", entry.getKey());
-		assertEquals("value", entry.getValue().getString());
+		assertEquals("value", entry.getValue());
 	}
 
 	@Test
 	public void testDouble() throws UnsupportedEncodingException, IOException {
 		String string = "{\"key\" : 42.5}";
-		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
-				rs.getLoadOptions());
+		JObject root = parse(string);
 
-		EObject dataRoot = resource.getContents().get(0);
-		Root root = (Root) dataRoot;
-
-		Entry entry = root.getContent().getEntries().get(0);
-		assertEquals(Double.valueOf(42.5), entry.getValue().getDouble());
+		Entry entry = root.getValue("key");
+		assertEquals(Double.valueOf(42.5), entry.getValue());
 	}
 
 
 	@Test
 	public void testArray() throws UnsupportedEncodingException, IOException {
 		String string = "{\"key\" : [1,2,3]}";
-		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
-				rs.getLoadOptions());
+		JObject root = parse(string);
 
-		EObject dataRoot = resource.getContents().get(0);
-		Root root = (Root) dataRoot;
-
-		Entry entry = root.getContent().getEntries().get(0);
-		EList<Value> values = entry.getValue().getArray().getValues();
-		assertEquals(Integer.valueOf(1), values.get(0).getInt());
-		assertEquals(Integer.valueOf(2), values.get(1).getInt());
-		assertEquals(Integer.valueOf(3), values.get(2).getInt());
+		Entry entry = root.getValue("key");
+		Array values = (Array) entry.getContent().getChild();
+		assertEquals(Integer.valueOf(1), values.getValue(0));
+		assertEquals(Integer.valueOf(2), values.getValue(1));
+		assertEquals(Integer.valueOf(3), values.getValue(2));
 	}
 
 	@Test
 	public void testObject() throws UnsupportedEncodingException, IOException {
 		String string = "{\"key\" : {\"key\" : \"value\"}}";
-		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
-				rs.getLoadOptions());
+		JObject root = parse(string);
 
-		EObject dataRoot = resource.getContents().get(0);
-		Root root = (Root) dataRoot;
-
-		Entry entry = root.getContent().getEntries().get(0);
+		Entry entry = root.getValue("key");
 		assertEquals("key", entry.getKey());
-		assertEquals("value", entry.getValue().getChild().getEntries().get(0)
-				.getValue().getString());
+		JObject child = (JObject) entry.getContent().getChild();
+		assertEquals("value", child.getEntries().get(0).getValue());
 	}
 
 	@Test
 	public void testBoolean() throws UnsupportedEncodingException, IOException {
 		String string = "{\"key\" : true}";
-		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
-				rs.getLoadOptions());
+		JObject root = parse(string);
 
-		EObject dataRoot = resource.getContents().get(0);
-		Root root = (Root) dataRoot;
-
-		Entry entry = root.getContent().getEntries().get(0);
-		assertEquals("key", entry.getKey());
-		assertEquals(Boolean.TRUE, entry.getValue().getBoolean());
+		Entry entry = root.getValue("key");
+		assertEquals(Boolean.TRUE, entry.getValue());
 	}
 
 	@Test
 	public void testNull() throws UnsupportedEncodingException, IOException {
 		String string = "{\"key\" : null}";
-		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
-				rs.getLoadOptions());
+		JObject root = parse(string);
 
-		EObject dataRoot = resource.getContents().get(0);
-		Root root = (Root) dataRoot;
-
-		Entry entry = root.getContent().getEntries().get(0);
-		assertEquals("key", entry.getKey());
+		Entry entry = root.getValue("key");
 		assertEquals(null, entry.getValue());
 	}
 }

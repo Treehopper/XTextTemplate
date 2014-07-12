@@ -8,7 +8,6 @@ import eu.hohenegger.template.json.model.JObject;
 import eu.hohenegger.template.json.model.ModelFactory;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Node;
-import eu.hohenegger.template.json.model.Root;
 import eu.hohenegger.template.json.model.Value;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -25,13 +24,6 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass rootEClass = null;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -129,24 +121,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ModelPackage.eNS_URI, theModelPackage);
 		return theModelPackage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRoot() {
-		return rootEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRoot_Content() {
-		return (EReference)rootEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -312,9 +286,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		rootEClass = createEClass(ROOT);
-		createEReference(rootEClass, ROOT__CONTENT);
-
 		nodeEClass = createEClass(NODE);
 
 		jObjectEClass = createEClass(JOBJECT);
@@ -371,9 +342,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		arrayEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(rootEClass, Root.class, "Root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRoot_Content(), this.getJObject(), null, "content", null, 0, 1, Root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(jObjectEClass, JObject.class, "JObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -72,29 +72,6 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Root} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RootItemProvider rootItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Root}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRootAdapter() {
-		if (rootItemProvider == null) {
-			rootItemProvider = new RootItemProvider(this);
-		}
-
-		return rootItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.JObject} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,26 +118,26 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.JTerminal} instances.
+	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Value} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected JTerminalItemProvider jTerminalItemProvider;
+	protected ValueItemProvider valueItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.JTerminal}.
+	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Value}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createJTerminalAdapter() {
-		if (jTerminalItemProvider == null) {
-			jTerminalItemProvider = new JTerminalItemProvider(this);
+	public Adapter createValueAdapter() {
+		if (valueItemProvider == null) {
+			valueItemProvider = new ValueItemProvider(this);
 		}
 
-		return jTerminalItemProvider;
+		return valueItemProvider;
 	}
 
 	/**
@@ -285,10 +262,9 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	 * @generated
 	 */
 	public void dispose() {
-		if (rootItemProvider != null) rootItemProvider.dispose();
 		if (jObjectItemProvider != null) jObjectItemProvider.dispose();
 		if (entryItemProvider != null) entryItemProvider.dispose();
-		if (jTerminalItemProvider != null) jTerminalItemProvider.dispose();
+		if (valueItemProvider != null) valueItemProvider.dispose();
 		if (arrayItemProvider != null) arrayItemProvider.dispose();
 	}
 
