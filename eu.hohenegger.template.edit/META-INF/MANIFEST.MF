@@ -7,8 +7,8 @@ Bundle-ClassPath: .
 Bundle-Activator: eu.hohenegger.template.json.model.provider.ModelEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7,
- JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8,
+ JavaSE-1.7
 Export-Package: eu.hohenegger.template.json.model.provider
 Require-Bundle: org.eclipse.core.runtime,
  eu.hohenegger.template.model;visibility:=reexport,
