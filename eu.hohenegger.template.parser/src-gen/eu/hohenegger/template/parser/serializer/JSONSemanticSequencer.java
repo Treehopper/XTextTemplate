@@ -5,6 +5,7 @@ import com.google.inject.Provider;
 import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.JObject;
+import eu.hohenegger.template.json.model.JTerminal;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Root;
 import eu.hohenegger.template.parser.services.JSONGrammarAccess;
@@ -45,6 +46,13 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				if(context == grammarAccess.getJObjectRule() ||
 				   context == grammarAccess.getValueRule()) {
 					sequence_JObject(context, (JObject) semanticObject); 
+					return; 
+				}
+				else break;
+			case ModelPackage.JTERMINAL:
+				if(context == grammarAccess.getJTerminalRule() ||
+				   context == grammarAccess.getValueRule()) {
+					sequence_JTerminal(context, (JTerminal) semanticObject); 
 					return; 
 				}
 				else break;
@@ -91,6 +99,15 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (entries+=Entry? entries+=Entry*)
 	 */
 	protected void sequence_JObject(EObject context, JObject semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (value=STRING | value=Boolean | value=NUMBER | value=Null)
+	 */
+	protected void sequence_JTerminal(EObject context, JTerminal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -23,21 +23,9 @@ public class JSONSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getJTerminalRule())
-			return getJTerminalToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * JTerminal:
-	 * 	STRING | Boolean | NUMBER | Null
-	 * ;
-	 */
-	protected String getJTerminalToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "\"\"";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

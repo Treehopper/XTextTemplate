@@ -15,6 +15,7 @@ import org.junit.Test;
 
 import com.google.inject.Injector;
 
+import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.Root;
 
 public class TestStandaloneSetup {
@@ -34,20 +35,19 @@ public class TestStandaloneSetup {
 		rs.addLoadOption(XtextResource.OPTION_RESOLVE_ALL, Boolean.TRUE);
 		rs.addLoadOption(XtextResource.OPTION_ENCODING, encoding);
 
-		Resource metaResource = rs.createResource(URI.createURI(SCHEME
+		Resource resource = rs.createResource(URI.createURI(SCHEME
 				+ ":/" + "foo.json"));
 
-		metaResource
+		resource
 				.load(new ByteArrayInputStream("{\"key\" : \"value\"}"
 						.getBytes(encoding)), rs.getLoadOptions());
 
-		EObject dataRoot = metaResource.getContents().get(0);
-		if (!(dataRoot instanceof Root)) {
-			throw new RuntimeException("Unexpected model configuration.");
-		}
+		EObject dataRoot = resource.getContents().get(0);
 		Root root = (Root) dataRoot;
 		
-		assertEquals("key", root.getContent().getEntries().get(0).getKey());
+		Entry entry = root.getContent().getEntries().get(0);
+		assertEquals("key", entry.getKey());
+		assertEquals("value", entry.getValue().getValue());
 	}
 
 }

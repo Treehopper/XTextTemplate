@@ -22,7 +22,7 @@ Array:
 
 
 JTerminal:
-	STRING | Boolean | NUMBER | Null
+	value=(STRING | Boolean | NUMBER | Null)
 ; 
 
 Boolean:
@@ -36,7 +36,7 @@ terminal NUMBER:
 	
 terminal INT returns ecore::EInt: ('0'..'9')+;
 
-terminal STRING	: 
+terminal STRING	 returns ecore::EString: 
 			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"'
 		; 
 
