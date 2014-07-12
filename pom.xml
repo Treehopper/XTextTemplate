@@ -83,6 +83,7 @@
 		<module>eu.hohenegger.template.edit</module>
 		<module>eu.hohenegger.template.parser</module>
 		<module>eu.hohenegger.template.parser_builder</module>
+		<module>eu.hohenegger.template.parser.test</module>
 		<module>eu.hohenegger.template.releng.targetplatform</module>
 	</modules>
 
