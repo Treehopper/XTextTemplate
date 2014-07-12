@@ -23,9 +23,21 @@ public class JSONSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if(ruleCall.getRule() == grammarAccess.getNullRule())
+			return getNullToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * Null:
+	 * 	'null'
+	 * ;
+	 */
+	protected String getNullToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "null";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {

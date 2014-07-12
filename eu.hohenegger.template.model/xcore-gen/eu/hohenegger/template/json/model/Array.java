@@ -3,6 +3,7 @@
 package eu.hohenegger.template.json.model;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +21,8 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Array extends Value {
+public interface Array extends EObject {
+
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' containment reference list.
 	 * The list contents are of type {@link eu.hohenegger.template.json.model.Value}.

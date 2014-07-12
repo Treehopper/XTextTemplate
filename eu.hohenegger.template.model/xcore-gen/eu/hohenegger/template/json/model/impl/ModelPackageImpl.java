@@ -5,7 +5,6 @@ package eu.hohenegger.template.json.model.impl;
 import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.JObject;
-import eu.hohenegger.template.json.model.JTerminal;
 import eu.hohenegger.template.json.model.ModelFactory;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Root;
@@ -36,13 +35,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass valueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass jObjectEClass = null;
 
 	/**
@@ -57,7 +49,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass jTerminalEClass = null;
+	private EClass valueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -153,24 +145,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getValue() {
-		return valueEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getValue_Value() {
-		return (EAttribute)valueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getJObject() {
 		return jObjectEClass;
 	}
@@ -216,8 +190,62 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getJTerminal() {
-		return jTerminalEClass;
+	public EClass getValue() {
+		return valueEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getValue_Child() {
+		return (EReference)valueEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getValue_Array() {
+		return (EReference)valueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValue_String() {
+		return (EAttribute)valueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValue_Double() {
+		return (EAttribute)valueEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValue_Int() {
+		return (EAttribute)valueEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getValue_Boolean() {
+		return (EAttribute)valueEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -269,9 +297,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		rootEClass = createEClass(ROOT);
 		createEReference(rootEClass, ROOT__CONTENT);
 
-		valueEClass = createEClass(VALUE);
-		createEAttribute(valueEClass, VALUE__VALUE);
-
 		jObjectEClass = createEClass(JOBJECT);
 		createEReference(jObjectEClass, JOBJECT__ENTRIES);
 
@@ -279,7 +304,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(entryEClass, ENTRY__KEY);
 		createEReference(entryEClass, ENTRY__VALUE);
 
-		jTerminalEClass = createEClass(JTERMINAL);
+		valueEClass = createEClass(VALUE);
+		createEReference(valueEClass, VALUE__CHILD);
+		createEReference(valueEClass, VALUE__ARRAY);
+		createEAttribute(valueEClass, VALUE__STRING);
+		createEAttribute(valueEClass, VALUE__DOUBLE);
+		createEAttribute(valueEClass, VALUE__INT);
+		createEAttribute(valueEClass, VALUE__BOOLEAN);
 
 		arrayEClass = createEClass(ARRAY);
 		createEReference(arrayEClass, ARRAY__VALUES);
@@ -316,16 +347,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		jObjectEClass.getESuperTypes().add(this.getValue());
-		jTerminalEClass.getESuperTypes().add(this.getValue());
-		arrayEClass.getESuperTypes().add(this.getValue());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(rootEClass, Root.class, "Root", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoot_Content(), this.getJObject(), null, "content", null, 0, 1, Root.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getValue_Value(), theEcorePackage.getEJavaObject(), "value", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(jObjectEClass, JObject.class, "JObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getJObject_Entries(), this.getEntry(), null, "entries", null, 0, -1, JObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -334,7 +359,13 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getEntry_Key(), theEcorePackage.getEString(), "key", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEntry_Value(), this.getValue(), null, "value", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(jTerminalEClass, JTerminal.class, "JTerminal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getValue_Child(), this.getJObject(), null, "child", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getValue_Array(), this.getArray(), null, "array", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValue_String(), theEcorePackage.getEString(), "string", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValue_Double(), theEcorePackage.getEDoubleObject(), "double", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValue_Int(), theEcorePackage.getEIntegerObject(), "int", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getValue_Boolean(), theEcorePackage.getEBooleanObject(), "boolean", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arrayEClass, Array.class, "Array", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getArray_Values(), this.getValue(), null, "values", null, 0, -1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

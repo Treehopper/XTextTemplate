@@ -12,29 +12,28 @@ JObject:
 	'}';
 
 Entry:
-	key=STRING ':' value=Value;
+	key=STRING ':' (value=Value)
+;
 
 Value:
-	JObject | Array | JTerminal;
+	(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null
+;
 
 Array:
 	'[' {Array} (values+=Value)? (',' values+=Value)* ']';
 
 
-JTerminal:
-	value=(STRING | Boolean | NUMBER | Null)
-; 
-
-Boolean:
+Boolean 	 returns ecore::EBoolean:
 	'true' | 'false';
 
 Null:
-	'null';
+	'null'
+;
 
-terminal NUMBER:
+terminal NUMBER	 returns ecore::EDouble:
 	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?;
 	
-terminal INT returns ecore::EInt: ('0'..'9')+;
+terminal INT	 returns ecore::EInt: ('0'..'9')+;
 
 terminal STRING	 returns ecore::EString: 
 			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"'

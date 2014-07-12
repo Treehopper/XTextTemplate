@@ -31,15 +31,6 @@ public interface ModelFactory extends EFactory {
 	Root createRoot();
 
 	/**
-	 * Returns a new object of class '<em>Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value</em>'.
-	 * @generated
-	 */
-	Value createValue();
-
-	/**
 	 * Returns a new object of class '<em>JObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,13 +49,13 @@ public interface ModelFactory extends EFactory {
 	Entry createEntry();
 
 	/**
-	 * Returns a new object of class '<em>JTerminal</em>'.
+	 * Returns a new object of class '<em>Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>JTerminal</em>'.
+	 * @return a new object of class '<em>Value</em>'.
 	 * @generated
 	 */
-	JTerminal createJTerminal();
+	Value createValue();
 
 	/**
 	 * Returns a new object of class '<em>Array</em>'.

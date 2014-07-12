@@ -5,9 +5,9 @@ import com.google.inject.Provider;
 import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.JObject;
-import eu.hohenegger.template.json.model.JTerminal;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Root;
+import eu.hohenegger.template.json.model.Value;
 import eu.hohenegger.template.parser.services.JSONGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -30,8 +30,7 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == ModelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case ModelPackage.ARRAY:
-				if(context == grammarAccess.getArrayRule() ||
-				   context == grammarAccess.getValueRule()) {
+				if(context == grammarAccess.getArrayRule()) {
 					sequence_Array(context, (Array) semanticObject); 
 					return; 
 				}
@@ -43,22 +42,20 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				}
 				else break;
 			case ModelPackage.JOBJECT:
-				if(context == grammarAccess.getJObjectRule() ||
-				   context == grammarAccess.getValueRule()) {
+				if(context == grammarAccess.getJObjectRule()) {
 					sequence_JObject(context, (JObject) semanticObject); 
-					return; 
-				}
-				else break;
-			case ModelPackage.JTERMINAL:
-				if(context == grammarAccess.getJTerminalRule() ||
-				   context == grammarAccess.getValueRule()) {
-					sequence_JTerminal(context, (JTerminal) semanticObject); 
 					return; 
 				}
 				else break;
 			case ModelPackage.ROOT:
 				if(context == grammarAccess.getRootRule()) {
 					sequence_Root(context, (Root) semanticObject); 
+					return; 
+				}
+				else break;
+			case ModelPackage.VALUE:
+				if(context == grammarAccess.getValueRule()) {
+					sequence_Value(context, (Value) semanticObject); 
 					return; 
 				}
 				else break;
@@ -105,15 +102,6 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (value=STRING | value=Boolean | value=NUMBER | value=Null)
-	 */
-	protected void sequence_JTerminal(EObject context, JTerminal semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     content=JObject
 	 */
 	protected void sequence_Root(EObject context, Root semanticObject) {
@@ -125,5 +113,21 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getRootAccess().getContentJObjectParserRuleCall_0(), semanticObject.getContent());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         child=JObject | 
+	 *         string=STRING | 
+	 *         boolean=Boolean | 
+	 *         double=NUMBER | 
+	 *         int=INT | 
+	 *         array=Array
+	 *     )?
+	 */
+	protected void sequence_Value(EObject context, Value semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 }

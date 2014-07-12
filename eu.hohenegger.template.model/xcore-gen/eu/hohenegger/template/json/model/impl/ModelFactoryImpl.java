@@ -54,10 +54,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ModelPackage.ROOT: return createRoot();
-			case ModelPackage.VALUE: return createValue();
 			case ModelPackage.JOBJECT: return createJObject();
 			case ModelPackage.ENTRY: return createEntry();
-			case ModelPackage.JTERMINAL: return createJTerminal();
+			case ModelPackage.VALUE: return createValue();
 			case ModelPackage.ARRAY: return createArray();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -72,16 +71,6 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Root createRoot() {
 		RootImpl root = new RootImpl();
 		return root;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Value createValue() {
-		ValueImpl value = new ValueImpl();
-		return value;
 	}
 
 	/**
@@ -109,9 +98,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JTerminal createJTerminal() {
-		JTerminalImpl jTerminal = new JTerminalImpl();
-		return jTerminal;
+	public Value createValue() {
+		ValueImpl value = new ValueImpl();
+		return value;
 	}
 
 	/**

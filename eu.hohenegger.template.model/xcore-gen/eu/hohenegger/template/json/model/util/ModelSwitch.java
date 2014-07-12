@@ -72,16 +72,9 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.VALUE: {
-				Value value = (Value)theEObject;
-				T result = caseValue(value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ModelPackage.JOBJECT: {
 				JObject jObject = (JObject)theEObject;
 				T result = caseJObject(jObject);
-				if (result == null) result = caseValue(jObject);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,17 +84,15 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.JTERMINAL: {
-				JTerminal jTerminal = (JTerminal)theEObject;
-				T result = caseJTerminal(jTerminal);
-				if (result == null) result = caseValue(jTerminal);
+			case ModelPackage.VALUE: {
+				Value value = (Value)theEObject;
+				T result = caseValue(value);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ModelPackage.ARRAY: {
 				Array array = (Array)theEObject;
 				T result = caseArray(array);
-				if (result == null) result = caseValue(array);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,21 +112,6 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseRoot(Root object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseValue(Value object) {
 		return null;
 	}
 
@@ -170,17 +146,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>JTerminal</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>JTerminal</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseJTerminal(JTerminal object) {
+	public T caseValue(Value object) {
 		return null;
 	}
 

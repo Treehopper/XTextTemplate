@@ -116,25 +116,69 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	public class ValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Value");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cJObjectParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cArrayParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cJTerminalParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final Alternatives cAlternatives_0 = (Alternatives)cAlternatives.eContents().get(0);
+		private final Assignment cChildAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
+		private final RuleCall cChildJObjectParserRuleCall_0_0_0 = (RuleCall)cChildAssignment_0_0.eContents().get(0);
+		private final Assignment cStringAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cStringSTRINGTerminalRuleCall_0_1_0 = (RuleCall)cStringAssignment_0_1.eContents().get(0);
+		private final Assignment cBooleanAssignment_0_2 = (Assignment)cAlternatives_0.eContents().get(2);
+		private final RuleCall cBooleanBooleanParserRuleCall_0_2_0 = (RuleCall)cBooleanAssignment_0_2.eContents().get(0);
+		private final Assignment cDoubleAssignment_0_3 = (Assignment)cAlternatives_0.eContents().get(3);
+		private final RuleCall cDoubleNUMBERTerminalRuleCall_0_3_0 = (RuleCall)cDoubleAssignment_0_3.eContents().get(0);
+		private final Assignment cIntAssignment_0_4 = (Assignment)cAlternatives_0.eContents().get(4);
+		private final RuleCall cIntINTTerminalRuleCall_0_4_0 = (RuleCall)cIntAssignment_0_4.eContents().get(0);
+		private final Assignment cArrayAssignment_0_5 = (Assignment)cAlternatives_0.eContents().get(5);
+		private final RuleCall cArrayArrayParserRuleCall_0_5_0 = (RuleCall)cArrayAssignment_0_5.eContents().get(0);
+		private final RuleCall cNullParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//Value:
-		//	JObject | Array | JTerminal;
+		//	(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null;
 		public ParserRule getRule() { return rule; }
 
-		//JObject | Array | JTerminal
+		//(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null
 		public Alternatives getAlternatives() { return cAlternatives; }
 
+		//child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+
+		//child=JObject
+		public Assignment getChildAssignment_0_0() { return cChildAssignment_0_0; }
+
 		//JObject
-		public RuleCall getJObjectParserRuleCall_0() { return cJObjectParserRuleCall_0; }
+		public RuleCall getChildJObjectParserRuleCall_0_0_0() { return cChildJObjectParserRuleCall_0_0_0; }
+
+		//string=STRING
+		public Assignment getStringAssignment_0_1() { return cStringAssignment_0_1; }
+
+		//STRING
+		public RuleCall getStringSTRINGTerminalRuleCall_0_1_0() { return cStringSTRINGTerminalRuleCall_0_1_0; }
+
+		//boolean=Boolean
+		public Assignment getBooleanAssignment_0_2() { return cBooleanAssignment_0_2; }
+
+		//Boolean
+		public RuleCall getBooleanBooleanParserRuleCall_0_2_0() { return cBooleanBooleanParserRuleCall_0_2_0; }
+
+		//double=NUMBER
+		public Assignment getDoubleAssignment_0_3() { return cDoubleAssignment_0_3; }
+
+		//NUMBER
+		public RuleCall getDoubleNUMBERTerminalRuleCall_0_3_0() { return cDoubleNUMBERTerminalRuleCall_0_3_0; }
+
+		//int=INT
+		public Assignment getIntAssignment_0_4() { return cIntAssignment_0_4; }
+
+		//INT
+		public RuleCall getIntINTTerminalRuleCall_0_4_0() { return cIntINTTerminalRuleCall_0_4_0; }
+
+		//array=Array
+		public Assignment getArrayAssignment_0_5() { return cArrayAssignment_0_5; }
 
 		//Array
-		public RuleCall getArrayParserRuleCall_1() { return cArrayParserRuleCall_1; }
+		public RuleCall getArrayArrayParserRuleCall_0_5_0() { return cArrayArrayParserRuleCall_0_5_0; }
 
-		//JTerminal
-		public RuleCall getJTerminalParserRuleCall_2() { return cJTerminalParserRuleCall_2; }
+		//Null
+		public RuleCall getNullParserRuleCall_1() { return cNullParserRuleCall_1; }
 	}
 
 	public class ArrayElements extends AbstractParserRuleElementFinder {
@@ -185,45 +229,13 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightSquareBracketKeyword_4() { return cRightSquareBracketKeyword_4; }
 	}
 
-	public class JTerminalElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "JTerminal");
-		private final Assignment cValueAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cValueAlternatives_0 = (Alternatives)cValueAssignment.eContents().get(0);
-		private final RuleCall cValueSTRINGTerminalRuleCall_0_0 = (RuleCall)cValueAlternatives_0.eContents().get(0);
-		private final RuleCall cValueBooleanParserRuleCall_0_1 = (RuleCall)cValueAlternatives_0.eContents().get(1);
-		private final RuleCall cValueNUMBERTerminalRuleCall_0_2 = (RuleCall)cValueAlternatives_0.eContents().get(2);
-		private final RuleCall cValueNullParserRuleCall_0_3 = (RuleCall)cValueAlternatives_0.eContents().get(3);
-		
-		//JTerminal:
-		//	value=(STRING | Boolean | NUMBER | Null);
-		public ParserRule getRule() { return rule; }
-
-		//value=(STRING | Boolean | NUMBER | Null)
-		public Assignment getValueAssignment() { return cValueAssignment; }
-
-		//STRING | Boolean | NUMBER | Null
-		public Alternatives getValueAlternatives_0() { return cValueAlternatives_0; }
-
-		//STRING
-		public RuleCall getValueSTRINGTerminalRuleCall_0_0() { return cValueSTRINGTerminalRuleCall_0_0; }
-
-		//Boolean
-		public RuleCall getValueBooleanParserRuleCall_0_1() { return cValueBooleanParserRuleCall_0_1; }
-
-		//NUMBER
-		public RuleCall getValueNUMBERTerminalRuleCall_0_2() { return cValueNUMBERTerminalRuleCall_0_2; }
-
-		//Null
-		public RuleCall getValueNullParserRuleCall_0_3() { return cValueNullParserRuleCall_0_3; }
-	}
-
 	public class BooleanElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Boolean");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Keyword cTrueKeyword_0 = (Keyword)cAlternatives.eContents().get(0);
 		private final Keyword cFalseKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
 		
-		//Boolean:
+		//Boolean returns ecore::EBoolean:
 		//	"true" | "false";
 		public ParserRule getRule() { return rule; }
 
@@ -255,7 +267,6 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	private EntryElements pEntry;
 	private ValueElements pValue;
 	private ArrayElements pArray;
-	private JTerminalElements pJTerminal;
 	private BooleanElements pBoolean;
 	private NullElements pNull;
 	private TerminalRule tNUMBER;
@@ -324,7 +335,7 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Value:
-	//	JObject | Array | JTerminal;
+	//	(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null;
 	public ValueElements getValueAccess() {
 		return (pValue != null) ? pValue : (pValue = new ValueElements());
 	}
@@ -343,17 +354,7 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		return getArrayAccess().getRule();
 	}
 
-	//JTerminal:
-	//	value=(STRING | Boolean | NUMBER | Null);
-	public JTerminalElements getJTerminalAccess() {
-		return (pJTerminal != null) ? pJTerminal : (pJTerminal = new JTerminalElements());
-	}
-	
-	public ParserRule getJTerminalRule() {
-		return getJTerminalAccess().getRule();
-	}
-
-	//Boolean:
+	//Boolean returns ecore::EBoolean:
 	//	"true" | "false";
 	public BooleanElements getBooleanAccess() {
 		return (pBoolean != null) ? pBoolean : (pBoolean = new BooleanElements());
@@ -373,7 +374,7 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		return getNullAccess().getRule();
 	}
 
-	//terminal NUMBER returns ecore::EString:
+	//terminal NUMBER returns ecore::EDouble:
 	//	"-"? INT? "." INT (("E" | "e") "-"? INT)?;
 	public TerminalRule getNUMBERRule() {
 		return (tNUMBER != null) ? tNUMBER : (tNUMBER = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "NUMBER"));

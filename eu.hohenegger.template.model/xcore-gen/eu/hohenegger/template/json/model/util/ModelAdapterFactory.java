@@ -72,10 +72,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createRootAdapter();
 			}
 			@Override
-			public Adapter caseValue(Value object) {
-				return createValueAdapter();
-			}
-			@Override
 			public Adapter caseJObject(JObject object) {
 				return createJObjectAdapter();
 			}
@@ -84,8 +80,8 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createEntryAdapter();
 			}
 			@Override
-			public Adapter caseJTerminal(JTerminal object) {
-				return createJTerminalAdapter();
+			public Adapter caseValue(Value object) {
+				return createValueAdapter();
 			}
 			@Override
 			public Adapter caseArray(Array object) {
@@ -126,20 +122,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Value <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.hohenegger.template.json.model.Value
-	 * @generated
-	 */
-	public Adapter createValueAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.JObject <em>JObject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -168,16 +150,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.JTerminal <em>JTerminal</em>}'.
+	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Value <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see eu.hohenegger.template.json.model.JTerminal
+	 * @see eu.hohenegger.template.json.model.Value
 	 * @generated
 	 */
-	public Adapter createJTerminalAdapter() {
+	public Adapter createValueAdapter() {
 		return null;
 	}
 
