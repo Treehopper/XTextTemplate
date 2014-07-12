@@ -87,14 +87,14 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cKeyAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cKeySTRINGTerminalRuleCall_0_0 = (RuleCall)cKeyAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValueValueParserRuleCall_2_0 = (RuleCall)cValueAssignment_2.eContents().get(0);
+		private final Assignment cContentAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cContentValueParserRuleCall_2_0 = (RuleCall)cContentAssignment_2.eContents().get(0);
 		
 		//Entry:
-		//	key=STRING ":" value=Value;
+		//	key=STRING ":" content=Value;
 		public ParserRule getRule() { return rule; }
 
-		//key=STRING ":" value=Value
+		//key=STRING ":" content=Value
 		public Group getGroup() { return cGroup; }
 
 		//key=STRING
@@ -106,11 +106,11 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
 
-		//value=Value
-		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		//content=Value
+		public Assignment getContentAssignment_2() { return cContentAssignment_2; }
 
 		//Value
-		public RuleCall getValueValueParserRuleCall_2_0() { return cValueValueParserRuleCall_2_0; }
+		public RuleCall getContentValueParserRuleCall_2_0() { return cContentValueParserRuleCall_2_0; }
 	}
 
 	public class ValueElements extends AbstractParserRuleElementFinder {
@@ -119,26 +119,35 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_0 = (Alternatives)cAlternatives.eContents().get(0);
 		private final Assignment cChildAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
 		private final RuleCall cChildJObjectParserRuleCall_0_0_0 = (RuleCall)cChildAssignment_0_0.eContents().get(0);
-		private final Assignment cStringAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
-		private final RuleCall cStringSTRINGTerminalRuleCall_0_1_0 = (RuleCall)cStringAssignment_0_1.eContents().get(0);
-		private final Assignment cBooleanAssignment_0_2 = (Assignment)cAlternatives_0.eContents().get(2);
-		private final RuleCall cBooleanBooleanParserRuleCall_0_2_0 = (RuleCall)cBooleanAssignment_0_2.eContents().get(0);
-		private final Assignment cDoubleAssignment_0_3 = (Assignment)cAlternatives_0.eContents().get(3);
-		private final RuleCall cDoubleNUMBERTerminalRuleCall_0_3_0 = (RuleCall)cDoubleAssignment_0_3.eContents().get(0);
-		private final Assignment cIntAssignment_0_4 = (Assignment)cAlternatives_0.eContents().get(4);
-		private final RuleCall cIntINTTerminalRuleCall_0_4_0 = (RuleCall)cIntAssignment_0_4.eContents().get(0);
-		private final Assignment cArrayAssignment_0_5 = (Assignment)cAlternatives_0.eContents().get(5);
-		private final RuleCall cArrayArrayParserRuleCall_0_5_0 = (RuleCall)cArrayAssignment_0_5.eContents().get(0);
-		private final RuleCall cNullParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final Assignment cValueAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
+		private final RuleCall cValueSTRINGTerminalRuleCall_0_1_0 = (RuleCall)cValueAssignment_0_1.eContents().get(0);
+		private final Assignment cValueAssignment_0_2 = (Assignment)cAlternatives_0.eContents().get(2);
+		private final RuleCall cValueBooleanParserRuleCall_0_2_0 = (RuleCall)cValueAssignment_0_2.eContents().get(0);
+		private final Assignment cValueAssignment_0_3 = (Assignment)cAlternatives_0.eContents().get(3);
+		private final RuleCall cValueNUMBERTerminalRuleCall_0_3_0 = (RuleCall)cValueAssignment_0_3.eContents().get(0);
+		private final Assignment cValueAssignment_0_4 = (Assignment)cAlternatives_0.eContents().get(4);
+		private final RuleCall cValueINTTerminalRuleCall_0_4_0 = (RuleCall)cValueAssignment_0_4.eContents().get(0);
+		private final Assignment cChildAssignment_0_5 = (Assignment)cAlternatives_0.eContents().get(5);
+		private final RuleCall cChildArrayParserRuleCall_0_5_0 = (RuleCall)cChildAssignment_0_5.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final RuleCall cNullParserRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
+		private final Action cValueAction_1_1 = (Action)cGroup_1.eContents().get(1);
 		
+		////Entry:
+		////	key=STRING ':' value=Foobar
+		////;
+		////
+		////Foobar returns ecore::EObject:
+		////	(STRING | Boolean | NUMBER | INT)
+		////;
 		//Value:
-		//	(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null;
+		//	(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value};
 		public ParserRule getRule() { return rule; }
 
-		//(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null
+		//(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value}
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array
+		//child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//child=JObject
@@ -147,38 +156,44 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		//JObject
 		public RuleCall getChildJObjectParserRuleCall_0_0_0() { return cChildJObjectParserRuleCall_0_0_0; }
 
-		//string=STRING
-		public Assignment getStringAssignment_0_1() { return cStringAssignment_0_1; }
+		//value=STRING
+		public Assignment getValueAssignment_0_1() { return cValueAssignment_0_1; }
 
 		//STRING
-		public RuleCall getStringSTRINGTerminalRuleCall_0_1_0() { return cStringSTRINGTerminalRuleCall_0_1_0; }
+		public RuleCall getValueSTRINGTerminalRuleCall_0_1_0() { return cValueSTRINGTerminalRuleCall_0_1_0; }
 
-		//boolean=Boolean
-		public Assignment getBooleanAssignment_0_2() { return cBooleanAssignment_0_2; }
+		//value=Boolean
+		public Assignment getValueAssignment_0_2() { return cValueAssignment_0_2; }
 
 		//Boolean
-		public RuleCall getBooleanBooleanParserRuleCall_0_2_0() { return cBooleanBooleanParserRuleCall_0_2_0; }
+		public RuleCall getValueBooleanParserRuleCall_0_2_0() { return cValueBooleanParserRuleCall_0_2_0; }
 
-		//double=NUMBER
-		public Assignment getDoubleAssignment_0_3() { return cDoubleAssignment_0_3; }
+		//value=NUMBER
+		public Assignment getValueAssignment_0_3() { return cValueAssignment_0_3; }
 
 		//NUMBER
-		public RuleCall getDoubleNUMBERTerminalRuleCall_0_3_0() { return cDoubleNUMBERTerminalRuleCall_0_3_0; }
+		public RuleCall getValueNUMBERTerminalRuleCall_0_3_0() { return cValueNUMBERTerminalRuleCall_0_3_0; }
 
-		//int=INT
-		public Assignment getIntAssignment_0_4() { return cIntAssignment_0_4; }
+		//value=INT
+		public Assignment getValueAssignment_0_4() { return cValueAssignment_0_4; }
 
 		//INT
-		public RuleCall getIntINTTerminalRuleCall_0_4_0() { return cIntINTTerminalRuleCall_0_4_0; }
+		public RuleCall getValueINTTerminalRuleCall_0_4_0() { return cValueINTTerminalRuleCall_0_4_0; }
 
-		//array=Array
-		public Assignment getArrayAssignment_0_5() { return cArrayAssignment_0_5; }
+		//child=Array
+		public Assignment getChildAssignment_0_5() { return cChildAssignment_0_5; }
 
 		//Array
-		public RuleCall getArrayArrayParserRuleCall_0_5_0() { return cArrayArrayParserRuleCall_0_5_0; }
+		public RuleCall getChildArrayParserRuleCall_0_5_0() { return cChildArrayParserRuleCall_0_5_0; }
+
+		//Null {Value}
+		public Group getGroup_1() { return cGroup_1; }
 
 		//Null
-		public RuleCall getNullParserRuleCall_1() { return cNullParserRuleCall_1; }
+		public RuleCall getNullParserRuleCall_1_0() { return cNullParserRuleCall_1_0; }
+
+		//{Value}
+		public Action getValueAction_1_1() { return cValueAction_1_1; }
 	}
 
 	public class ArrayElements extends AbstractParserRuleElementFinder {
@@ -325,7 +340,7 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Entry:
-	//	key=STRING ":" value=Value;
+	//	key=STRING ":" content=Value;
 	public EntryElements getEntryAccess() {
 		return (pEntry != null) ? pEntry : (pEntry = new EntryElements());
 	}
@@ -334,8 +349,15 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		return getEntryAccess().getRule();
 	}
 
+	////Entry:
+	////	key=STRING ':' value=Foobar
+	////;
+	////
+	////Foobar returns ecore::EObject:
+	////	(STRING | Boolean | NUMBER | INT)
+	////;
 	//Value:
-	//	(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null;
+	//	(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value};
 	public ValueElements getValueAccess() {
 		return (pValue != null) ? pValue : (pValue = new ValueElements());
 	}

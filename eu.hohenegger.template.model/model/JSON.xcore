@@ -14,24 +14,44 @@ class Root {
 	contains JObject content
 }
 
-class JObject {
+interface Node {}
+
+class JObject extends Node {
 	contains Entry[] entries
+	
+	op Entry getValue(String key) {
+		entries.findFirst[e | key.equals(e.key)]
+	}
 }
 
 class Entry {
 	String key
-	contains Value value
+	contains Value content
+
+	derived Object value get {
+		if(content == null) 
+			null
+		else 
+			content.value
+	}
+
+	derived Object child get {
+		if(content == null) 
+			null
+		else 
+			content.child
+	}
 }
 
 class Value {
-	contains JObject child
-	contains Array array
-	String string
-	Double ^double
-	Integer ^int
-	Boolean ^boolean
+	contains Node child
+	Object value
 }
 
-class Array {
+class Array extends Node {
 	contains Value[] values
+	
+	op Object getValue(int index) {
+		values.get(index).value
+	}
 }

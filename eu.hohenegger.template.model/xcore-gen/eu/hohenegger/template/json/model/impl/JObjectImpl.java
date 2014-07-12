@@ -5,6 +5,7 @@ package eu.hohenegger.template.json.model.impl;
 import eu.hohenegger.template.json.model.Entry;
 import eu.hohenegger.template.json.model.JObject;
 import eu.hohenegger.template.json.model.ModelPackage;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
@@ -13,6 +14,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.xtext.xbase.lib.Functions.Function1;
+import org.eclipse.xtext.xbase.lib.IterableExtensions;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,6 +69,22 @@ public class JObjectImpl extends MinimalEObjectImpl.Container implements JObject
 			entries = new EObjectContainmentEList<Entry>(Entry.class, this, ModelPackage.JOBJECT__ENTRIES);
 		}
 		return entries;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entry getValue(final String key) {
+		EList<Entry> _entries = this.getEntries();
+		final Function1<Entry, Boolean> _function = new Function1<Entry, Boolean>() {
+			public Boolean apply(final Entry e) {
+				String _key = e.getKey();
+				return Boolean.valueOf(key.equals(_key));
+			}
+		};
+		return IterableExtensions.<Entry>findFirst(_entries, _function);
 	}
 
 	/**
@@ -140,6 +159,20 @@ public class JObjectImpl extends MinimalEObjectImpl.Container implements JObject
 				return entries != null && !entries.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ModelPackage.JOBJECT___GET_VALUE__STRING:
+				return getValue((String)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //JObjectImpl

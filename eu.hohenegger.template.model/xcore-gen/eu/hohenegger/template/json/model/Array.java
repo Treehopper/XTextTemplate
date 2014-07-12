@@ -3,7 +3,6 @@
 package eu.hohenegger.template.json.model;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Array extends EObject {
+public interface Array extends Node {
 
 	/**
 	 * Returns the value of the '<em><b>Values</b></em>' containment reference list.
@@ -38,5 +37,14 @@ public interface Array extends EObject {
 	 * @generated
 	 */
 	EList<Value> getValues();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" indexUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%eu.hohenegger.template.json.model.Value%>> _values = this.getValues();\n<%eu.hohenegger.template.json.model.Value%> _get = _values.get(index);\nreturn _get.getValue();'"
+	 * @generated
+	 */
+	Object getValue(int index);
 
 } // Array

@@ -4,13 +4,12 @@ package eu.hohenegger.template.json.model.impl;
 
 import eu.hohenegger.template.json.model.Array;
 import eu.hohenegger.template.json.model.ModelPackage;
-
 import eu.hohenegger.template.json.model.Value;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -69,6 +68,17 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array {
 			values = new EObjectContainmentEList<Value>(Value.class, this, ModelPackage.ARRAY__VALUES);
 		}
 		return values;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object getValue(final int index) {
+		EList<Value> _values = this.getValues();
+		Value _get = _values.get(index);
+		return _get.getValue();
 	}
 
 	/**
@@ -143,6 +153,20 @@ public class ArrayImpl extends MinimalEObjectImpl.Container implements Array {
 				return values != null && !values.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+			case ModelPackage.ARRAY___GET_VALUE__INT:
+				return getValue((Integer)arguments.get(0));
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 } //ArrayImpl

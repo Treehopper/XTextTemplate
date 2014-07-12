@@ -3,7 +3,6 @@
 package eu.hohenegger.template.json.model;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface JObject extends EObject {
+public interface JObject extends Node {
 	/**
 	 * Returns the value of the '<em><b>Entries</b></em>' containment reference list.
 	 * The list contents are of type {@link eu.hohenegger.template.json.model.Entry}.
@@ -37,5 +36,14 @@ public interface JObject extends EObject {
 	 * @generated
 	 */
 	EList<Entry> getEntries();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model unique="false" keyUnique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel body='<%org.eclipse.emf.common.util.EList%><<%eu.hohenegger.template.json.model.Entry%>> _entries = this.getEntries();\nfinal <%org.eclipse.xtext.xbase.lib.Functions.Function1%><<%eu.hohenegger.template.json.model.Entry%>, <%java.lang.Boolean%>> _function = new <%org.eclipse.xtext.xbase.lib.Functions.Function1%><<%eu.hohenegger.template.json.model.Entry%>, <%java.lang.Boolean%>>()\n{\n\tpublic <%java.lang.Boolean%> apply(final <%eu.hohenegger.template.json.model.Entry%> e)\n\t{\n\t\t<%java.lang.String%> _key = e.getKey();\n\t\treturn <%java.lang.Boolean%>.valueOf(key.equals(_key));\n\t}\n};\nreturn <%org.eclipse.xtext.xbase.lib.IterableExtensions%>.<<%eu.hohenegger.template.json.model.Entry%>>findFirst(_entries, _function);'"
+	 * @generated
+	 */
+	Entry getValue(String key);
 
 } // JObject

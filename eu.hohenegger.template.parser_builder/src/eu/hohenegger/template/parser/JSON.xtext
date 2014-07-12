@@ -12,11 +12,11 @@ JObject:
 	'}';
 
 Entry:
-	key=STRING ':' (value=Value)
+	key=STRING ':' (content=Value)
 ;
 
 Value:
-	(child=JObject | string=STRING | boolean=Boolean | double=NUMBER | int=INT | array=Array) | Null
+	(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value}
 ;
 
 Array:

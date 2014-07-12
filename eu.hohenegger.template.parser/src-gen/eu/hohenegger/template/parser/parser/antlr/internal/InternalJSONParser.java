@@ -409,23 +409,23 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEntry"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:190:1: ruleEntry returns [EObject current=null] : ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleValue ) ) ) ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:190:1: ruleEntry returns [EObject current=null] : ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_content_2_0= ruleValue ) ) ) ;
     public final EObject ruleEntry() throws RecognitionException {
         EObject current = null;
 
         Token lv_key_0_0=null;
         Token otherlv_1=null;
-        EObject lv_value_2_0 = null;
+        EObject lv_content_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:193:28: ( ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleValue ) ) ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:1: ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleValue ) ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:193:28: ( ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_content_2_0= ruleValue ) ) ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:1: ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_content_2_0= ruleValue ) ) )
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:1: ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleValue ) ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:2: ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_value_2_0= ruleValue ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:1: ( ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_content_2_0= ruleValue ) ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:2: ( (lv_key_0_0= RULE_STRING ) ) otherlv_1= ':' ( (lv_content_2_0= ruleValue ) )
             {
             // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:194:2: ( (lv_key_0_0= RULE_STRING ) )
             // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:195:1: (lv_key_0_0= RULE_STRING )
@@ -457,17 +457,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
                 	newLeafNode(otherlv_1, grammarAccess.getEntryAccess().getColonKeyword_1());
                 
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:216:1: ( (lv_value_2_0= ruleValue ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:217:1: (lv_value_2_0= ruleValue )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:216:1: ( (lv_content_2_0= ruleValue ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:217:1: (lv_content_2_0= ruleValue )
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:217:1: (lv_value_2_0= ruleValue )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:218:3: lv_value_2_0= ruleValue
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:217:1: (lv_content_2_0= ruleValue )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:218:3: lv_content_2_0= ruleValue
             {
              
-            	        newCompositeNode(grammarAccess.getEntryAccess().getValueValueParserRuleCall_2_0()); 
+            	        newCompositeNode(grammarAccess.getEntryAccess().getContentValueParserRuleCall_2_0()); 
             	    
             pushFollow(FOLLOW_ruleValue_in_ruleEntry417);
-            lv_value_2_0=ruleValue();
+            lv_content_2_0=ruleValue();
 
             state._fsp--;
 
@@ -477,8 +477,8 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
             	        }
                    		set(
                    			current, 
-                   			"value",
-                    		lv_value_2_0, 
+                   			"content",
+                    		lv_content_2_0, 
                     		"Value");
             	        afterParserOrEnumRuleCall();
             	    
@@ -545,27 +545,27 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleValue"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:251:1: ruleValue returns [EObject current=null] : ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_string_1_0= RULE_STRING ) ) | ( (lv_boolean_2_0= ruleBoolean ) ) | ( (lv_double_3_0= RULE_NUMBER ) ) | ( (lv_int_4_0= RULE_INT ) ) | ( (lv_array_5_0= ruleArray ) ) ) | ruleNull ) ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:251:1: ruleValue returns [EObject current=null] : ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_value_1_0= RULE_STRING ) ) | ( (lv_value_2_0= ruleBoolean ) ) | ( (lv_value_3_0= RULE_NUMBER ) ) | ( (lv_value_4_0= RULE_INT ) ) | ( (lv_child_5_0= ruleArray ) ) ) | ( ruleNull () ) ) ;
     public final EObject ruleValue() throws RecognitionException {
         EObject current = null;
 
-        Token lv_string_1_0=null;
-        Token lv_double_3_0=null;
-        Token lv_int_4_0=null;
+        Token lv_value_1_0=null;
+        Token lv_value_3_0=null;
+        Token lv_value_4_0=null;
         EObject lv_child_0_0 = null;
 
-        AntlrDatatypeRuleToken lv_boolean_2_0 = null;
+        AntlrDatatypeRuleToken lv_value_2_0 = null;
 
-        EObject lv_array_5_0 = null;
+        EObject lv_child_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:254:28: ( ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_string_1_0= RULE_STRING ) ) | ( (lv_boolean_2_0= ruleBoolean ) ) | ( (lv_double_3_0= RULE_NUMBER ) ) | ( (lv_int_4_0= RULE_INT ) ) | ( (lv_array_5_0= ruleArray ) ) ) | ruleNull ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:1: ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_string_1_0= RULE_STRING ) ) | ( (lv_boolean_2_0= ruleBoolean ) ) | ( (lv_double_3_0= RULE_NUMBER ) ) | ( (lv_int_4_0= RULE_INT ) ) | ( (lv_array_5_0= ruleArray ) ) ) | ruleNull )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:254:28: ( ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_value_1_0= RULE_STRING ) ) | ( (lv_value_2_0= ruleBoolean ) ) | ( (lv_value_3_0= RULE_NUMBER ) ) | ( (lv_value_4_0= RULE_INT ) ) | ( (lv_child_5_0= ruleArray ) ) ) | ( ruleNull () ) ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:1: ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_value_1_0= RULE_STRING ) ) | ( (lv_value_2_0= ruleBoolean ) ) | ( (lv_value_3_0= RULE_NUMBER ) ) | ( (lv_value_4_0= RULE_INT ) ) | ( (lv_child_5_0= ruleArray ) ) ) | ( ruleNull () ) )
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:1: ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_string_1_0= RULE_STRING ) ) | ( (lv_boolean_2_0= ruleBoolean ) ) | ( (lv_double_3_0= RULE_NUMBER ) ) | ( (lv_int_4_0= RULE_INT ) ) | ( (lv_array_5_0= ruleArray ) ) ) | ruleNull )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:1: ( ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_value_1_0= RULE_STRING ) ) | ( (lv_value_2_0= ruleBoolean ) ) | ( (lv_value_3_0= RULE_NUMBER ) ) | ( (lv_value_4_0= RULE_INT ) ) | ( (lv_child_5_0= ruleArray ) ) ) | ( ruleNull () ) )
             int alt4=2;
             int LA4_0 = input.LA(1);
 
@@ -583,9 +583,9 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
             }
             switch (alt4) {
                 case 1 :
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:2: ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_string_1_0= RULE_STRING ) ) | ( (lv_boolean_2_0= ruleBoolean ) ) | ( (lv_double_3_0= RULE_NUMBER ) ) | ( (lv_int_4_0= RULE_INT ) ) | ( (lv_array_5_0= ruleArray ) ) )
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:2: ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_value_1_0= RULE_STRING ) ) | ( (lv_value_2_0= ruleBoolean ) ) | ( (lv_value_3_0= RULE_NUMBER ) ) | ( (lv_value_4_0= RULE_INT ) ) | ( (lv_child_5_0= ruleArray ) ) )
                     {
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:2: ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_string_1_0= RULE_STRING ) ) | ( (lv_boolean_2_0= ruleBoolean ) ) | ( (lv_double_3_0= RULE_NUMBER ) ) | ( (lv_int_4_0= RULE_INT ) ) | ( (lv_array_5_0= ruleArray ) ) )
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:255:2: ( ( (lv_child_0_0= ruleJObject ) ) | ( (lv_value_1_0= RULE_STRING ) ) | ( (lv_value_2_0= ruleBoolean ) ) | ( (lv_value_3_0= RULE_NUMBER ) ) | ( (lv_value_4_0= RULE_INT ) ) | ( (lv_child_5_0= ruleArray ) ) )
                     int alt3=6;
                     switch ( input.LA(1) ) {
                     case 8:
@@ -665,17 +665,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:274:6: ( (lv_string_1_0= RULE_STRING ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:274:6: ( (lv_value_1_0= RULE_STRING ) )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:274:6: ( (lv_string_1_0= RULE_STRING ) )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:275:1: (lv_string_1_0= RULE_STRING )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:274:6: ( (lv_value_1_0= RULE_STRING ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:275:1: (lv_value_1_0= RULE_STRING )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:275:1: (lv_string_1_0= RULE_STRING )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:276:3: lv_string_1_0= RULE_STRING
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:275:1: (lv_value_1_0= RULE_STRING )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:276:3: lv_value_1_0= RULE_STRING
                             {
-                            lv_string_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue533); 
+                            lv_value_1_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleValue533); 
 
-                            			newLeafNode(lv_string_1_0, grammarAccess.getValueAccess().getStringSTRINGTerminalRuleCall_0_1_0()); 
+                            			newLeafNode(lv_value_1_0, grammarAccess.getValueAccess().getValueSTRINGTerminalRuleCall_0_1_0()); 
                             		
 
                             	        if (current==null) {
@@ -683,8 +683,8 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             	        }
                                    		setWithLastConsumed(
                                    			current, 
-                                   			"string",
-                                    		lv_string_1_0, 
+                                   			"value",
+                                    		lv_value_1_0, 
                                     		"STRING");
                             	    
 
@@ -697,19 +697,19 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:293:6: ( (lv_boolean_2_0= ruleBoolean ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:293:6: ( (lv_value_2_0= ruleBoolean ) )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:293:6: ( (lv_boolean_2_0= ruleBoolean ) )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:1: (lv_boolean_2_0= ruleBoolean )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:293:6: ( (lv_value_2_0= ruleBoolean ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:1: (lv_value_2_0= ruleBoolean )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:1: (lv_boolean_2_0= ruleBoolean )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:295:3: lv_boolean_2_0= ruleBoolean
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:1: (lv_value_2_0= ruleBoolean )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:295:3: lv_value_2_0= ruleBoolean
                             {
                              
-                            	        newCompositeNode(grammarAccess.getValueAccess().getBooleanBooleanParserRuleCall_0_2_0()); 
+                            	        newCompositeNode(grammarAccess.getValueAccess().getValueBooleanParserRuleCall_0_2_0()); 
                             	    
                             pushFollow(FOLLOW_ruleBoolean_in_ruleValue565);
-                            lv_boolean_2_0=ruleBoolean();
+                            lv_value_2_0=ruleBoolean();
 
                             state._fsp--;
 
@@ -719,8 +719,8 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             	        }
                                    		set(
                                    			current, 
-                                   			"boolean",
-                                    		lv_boolean_2_0, 
+                                   			"value",
+                                    		lv_value_2_0, 
                                     		"Boolean");
                             	        afterParserOrEnumRuleCall();
                             	    
@@ -734,17 +734,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:312:6: ( (lv_double_3_0= RULE_NUMBER ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:312:6: ( (lv_value_3_0= RULE_NUMBER ) )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:312:6: ( (lv_double_3_0= RULE_NUMBER ) )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:313:1: (lv_double_3_0= RULE_NUMBER )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:312:6: ( (lv_value_3_0= RULE_NUMBER ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:313:1: (lv_value_3_0= RULE_NUMBER )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:313:1: (lv_double_3_0= RULE_NUMBER )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:314:3: lv_double_3_0= RULE_NUMBER
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:313:1: (lv_value_3_0= RULE_NUMBER )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:314:3: lv_value_3_0= RULE_NUMBER
                             {
-                            lv_double_3_0=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleValue588); 
+                            lv_value_3_0=(Token)match(input,RULE_NUMBER,FOLLOW_RULE_NUMBER_in_ruleValue588); 
 
-                            			newLeafNode(lv_double_3_0, grammarAccess.getValueAccess().getDoubleNUMBERTerminalRuleCall_0_3_0()); 
+                            			newLeafNode(lv_value_3_0, grammarAccess.getValueAccess().getValueNUMBERTerminalRuleCall_0_3_0()); 
                             		
 
                             	        if (current==null) {
@@ -752,8 +752,8 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             	        }
                                    		setWithLastConsumed(
                                    			current, 
-                                   			"double",
-                                    		lv_double_3_0, 
+                                   			"value",
+                                    		lv_value_3_0, 
                                     		"NUMBER");
                             	    
 
@@ -766,17 +766,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 5 :
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:331:6: ( (lv_int_4_0= RULE_INT ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:331:6: ( (lv_value_4_0= RULE_INT ) )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:331:6: ( (lv_int_4_0= RULE_INT ) )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:332:1: (lv_int_4_0= RULE_INT )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:331:6: ( (lv_value_4_0= RULE_INT ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:332:1: (lv_value_4_0= RULE_INT )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:332:1: (lv_int_4_0= RULE_INT )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:333:3: lv_int_4_0= RULE_INT
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:332:1: (lv_value_4_0= RULE_INT )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:333:3: lv_value_4_0= RULE_INT
                             {
-                            lv_int_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleValue616); 
+                            lv_value_4_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleValue616); 
 
-                            			newLeafNode(lv_int_4_0, grammarAccess.getValueAccess().getIntINTTerminalRuleCall_0_4_0()); 
+                            			newLeafNode(lv_value_4_0, grammarAccess.getValueAccess().getValueINTTerminalRuleCall_0_4_0()); 
                             		
 
                             	        if (current==null) {
@@ -784,8 +784,8 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             	        }
                                    		setWithLastConsumed(
                                    			current, 
-                                   			"int",
-                                    		lv_int_4_0, 
+                                   			"value",
+                                    		lv_value_4_0, 
                                     		"INT");
                             	    
 
@@ -798,19 +798,19 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 6 :
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:350:6: ( (lv_array_5_0= ruleArray ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:350:6: ( (lv_child_5_0= ruleArray ) )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:350:6: ( (lv_array_5_0= ruleArray ) )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:351:1: (lv_array_5_0= ruleArray )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:350:6: ( (lv_child_5_0= ruleArray ) )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:351:1: (lv_child_5_0= ruleArray )
                             {
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:351:1: (lv_array_5_0= ruleArray )
-                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:352:3: lv_array_5_0= ruleArray
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:351:1: (lv_child_5_0= ruleArray )
+                            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:352:3: lv_child_5_0= ruleArray
                             {
                              
-                            	        newCompositeNode(grammarAccess.getValueAccess().getArrayArrayParserRuleCall_0_5_0()); 
+                            	        newCompositeNode(grammarAccess.getValueAccess().getChildArrayParserRuleCall_0_5_0()); 
                             	    
                             pushFollow(FOLLOW_ruleArray_in_ruleValue648);
-                            lv_array_5_0=ruleArray();
+                            lv_child_5_0=ruleArray();
 
                             state._fsp--;
 
@@ -820,8 +820,8 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                             	        }
                                    		set(
                                    			current, 
-                                   			"array",
-                                    		lv_array_5_0, 
+                                   			"child",
+                                    		lv_child_5_0, 
                                     		"Array");
                             	        afterParserOrEnumRuleCall();
                             	    
@@ -841,12 +841,15 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:370:5: ruleNull
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:369:6: ( ruleNull () )
+                    {
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:369:6: ( ruleNull () )
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:370:5: ruleNull ()
                     {
                      
-                            newCompositeNode(grammarAccess.getValueAccess().getNullParserRuleCall_1()); 
+                            newCompositeNode(grammarAccess.getValueAccess().getNullParserRuleCall_1_0()); 
                         
-                    pushFollow(FOLLOW_ruleNull_in_ruleValue671);
+                    pushFollow(FOLLOW_ruleNull_in_ruleValue672);
                     ruleNull();
 
                     state._fsp--;
@@ -854,6 +857,20 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:377:1: ()
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:378:5: 
+                    {
+
+                            current = forceCreateModelElement(
+                                grammarAccess.getValueAccess().getValueAction_1_1(),
+                                current);
+                        
+
+                    }
+
+
+                    }
+
 
                     }
                     break;
@@ -878,7 +895,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleArray"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:385:1: entryRuleArray returns [EObject current=null] : iv_ruleArray= ruleArray EOF ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:391:1: entryRuleArray returns [EObject current=null] : iv_ruleArray= ruleArray EOF ;
     public final EObject entryRuleArray() throws RecognitionException {
         EObject current = null;
 
@@ -886,17 +903,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:386:2: (iv_ruleArray= ruleArray EOF )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:387:2: iv_ruleArray= ruleArray EOF
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:392:2: (iv_ruleArray= ruleArray EOF )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:393:2: iv_ruleArray= ruleArray EOF
             {
              newCompositeNode(grammarAccess.getArrayRule()); 
-            pushFollow(FOLLOW_ruleArray_in_entryRuleArray706);
+            pushFollow(FOLLOW_ruleArray_in_entryRuleArray717);
             iv_ruleArray=ruleArray();
 
             state._fsp--;
 
              current =iv_ruleArray; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleArray716); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleArray727); 
 
             }
 
@@ -914,7 +931,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleArray"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:394:1: ruleArray returns [EObject current=null] : (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' ) ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:400:1: ruleArray returns [EObject current=null] : (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' ) ;
     public final EObject ruleArray() throws RecognitionException {
         EObject current = null;
 
@@ -929,18 +946,18 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:397:28: ( (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:398:1: (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:403:28: ( (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:404:1: (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' )
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:398:1: (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:398:3: otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']'
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:404:1: (otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:404:3: otherlv_0= '[' () ( (lv_values_2_0= ruleValue ) )? (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )* otherlv_5= ']'
             {
-            otherlv_0=(Token)match(input,12,FOLLOW_12_in_ruleArray753); 
+            otherlv_0=(Token)match(input,12,FOLLOW_12_in_ruleArray764); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getArrayAccess().getLeftSquareBracketKeyword_0());
                 
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:402:1: ()
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:403:5: 
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:408:1: ()
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:409:5: 
             {
 
                     current = forceCreateModelElement(
@@ -950,7 +967,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:408:2: ( (lv_values_2_0= ruleValue ) )?
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:414:2: ( (lv_values_2_0= ruleValue ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -959,15 +976,15 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:409:1: (lv_values_2_0= ruleValue )
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:415:1: (lv_values_2_0= ruleValue )
                     {
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:409:1: (lv_values_2_0= ruleValue )
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:410:3: lv_values_2_0= ruleValue
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:415:1: (lv_values_2_0= ruleValue )
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:416:3: lv_values_2_0= ruleValue
                     {
                      
                     	        newCompositeNode(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleValue_in_ruleArray783);
+                    pushFollow(FOLLOW_ruleValue_in_ruleArray794);
                     lv_values_2_0=ruleValue();
 
                     state._fsp--;
@@ -992,7 +1009,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:426:3: (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )*
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:432:3: (otherlv_3= ',' ( (lv_values_4_0= ruleValue ) ) )*
             loop6:
             do {
                 int alt6=2;
@@ -1005,22 +1022,22 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
                 switch (alt6) {
             	case 1 :
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:426:5: otherlv_3= ',' ( (lv_values_4_0= ruleValue ) )
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:432:5: otherlv_3= ',' ( (lv_values_4_0= ruleValue ) )
             	    {
-            	    otherlv_3=(Token)match(input,9,FOLLOW_9_in_ruleArray797); 
+            	    otherlv_3=(Token)match(input,9,FOLLOW_9_in_ruleArray808); 
 
             	        	newLeafNode(otherlv_3, grammarAccess.getArrayAccess().getCommaKeyword_3_0());
             	        
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:430:1: ( (lv_values_4_0= ruleValue ) )
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:431:1: (lv_values_4_0= ruleValue )
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:436:1: ( (lv_values_4_0= ruleValue ) )
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:437:1: (lv_values_4_0= ruleValue )
             	    {
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:431:1: (lv_values_4_0= ruleValue )
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:432:3: lv_values_4_0= ruleValue
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:437:1: (lv_values_4_0= ruleValue )
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:438:3: lv_values_4_0= ruleValue
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getArrayAccess().getValuesValueParserRuleCall_3_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleValue_in_ruleArray818);
+            	    pushFollow(FOLLOW_ruleValue_in_ruleArray829);
             	    lv_values_4_0=ruleValue();
 
             	    state._fsp--;
@@ -1051,7 +1068,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_5=(Token)match(input,13,FOLLOW_13_in_ruleArray832); 
+            otherlv_5=(Token)match(input,13,FOLLOW_13_in_ruleArray843); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getArrayAccess().getRightSquareBracketKeyword_4());
                 
@@ -1076,7 +1093,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleBoolean"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:460:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:466:1: entryRuleBoolean returns [String current=null] : iv_ruleBoolean= ruleBoolean EOF ;
     public final String entryRuleBoolean() throws RecognitionException {
         String current = null;
 
@@ -1084,17 +1101,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:461:2: (iv_ruleBoolean= ruleBoolean EOF )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:462:2: iv_ruleBoolean= ruleBoolean EOF
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:467:2: (iv_ruleBoolean= ruleBoolean EOF )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:468:2: iv_ruleBoolean= ruleBoolean EOF
             {
              newCompositeNode(grammarAccess.getBooleanRule()); 
-            pushFollow(FOLLOW_ruleBoolean_in_entryRuleBoolean869);
+            pushFollow(FOLLOW_ruleBoolean_in_entryRuleBoolean880);
             iv_ruleBoolean=ruleBoolean();
 
             state._fsp--;
 
              current =iv_ruleBoolean.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolean880); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleBoolean891); 
 
             }
 
@@ -1112,7 +1129,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBoolean"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:469:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:475:1: ruleBoolean returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (kw= 'true' | kw= 'false' ) ;
     public final AntlrDatatypeRuleToken ruleBoolean() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1121,10 +1138,10 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:472:28: ( (kw= 'true' | kw= 'false' ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:473:1: (kw= 'true' | kw= 'false' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:478:28: ( (kw= 'true' | kw= 'false' ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:479:1: (kw= 'true' | kw= 'false' )
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:473:1: (kw= 'true' | kw= 'false' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:479:1: (kw= 'true' | kw= 'false' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1142,9 +1159,9 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
             }
             switch (alt7) {
                 case 1 :
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:474:2: kw= 'true'
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:480:2: kw= 'true'
                     {
-                    kw=(Token)match(input,14,FOLLOW_14_in_ruleBoolean918); 
+                    kw=(Token)match(input,14,FOLLOW_14_in_ruleBoolean929); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBooleanAccess().getTrueKeyword_0()); 
@@ -1153,9 +1170,9 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:481:2: kw= 'false'
+                    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:487:2: kw= 'false'
                     {
-                    kw=(Token)match(input,15,FOLLOW_15_in_ruleBoolean937); 
+                    kw=(Token)match(input,15,FOLLOW_15_in_ruleBoolean948); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getBooleanAccess().getFalseKeyword_1()); 
@@ -1184,7 +1201,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNull"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:494:1: entryRuleNull returns [String current=null] : iv_ruleNull= ruleNull EOF ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:500:1: entryRuleNull returns [String current=null] : iv_ruleNull= ruleNull EOF ;
     public final String entryRuleNull() throws RecognitionException {
         String current = null;
 
@@ -1192,17 +1209,17 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:495:2: (iv_ruleNull= ruleNull EOF )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:496:2: iv_ruleNull= ruleNull EOF
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:501:2: (iv_ruleNull= ruleNull EOF )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:502:2: iv_ruleNull= ruleNull EOF
             {
              newCompositeNode(grammarAccess.getNullRule()); 
-            pushFollow(FOLLOW_ruleNull_in_entryRuleNull978);
+            pushFollow(FOLLOW_ruleNull_in_entryRuleNull989);
             iv_ruleNull=ruleNull();
 
             state._fsp--;
 
              current =iv_ruleNull.getText(); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNull989); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNull1000); 
 
             }
 
@@ -1220,7 +1237,7 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNull"
-    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:503:1: ruleNull returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'null' ;
+    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:509:1: ruleNull returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : kw= 'null' ;
     public final AntlrDatatypeRuleToken ruleNull() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -1229,10 +1246,10 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:506:28: (kw= 'null' )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:508:2: kw= 'null'
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:512:28: (kw= 'null' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:514:2: kw= 'null'
             {
-            kw=(Token)match(input,16,FOLLOW_16_in_ruleNull1026); 
+            kw=(Token)match(input,16,FOLLOW_16_in_ruleNull1037); 
 
                     current.merge(kw);
                     newLeafNode(kw, grammarAccess.getNullAccess().getNullKeyword()); 
@@ -1281,20 +1298,20 @@ public class InternalJSONParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_NUMBER_in_ruleValue588 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleValue616 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleArray_in_ruleValue648 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNull_in_ruleValue671 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray706 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleArray716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_ruleArray753 = new BitSet(new long[]{0x000000000001F370L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleArray783 = new BitSet(new long[]{0x0000000000002200L});
-    public static final BitSet FOLLOW_9_in_ruleArray797 = new BitSet(new long[]{0x000000000001D170L});
-    public static final BitSet FOLLOW_ruleValue_in_ruleArray818 = new BitSet(new long[]{0x0000000000002200L});
-    public static final BitSet FOLLOW_13_in_ruleArray832 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBoolean_in_entryRuleBoolean869 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleBoolean880 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_ruleBoolean918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_ruleBoolean937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNull_in_entryRuleNull978 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNull989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_ruleNull1026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNull_in_ruleValue672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleArray_in_entryRuleArray717 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleArray727 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_ruleArray764 = new BitSet(new long[]{0x000000000001F370L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleArray794 = new BitSet(new long[]{0x0000000000002200L});
+    public static final BitSet FOLLOW_9_in_ruleArray808 = new BitSet(new long[]{0x000000000001D170L});
+    public static final BitSet FOLLOW_ruleValue_in_ruleArray829 = new BitSet(new long[]{0x0000000000002200L});
+    public static final BitSet FOLLOW_13_in_ruleArray843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBoolean_in_entryRuleBoolean880 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleBoolean891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_ruleBoolean929 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_ruleBoolean948 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNull_in_entryRuleNull989 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNull1000 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_ruleNull1037 = new BitSet(new long[]{0x0000000000000002L});
 
 }
