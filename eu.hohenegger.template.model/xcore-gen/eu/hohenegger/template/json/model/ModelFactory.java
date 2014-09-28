@@ -22,40 +22,31 @@ public interface ModelFactory extends EFactory {
 	ModelFactory eINSTANCE = eu.hohenegger.template.json.model.impl.ModelFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>JObject</em>'.
+	 * Returns a new object of class '<em>Tag</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>JObject</em>'.
+	 * @return a new object of class '<em>Tag</em>'.
 	 * @generated
 	 */
-	JObject createJObject();
+	Tag createTag();
 
 	/**
-	 * Returns a new object of class '<em>Entry</em>'.
+	 * Returns a new object of class '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Entry</em>'.
+	 * @return a new object of class '<em>Attribute</em>'.
 	 * @generated
 	 */
-	Entry createEntry();
+	Attribute createAttribute();
 
 	/**
-	 * Returns a new object of class '<em>Value</em>'.
+	 * Returns a new object of class '<em>Text Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Value</em>'.
+	 * @return a new object of class '<em>Text Node</em>'.
 	 * @generated
 	 */
-	Value createValue();
-
-	/**
-	 * Returns a new object of class '<em>Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Array</em>'.
-	 * @generated
-	 */
-	Array createArray();
+	TextNode createTextNode();
 
 	/**
 	 * Returns the package supported by this factory.

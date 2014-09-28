@@ -72,29 +72,22 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.JOBJECT: {
-				JObject jObject = (JObject)theEObject;
-				T result = caseJObject(jObject);
-				if (result == null) result = caseNode(jObject);
+			case ModelPackage.TAG: {
+				Tag tag = (Tag)theEObject;
+				T result = caseTag(tag);
+				if (result == null) result = caseNode(tag);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.ENTRY: {
-				Entry entry = (Entry)theEObject;
-				T result = caseEntry(entry);
+			case ModelPackage.ATTRIBUTE: {
+				Attribute attribute = (Attribute)theEObject;
+				T result = caseAttribute(attribute);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.VALUE: {
-				Value value = (Value)theEObject;
-				T result = caseValue(value);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ModelPackage.ARRAY: {
-				Array array = (Array)theEObject;
-				T result = caseArray(array);
-				if (result == null) result = caseNode(array);
+			case ModelPackage.TEXT_NODE: {
+				TextNode textNode = (TextNode)theEObject;
+				T result = caseTextNode(textNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -118,62 +111,47 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>JObject</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Tag</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>JObject</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Tag</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseJObject(JObject object) {
+	public T caseTag(Tag object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entry</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Attribute</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entry</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Attribute</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntry(Entry object) {
+	public T caseAttribute(Attribute object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Value</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Text Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Value</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Text Node</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseValue(Value object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Array</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Array</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseArray(Array object) {
+	public T caseTextNode(TextNode object) {
 		return null;
 	}
 

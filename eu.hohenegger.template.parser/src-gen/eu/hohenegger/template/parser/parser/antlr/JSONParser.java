@@ -25,7 +25,7 @@ public class JSONParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPars
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "JObject";
+		return "Tag";
 	}
 	
 	public JSONGrammarAccess getGrammarAccess() {

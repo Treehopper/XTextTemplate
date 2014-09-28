@@ -3,38 +3,43 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
 import "http://www.hohenegger.eu/template/parser/JSON"
 
-JObject:
-	'{' {JObject}
-	(entries+=Entry)?
-	(',' entries+=Entry)*
-	'}';
-
-Entry:
-	key=STRING ':' (content=Value)
+Tag:
+    LD name=ID attributes+=Attribute* (('/' RD) | (RD (subTags+=Tag* | =>(textNode=TextNode)) LD '/' ID RD))  
+    
 ;
 
-Value:
-	(child=JObject | value=STRING | value=Boolean | value=NUMBER | value=INT | child=Array) | Null {Value}
+Attribute:
+	key=ID '=' value=STRING
 ;
 
-Array:
-	'[' {Array} (values+=Value)? (',' values+=Value)* ']';
-
-
-Boolean 	 returns ecore::EBoolean:
-	'true' | 'false';
-
-Null:
-	'null'
+TextNode /*returns textNode */: 
+	value+=TEXT_NODE_ELEMENT* //'z'*
 ;
 
-terminal NUMBER	 returns ecore::EDouble:
-	'-'? INT? '.' INT (('E' | 'e') '-'? INT)?;
-	
-terminal INT	 returns ecore::EInt: ('0'..'9')+;
+terminal LD:
+	'<'
+;
 
-terminal STRING	 returns ecore::EString: 
-			'"' ( '\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"'
-		; 
+terminal RD:
+	'>'
+;
 
-terminal WS	: (' '|'\t'|'\r'|'\n')+;
+terminal STRING:
+	'"' (!'"')* '"'
+;
+
+terminal WS:
+    (' ' | '\t' | '\r' | '\n')+;
+
+terminal ID:
+	('a'..'y')+
+;
+
+terminal TEXT_NODE_ELEMENT:
+	(!('<' | '>'))
+;
+/*
+ terminal ID:
+	(!('<' | '>'))+
+;
+ */

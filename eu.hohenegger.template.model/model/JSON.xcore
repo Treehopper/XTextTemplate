@@ -12,42 +12,21 @@ package eu.hohenegger.template.json.model
 
 interface Node {}
 
-class JObject extends Node {
-	contains Entry[] entries
+class Tag extends Node {
+	contains Attribute[] attributes
+
+	contains TextNode textNode
+	contains Tag[] subTags
 	
-	op Entry getValue(String key) {
-		entries.findFirst[e | key.equals(e.key)]
-	}
+	String name
+	
 }
 
-class Entry {
+class Attribute {
 	String key
-	contains Value content
-
-	derived Object value get {
-		if(content == null) 
-			null
-		else 
-			content.value
-	}
-
-	derived Object child get {
-		if(content == null) 
-			null
-		else 
-			content.child
-	}
+	String value
 }
 
-class Value {
-	contains Node child
-	Object value
-}
-
-class Array extends Node {
-	contains Value[] values
-	
-	op Object getValue(int index) {
-		values.get(index).value
-	}
+class TextNode {
+	String[] value
 }

@@ -72,20 +72,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createNodeAdapter();
 			}
 			@Override
-			public Adapter caseJObject(JObject object) {
-				return createJObjectAdapter();
+			public Adapter caseTag(Tag object) {
+				return createTagAdapter();
 			}
 			@Override
-			public Adapter caseEntry(Entry object) {
-				return createEntryAdapter();
+			public Adapter caseAttribute(Attribute object) {
+				return createAttributeAdapter();
 			}
 			@Override
-			public Adapter caseValue(Value object) {
-				return createValueAdapter();
-			}
-			@Override
-			public Adapter caseArray(Array object) {
-				return createArrayAdapter();
+			public Adapter caseTextNode(TextNode object) {
+				return createTextNodeAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -122,58 +118,44 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.JObject <em>JObject</em>}'.
+	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Tag <em>Tag</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see eu.hohenegger.template.json.model.JObject
+	 * @see eu.hohenegger.template.json.model.Tag
 	 * @generated
 	 */
-	public Adapter createJObjectAdapter() {
+	public Adapter createTagAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Entry <em>Entry</em>}'.
+	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Attribute <em>Attribute</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see eu.hohenegger.template.json.model.Entry
+	 * @see eu.hohenegger.template.json.model.Attribute
 	 * @generated
 	 */
-	public Adapter createEntryAdapter() {
+	public Adapter createAttributeAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Value <em>Value</em>}'.
+	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.TextNode <em>Text Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see eu.hohenegger.template.json.model.Value
+	 * @see eu.hohenegger.template.json.model.TextNode
 	 * @generated
 	 */
-	public Adapter createValueAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link eu.hohenegger.template.json.model.Array <em>Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see eu.hohenegger.template.json.model.Array
-	 * @generated
-	 */
-	public Adapter createArrayAdapter() {
+	public Adapter createTextNodeAdapter() {
 		return null;
 	}
 

@@ -53,10 +53,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ModelPackage.JOBJECT: return createJObject();
-			case ModelPackage.ENTRY: return createEntry();
-			case ModelPackage.VALUE: return createValue();
-			case ModelPackage.ARRAY: return createArray();
+			case ModelPackage.TAG: return createTag();
+			case ModelPackage.ATTRIBUTE: return createAttribute();
+			case ModelPackage.TEXT_NODE: return createTextNode();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -67,9 +66,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JObject createJObject() {
-		JObjectImpl jObject = new JObjectImpl();
-		return jObject;
+	public Tag createTag() {
+		TagImpl tag = new TagImpl();
+		return tag;
 	}
 
 	/**
@@ -77,9 +76,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Entry createEntry() {
-		EntryImpl entry = new EntryImpl();
-		return entry;
+	public Attribute createAttribute() {
+		AttributeImpl attribute = new AttributeImpl();
+		return attribute;
 	}
 
 	/**
@@ -87,19 +86,9 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Value createValue() {
-		ValueImpl value = new ValueImpl();
-		return value;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Array createArray() {
-		ArrayImpl array = new ArrayImpl();
-		return array;
+	public TextNode createTextNode() {
+		TextNodeImpl textNode = new TextNodeImpl();
+		return textNode;
 	}
 
 	/**

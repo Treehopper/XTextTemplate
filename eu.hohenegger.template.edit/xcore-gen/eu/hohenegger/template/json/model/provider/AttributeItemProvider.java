@@ -3,15 +3,17 @@
 package eu.hohenegger.template.json.model.provider;
 
 
-import eu.hohenegger.template.json.model.Entry;
-import eu.hohenegger.template.json.model.ModelFactory;
+import eu.hohenegger.template.json.model.Attribute;
 import eu.hohenegger.template.json.model.ModelPackage;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
-import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -24,12 +26,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link eu.hohenegger.template.json.model.Entry} object.
+ * This is the item provider adapter for a {@link eu.hohenegger.template.json.model.Attribute} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class EntryItemProvider 
+public class AttributeItemProvider 
 	extends ItemProviderAdapter
 	implements
 		IEditingDomainItemProvider,
@@ -43,7 +45,7 @@ public class EntryItemProvider
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EntryItemProvider(AdapterFactory adapterFactory) {
+	public AttributeItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -60,7 +62,6 @@ public class EntryItemProvider
 
 			addKeyPropertyDescriptor(object);
 			addValuePropertyDescriptor(object);
-			addChildPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -76,9 +77,9 @@ public class EntryItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entry_key_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_key_feature", "_UI_Entry_type"),
-				 ModelPackage.Literals.ENTRY__KEY,
+				 getString("_UI_Attribute_key_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_key_feature", "_UI_Attribute_type"),
+				 ModelPackage.Literals.ATTRIBUTE__KEY,
 				 true,
 				 false,
 				 false,
@@ -98,32 +99,10 @@ public class EntryItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Entry_value_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_value_feature", "_UI_Entry_type"),
-				 ModelPackage.Literals.ENTRY__VALUE,
-				 false,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Child feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addChildPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Entry_child_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Entry_child_feature", "_UI_Entry_type"),
-				 ModelPackage.Literals.ENTRY__CHILD,
-				 false,
+				 getString("_UI_Attribute_value_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Attribute_value_feature", "_UI_Attribute_type"),
+				 ModelPackage.Literals.ATTRIBUTE__VALUE,
+				 true,
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
@@ -132,44 +111,14 @@ public class EntryItemProvider
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModelPackage.Literals.ENTRY__CONTENT);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Entry.gif.
+	 * This returns Attribute.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Entry"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Attribute"));
 	}
 
 	/**
@@ -180,10 +129,10 @@ public class EntryItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Entry)object).getKey();
+		String label = ((Attribute)object).getKey();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Entry_type") :
-			getString("_UI_Entry_type") + " " + label;
+			getString("_UI_Attribute_type") :
+			getString("_UI_Attribute_type") + " " + label;
 	}
 	
 
@@ -198,14 +147,10 @@ public class EntryItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Entry.class)) {
-			case ModelPackage.ENTRY__KEY:
-			case ModelPackage.ENTRY__VALUE:
-			case ModelPackage.ENTRY__CHILD:
+		switch (notification.getFeatureID(Attribute.class)) {
+			case ModelPackage.ATTRIBUTE__KEY:
+			case ModelPackage.ATTRIBUTE__VALUE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
-			case ModelPackage.ENTRY__CONTENT:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
 		super.notifyChanged(notification);
@@ -221,11 +166,6 @@ public class EntryItemProvider
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModelPackage.Literals.ENTRY__CONTENT,
-				 ModelFactory.eINSTANCE.createValue()));
 	}
 
 	/**

@@ -2,16 +2,14 @@
  */
 package eu.hohenegger.template.json.model.impl;
 
-import eu.hohenegger.template.json.model.Array;
-import eu.hohenegger.template.json.model.Entry;
-import eu.hohenegger.template.json.model.JObject;
+import eu.hohenegger.template.json.model.Attribute;
 import eu.hohenegger.template.json.model.ModelFactory;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Node;
-import eu.hohenegger.template.json.model.Value;
+import eu.hohenegger.template.json.model.Tag;
+import eu.hohenegger.template.json.model.TextNode;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EcorePackage;
@@ -36,28 +34,21 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass jObjectEClass = null;
+	private EClass tagEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass entryEClass = null;
+	private EClass attributeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass valueEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass arrayEClass = null;
+	private EClass textNodeEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -137,8 +128,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getJObject() {
-		return jObjectEClass;
+	public EClass getTag() {
+		return tagEClass;
 	}
 
 	/**
@@ -146,8 +137,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getJObject_Entries() {
-		return (EReference)jObjectEClass.getEStructuralFeatures().get(0);
+	public EReference getTag_SubTags() {
+		return (EReference)tagEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -155,8 +146,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getJObject__GetValue__String() {
-		return jObjectEClass.getEOperations().get(0);
+	public EReference getTag_Attributes() {
+		return (EReference)tagEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -164,8 +155,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntry() {
-		return entryEClass;
+	public EReference getTag_TextNode() {
+		return (EReference)tagEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -173,8 +164,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntry_Key() {
-		return (EAttribute)entryEClass.getEStructuralFeatures().get(0);
+	public EAttribute getTag_Name() {
+		return (EAttribute)tagEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -182,8 +173,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEntry_Content() {
-		return (EReference)entryEClass.getEStructuralFeatures().get(1);
+	public EClass getAttribute() {
+		return attributeEClass;
 	}
 
 	/**
@@ -191,8 +182,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntry_Value() {
-		return (EAttribute)entryEClass.getEStructuralFeatures().get(2);
+	public EAttribute getAttribute_Key() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -200,8 +191,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getEntry_Child() {
-		return (EAttribute)entryEClass.getEStructuralFeatures().get(3);
+	public EAttribute getAttribute_Value() {
+		return (EAttribute)attributeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -209,8 +200,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getValue() {
-		return valueEClass;
+	public EClass getTextNode() {
+		return textNodeEClass;
 	}
 
 	/**
@@ -218,44 +209,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getValue_Child() {
-		return (EReference)valueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getValue_Value() {
-		return (EAttribute)valueEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getArray() {
-		return arrayEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getArray_Values() {
-		return (EReference)arrayEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getArray__GetValue__int() {
-		return arrayEClass.getEOperations().get(0);
+	public EAttribute getTextNode_Value() {
+		return (EAttribute)textNodeEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -288,23 +243,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Create classes and their features
 		nodeEClass = createEClass(NODE);
 
-		jObjectEClass = createEClass(JOBJECT);
-		createEReference(jObjectEClass, JOBJECT__ENTRIES);
-		createEOperation(jObjectEClass, JOBJECT___GET_VALUE__STRING);
+		tagEClass = createEClass(TAG);
+		createEReference(tagEClass, TAG__ATTRIBUTES);
+		createEReference(tagEClass, TAG__TEXT_NODE);
+		createEReference(tagEClass, TAG__SUB_TAGS);
+		createEAttribute(tagEClass, TAG__NAME);
 
-		entryEClass = createEClass(ENTRY);
-		createEAttribute(entryEClass, ENTRY__KEY);
-		createEReference(entryEClass, ENTRY__CONTENT);
-		createEAttribute(entryEClass, ENTRY__VALUE);
-		createEAttribute(entryEClass, ENTRY__CHILD);
+		attributeEClass = createEClass(ATTRIBUTE);
+		createEAttribute(attributeEClass, ATTRIBUTE__KEY);
+		createEAttribute(attributeEClass, ATTRIBUTE__VALUE);
 
-		valueEClass = createEClass(VALUE);
-		createEReference(valueEClass, VALUE__CHILD);
-		createEAttribute(valueEClass, VALUE__VALUE);
-
-		arrayEClass = createEClass(ARRAY);
-		createEReference(arrayEClass, ARRAY__VALUES);
-		createEOperation(arrayEClass, ARRAY___GET_VALUE__INT);
+		textNodeEClass = createEClass(TEXT_NODE);
+		createEAttribute(textNodeEClass, TEXT_NODE__VALUE);
 	}
 
 	/**
@@ -338,33 +288,23 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		jObjectEClass.getESuperTypes().add(this.getNode());
-		arrayEClass.getESuperTypes().add(this.getNode());
+		tagEClass.getESuperTypes().add(this.getNode());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(nodeEClass, Node.class, "Node", IS_ABSTRACT, IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(jObjectEClass, JObject.class, "JObject", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getJObject_Entries(), this.getEntry(), null, "entries", null, 0, -1, JObject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(tagEClass, Tag.class, "Tag", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTag_Attributes(), this.getAttribute(), null, "attributes", null, 0, -1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTag_TextNode(), this.getTextNode(), null, "textNode", null, 0, 1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTag_SubTags(), this.getTag(), null, "subTags", null, 0, -1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTag_Name(), theEcorePackage.getEString(), "name", null, 0, 1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		EOperation op = initEOperation(getJObject__GetValue__String(), this.getEntry(), "getValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEString(), "key", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEClass(attributeEClass, Attribute.class, "Attribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAttribute_Key(), theEcorePackage.getEString(), "key", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getAttribute_Value(), theEcorePackage.getEString(), "value", null, 0, 1, Attribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(entryEClass, Entry.class, "Entry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getEntry_Key(), theEcorePackage.getEString(), "key", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEntry_Content(), this.getValue(), null, "content", null, 0, 1, Entry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntry_Value(), theEcorePackage.getEJavaObject(), "value", null, 0, 1, Entry.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEAttribute(getEntry_Child(), theEcorePackage.getEJavaObject(), "child", null, 0, 1, Entry.class, IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-
-		initEClass(valueEClass, Value.class, "Value", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getValue_Child(), this.getNode(), null, "child", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getValue_Value(), theEcorePackage.getEJavaObject(), "value", null, 0, 1, Value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(arrayEClass, Array.class, "Array", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArray_Values(), this.getValue(), null, "values", null, 0, -1, Array.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		op = initEOperation(getArray__GetValue__int(), theEcorePackage.getEJavaObject(), "getValue", 0, 1, !IS_UNIQUE, IS_ORDERED);
-		addEParameter(op, theEcorePackage.getEInt(), "index", 0, 1, !IS_UNIQUE, IS_ORDERED);
+		initEClass(textNodeEClass, TextNode.class, "TextNode", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTextNode_Value(), theEcorePackage.getEString(), "value", null, 0, -1, TextNode.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

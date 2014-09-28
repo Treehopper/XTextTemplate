@@ -16,9 +16,7 @@ import org.junit.Test;
 
 import com.google.inject.Injector;
 
-import eu.hohenegger.template.json.model.Array;
-import eu.hohenegger.template.json.model.Entry;
-import eu.hohenegger.template.json.model.JObject;
+import eu.hohenegger.template.json.model.Tag;
 
 public class TestStandaloneSetup {
 	static final String ISO_8859_1 = "ISO-8859-1";
@@ -29,13 +27,14 @@ public class TestStandaloneSetup {
 	private XtextResourceSet rs;
 	private String encoding;
 
-	private JObject parse(String string) throws IOException,
+	@SuppressWarnings("unchecked")
+	private <T> T parse(String string) throws IOException,
 	UnsupportedEncodingException {
 		resource.load(new ByteArrayInputStream(string.getBytes(encoding)),
 				rs.getLoadOptions());
 
 		EObject dataRoot = resource.getContents().get(0);
-		JObject root = (JObject) dataRoot;
+		T root = (T) dataRoot;
 		return root;
 	}
 
@@ -54,63 +53,11 @@ public class TestStandaloneSetup {
 	}
 
 	@Test
-	public void testString() throws UnsupportedEncodingException, IOException {
-		String string = "{\"key\" : \"value\"}";
-		JObject root = parse(string);
+	public void testTag() throws UnsupportedEncodingException, IOException {
+		String string = "<root></root>";
+		Tag root = parse(string);
 
-		Entry entry = root.getValue("key");
-		assertEquals("key", entry.getKey());
-		assertEquals("value", entry.getValue());
+		assertEquals("root", root.getName());
 	}
 
-	@Test
-	public void testDouble() throws UnsupportedEncodingException, IOException {
-		String string = "{\"key\" : 42.5}";
-		JObject root = parse(string);
-
-		Entry entry = root.getValue("key");
-		assertEquals(Double.valueOf(42.5), entry.getValue());
-	}
-
-
-	@Test
-	public void testArray() throws UnsupportedEncodingException, IOException {
-		String string = "{\"key\" : [1,2,3]}";
-		JObject root = parse(string);
-
-		Entry entry = root.getValue("key");
-		Array values = (Array) entry.getContent().getChild();
-		assertEquals(Integer.valueOf(1), values.getValue(0));
-		assertEquals(Integer.valueOf(2), values.getValue(1));
-		assertEquals(Integer.valueOf(3), values.getValue(2));
-	}
-
-	@Test
-	public void testObject() throws UnsupportedEncodingException, IOException {
-		String string = "{\"key\" : {\"key\" : \"value\"}}";
-		JObject root = parse(string);
-
-		Entry entry = root.getValue("key");
-		assertEquals("key", entry.getKey());
-		JObject child = (JObject) entry.getContent().getChild();
-		assertEquals("value", child.getEntries().get(0).getValue());
-	}
-
-	@Test
-	public void testBoolean() throws UnsupportedEncodingException, IOException {
-		String string = "{\"key\" : true}";
-		JObject root = parse(string);
-
-		Entry entry = root.getValue("key");
-		assertEquals(Boolean.TRUE, entry.getValue());
-	}
-
-	@Test
-	public void testNull() throws UnsupportedEncodingException, IOException {
-		String string = "{\"key\" : null}";
-		JObject root = parse(string);
-
-		Entry entry = root.getValue("key");
-		assertEquals(null, entry.getValue());
-	}
 }

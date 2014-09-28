@@ -3,7 +3,7 @@
 package eu.hohenegger.template.json.model.tests;
 
 import eu.hohenegger.template.json.model.ModelFactory;
-import eu.hohenegger.template.json.model.Value;
+import eu.hohenegger.template.json.model.Tag;
 
 import junit.framework.TestCase;
 
@@ -11,19 +11,19 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Value</b></em>'.
+ * A test case for the model object '<em><b>Tag</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ValueTest extends TestCase {
+public class TagTest extends TestCase {
 
 	/**
-	 * The fixture for this Value test case.
+	 * The fixture for this Tag test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Value fixture = null;
+	protected Tag fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -31,36 +31,36 @@ public class ValueTest extends TestCase {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(ValueTest.class);
+		TestRunner.run(TagTest.class);
 	}
 
 	/**
-	 * Constructs a new Value test case with the given name.
+	 * Constructs a new Tag test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ValueTest(String name) {
+	public TagTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Sets the fixture for this Value test case.
+	 * Sets the fixture for this Tag test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void setFixture(Value fixture) {
+	protected void setFixture(Tag fixture) {
 		this.fixture = fixture;
 	}
 
 	/**
-	 * Returns the fixture for this Value test case.
+	 * Returns the fixture for this Tag test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected Value getFixture() {
+	protected Tag getFixture() {
 		return fixture;
 	}
 
@@ -72,7 +72,7 @@ public class ValueTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ModelFactory.eINSTANCE.createValue());
+		setFixture(ModelFactory.eINSTANCE.createTag());
 	}
 
 	/**
@@ -86,4 +86,4 @@ public class ValueTest extends TestCase {
 		setFixture(null);
 	}
 
-} //ValueTest
+} //TagTest

@@ -3,39 +3,52 @@
 package eu.hohenegger.template.json.model.provider;
 
 
-import eu.hohenegger.template.json.model.JObject;
 import eu.hohenegger.template.json.model.ModelFactory;
 import eu.hohenegger.template.json.model.ModelPackage;
+import eu.hohenegger.template.json.model.Tag;
+
 import java.util.Collection;
 import java.util.List;
+
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link eu.hohenegger.template.json.model.JObject} object.
+ * This is the item provider adapter for a {@link eu.hohenegger.template.json.model.Tag} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class JObjectItemProvider 
-	extends ItemProviderAdapter implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class TagItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public JObjectItemProvider(AdapterFactory adapterFactory) {
+	public TagItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -50,8 +63,31 @@ public class JObjectItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Tag_name_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Tag_name_feature", "_UI_Tag_type"),
+				 ModelPackage.Literals.TAG__NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -66,7 +102,9 @@ public class JObjectItemProvider
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ModelPackage.Literals.JOBJECT__ENTRIES);
+			childrenFeatures.add(ModelPackage.Literals.TAG__ATTRIBUTES);
+			childrenFeatures.add(ModelPackage.Literals.TAG__TEXT_NODE);
+			childrenFeatures.add(ModelPackage.Literals.TAG__SUB_TAGS);
 		}
 		return childrenFeatures;
 	}
@@ -85,14 +123,14 @@ public class JObjectItemProvider
 	}
 
 	/**
-	 * This returns JObject.gif.
+	 * This returns Tag.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/JObject"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Tag"));
 	}
 
 	/**
@@ -103,7 +141,10 @@ public class JObjectItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_JObject_type");
+		String label = ((Tag)object).getName();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tag_type") :
+			getString("_UI_Tag_type") + " " + label;
 	}
 	
 
@@ -118,8 +159,13 @@ public class JObjectItemProvider
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(JObject.class)) {
-			case ModelPackage.JOBJECT__ENTRIES:
+		switch (notification.getFeatureID(Tag.class)) {
+			case ModelPackage.TAG__NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+			case ModelPackage.TAG__ATTRIBUTES:
+			case ModelPackage.TAG__TEXT_NODE:
+			case ModelPackage.TAG__SUB_TAGS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -139,8 +185,18 @@ public class JObjectItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ModelPackage.Literals.JOBJECT__ENTRIES,
-				 ModelFactory.eINSTANCE.createEntry()));
+				(ModelPackage.Literals.TAG__ATTRIBUTES,
+				 ModelFactory.eINSTANCE.createAttribute()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModelPackage.Literals.TAG__TEXT_NODE,
+				 ModelFactory.eINSTANCE.createTextNode()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModelPackage.Literals.TAG__SUB_TAGS,
+				 ModelFactory.eINSTANCE.createTag()));
 	}
 
 	/**

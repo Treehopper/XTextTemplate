@@ -72,95 +72,72 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.JObject} instances.
+	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Tag} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected JObjectItemProvider jObjectItemProvider;
+	protected TagItemProvider tagItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.JObject}.
+	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Tag}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createJObjectAdapter() {
-		if (jObjectItemProvider == null) {
-			jObjectItemProvider = new JObjectItemProvider(this);
+	public Adapter createTagAdapter() {
+		if (tagItemProvider == null) {
+			tagItemProvider = new TagItemProvider(this);
 		}
 
-		return jObjectItemProvider;
+		return tagItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Entry} instances.
+	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Attribute} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected EntryItemProvider entryItemProvider;
+	protected AttributeItemProvider attributeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Entry}.
+	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Attribute}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createEntryAdapter() {
-		if (entryItemProvider == null) {
-			entryItemProvider = new EntryItemProvider(this);
+	public Adapter createAttributeAdapter() {
+		if (attributeItemProvider == null) {
+			attributeItemProvider = new AttributeItemProvider(this);
 		}
 
-		return entryItemProvider;
+		return attributeItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Value} instances.
+	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.TextNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ValueItemProvider valueItemProvider;
+	protected TextNodeItemProvider textNodeItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Value}.
+	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.TextNode}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createValueAdapter() {
-		if (valueItemProvider == null) {
-			valueItemProvider = new ValueItemProvider(this);
+	public Adapter createTextNodeAdapter() {
+		if (textNodeItemProvider == null) {
+			textNodeItemProvider = new TextNodeItemProvider(this);
 		}
 
-		return valueItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Array} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArrayItemProvider arrayItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Array}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArrayAdapter() {
-		if (arrayItemProvider == null) {
-			arrayItemProvider = new ArrayItemProvider(this);
-		}
-
-		return arrayItemProvider;
+		return textNodeItemProvider;
 	}
 
 	/**
@@ -262,10 +239,9 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	 * @generated
 	 */
 	public void dispose() {
-		if (jObjectItemProvider != null) jObjectItemProvider.dispose();
-		if (entryItemProvider != null) entryItemProvider.dispose();
-		if (valueItemProvider != null) valueItemProvider.dispose();
-		if (arrayItemProvider != null) arrayItemProvider.dispose();
+		if (tagItemProvider != null) tagItemProvider.dispose();
+		if (attributeItemProvider != null) attributeItemProvider.dispose();
+		if (textNodeItemProvider != null) textNodeItemProvider.dispose();
 	}
 
 }

@@ -2,20 +2,22 @@ package eu.hohenegger.template.parser.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
-import eu.hohenegger.template.json.model.Array;
-import eu.hohenegger.template.json.model.Entry;
-import eu.hohenegger.template.json.model.JObject;
+import eu.hohenegger.template.json.model.Attribute;
 import eu.hohenegger.template.json.model.ModelPackage;
-import eu.hohenegger.template.json.model.Value;
+import eu.hohenegger.template.json.model.Tag;
+import eu.hohenegger.template.json.model.TextNode;
 import eu.hohenegger.template.parser.services.JSONGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -25,27 +27,21 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == ModelPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case ModelPackage.ARRAY:
-				if(context == grammarAccess.getArrayRule()) {
-					sequence_Array(context, (Array) semanticObject); 
+			case ModelPackage.ATTRIBUTE:
+				if(context == grammarAccess.getAttributeRule()) {
+					sequence_Attribute(context, (Attribute) semanticObject); 
 					return; 
 				}
 				else break;
-			case ModelPackage.ENTRY:
-				if(context == grammarAccess.getEntryRule()) {
-					sequence_Entry(context, (Entry) semanticObject); 
+			case ModelPackage.TAG:
+				if(context == grammarAccess.getTagRule()) {
+					sequence_Tag(context, (Tag) semanticObject); 
 					return; 
 				}
 				else break;
-			case ModelPackage.JOBJECT:
-				if(context == grammarAccess.getJObjectRule()) {
-					sequence_JObject(context, (JObject) semanticObject); 
-					return; 
-				}
-				else break;
-			case ModelPackage.VALUE:
-				if(context == grammarAccess.getValueRule()) {
-					sequence_Value(context, (Value) semanticObject); 
+			case ModelPackage.TEXT_NODE:
+				if(context == grammarAccess.getTextNodeRule()) {
+					sequence_TextNode(context, (TextNode) semanticObject); 
 					return; 
 				}
 				else break;
@@ -55,36 +51,37 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (values+=Value? values+=Value*)
+	 *     (key=ID value=STRING)
 	 */
-	protected void sequence_Array(EObject context, Array semanticObject) {
+	protected void sequence_Attribute(EObject context, Attribute semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, ModelPackage.Literals.ATTRIBUTE__KEY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.ATTRIBUTE__KEY));
+			if(transientValues.isValueTransient(semanticObject, ModelPackage.Literals.ATTRIBUTE__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ModelPackage.Literals.ATTRIBUTE__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAttributeAccess().getKeyIDTerminalRuleCall_0_0(), semanticObject.getKey());
+		feeder.accept(grammarAccess.getAttributeAccess().getValueSTRINGTerminalRuleCall_2_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID attributes+=Attribute* (subTags+=Tag* | textNode=TextNode)?)
+	 */
+	protected void sequence_Tag(EObject context, Tag semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (key=STRING content=Value)
+	 *     value+=TEXT_NODE_ELEMENT*
 	 */
-	protected void sequence_Entry(EObject context, Entry semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (entries+=Entry? entries+=Entry*)
-	 */
-	protected void sequence_JObject(EObject context, JObject semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     {Value}
-	 */
-	protected void sequence_Value(EObject context, Value semanticObject) {
+	protected void sequence_TextNode(EObject context, TextNode semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 }

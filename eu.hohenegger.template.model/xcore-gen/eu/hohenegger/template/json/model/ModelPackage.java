@@ -4,7 +4,6 @@ package eu.hohenegger.template.json.model;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -87,60 +86,78 @@ public interface ModelPackage extends EPackage {
 	int NODE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.JObjectImpl <em>JObject</em>}' class.
+	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.TagImpl <em>Tag</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see eu.hohenegger.template.json.model.impl.JObjectImpl
-	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getJObject()
+	 * @see eu.hohenegger.template.json.model.impl.TagImpl
+	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getTag()
 	 * @generated
 	 */
-	int JOBJECT = 1;
+	int TAG = 1;
 
 	/**
-	 * The feature id for the '<em><b>Entries</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JOBJECT__ENTRIES = NODE_FEATURE_COUNT + 0;
+	int TAG__ATTRIBUTES = NODE_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>JObject</em>' class.
+	 * The feature id for the '<em><b>Text Node</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JOBJECT_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
+	int TAG__TEXT_NODE = NODE_FEATURE_COUNT + 1;
 
 	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
+	 * The feature id for the '<em><b>Sub Tags</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JOBJECT___GET_VALUE__STRING = NODE_OPERATION_COUNT + 0;
+	int TAG__SUB_TAGS = NODE_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>JObject</em>' class.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int JOBJECT_OPERATION_COUNT = NODE_OPERATION_COUNT + 1;
+	int TAG__NAME = NODE_FEATURE_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.EntryImpl <em>Entry</em>}' class.
+	 * The number of structural features of the '<em>Tag</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see eu.hohenegger.template.json.model.impl.EntryImpl
-	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getEntry()
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_FEATURE_COUNT = NODE_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.AttributeImpl <em>Attribute</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see eu.hohenegger.template.json.model.impl.AttributeImpl
+	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getAttribute()
 	 * @generated
 	 */
-	int ENTRY = 2;
+	int ATTRIBUTE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -149,16 +166,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__KEY = 0;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTRY__CONTENT = 1;
+	int ATTRIBUTE__KEY = 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -167,126 +175,62 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__VALUE = 2;
+	int ATTRIBUTE__VALUE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Child</b></em>' attribute.
+	 * The number of structural features of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY__CHILD = 3;
+	int ATTRIBUTE_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of structural features of the '<em>Entry</em>' class.
+	 * The number of operations of the '<em>Attribute</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY_FEATURE_COUNT = 4;
+	int ATTRIBUTE_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Entry</em>' class.
+	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.TextNodeImpl <em>Text Node</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see eu.hohenegger.template.json.model.impl.TextNodeImpl
+	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getTextNode()
+	 * @generated
+	 */
+	int TEXT_NODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Value</b></em>' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENTRY_OPERATION_COUNT = 0;
+	int TEXT_NODE__VALUE = 0;
 
 	/**
-	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.ValueImpl <em>Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see eu.hohenegger.template.json.model.impl.ValueImpl
-	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getValue()
-	 * @generated
-	 */
-	int VALUE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Child</b></em>' containment reference.
+	 * The number of structural features of the '<em>Text Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE__CHILD = 0;
+	int TEXT_NODE_FEATURE_COUNT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The number of operations of the '<em>Text Node</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VALUE__VALUE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALUE_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.ArrayImpl <em>Array</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see eu.hohenegger.template.json.model.impl.ArrayImpl
-	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getArray()
-	 * @generated
-	 */
-	int ARRAY = 4;
-
-	/**
-	 * The feature id for the '<em><b>Values</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY__VALUES = NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Array</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Get Value</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY___GET_VALUE__INT = NODE_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Array</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARRAY_OPERATION_COUNT = NODE_OPERATION_COUNT + 1;
+	int TEXT_NODE_OPERATION_COUNT = 0;
 
 	/**
 	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Node <em>Node</em>}'.
@@ -299,152 +243,111 @@ public interface ModelPackage extends EPackage {
 	EClass getNode();
 
 	/**
-	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.JObject <em>JObject</em>}'.
+	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Tag <em>Tag</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>JObject</em>'.
-	 * @see eu.hohenegger.template.json.model.JObject
+	 * @return the meta object for class '<em>Tag</em>'.
+	 * @see eu.hohenegger.template.json.model.Tag
 	 * @generated
 	 */
-	EClass getJObject();
+	EClass getTag();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.json.model.JObject#getEntries <em>Entries</em>}'.
+	 * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.json.model.Tag#getSubTags <em>Sub Tags</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Entries</em>'.
-	 * @see eu.hohenegger.template.json.model.JObject#getEntries()
-	 * @see #getJObject()
+	 * @return the meta object for the containment reference list '<em>Sub Tags</em>'.
+	 * @see eu.hohenegger.template.json.model.Tag#getSubTags()
+	 * @see #getTag()
 	 * @generated
 	 */
-	EReference getJObject_Entries();
+	EReference getTag_SubTags();
 
 	/**
-	 * Returns the meta object for the '{@link eu.hohenegger.template.json.model.JObject#getValue(java.lang.String) <em>Get Value</em>}' operation.
+	 * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.json.model.Tag#getAttributes <em>Attributes</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see eu.hohenegger.template.json.model.JObject#getValue(java.lang.String)
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see eu.hohenegger.template.json.model.Tag#getAttributes()
+	 * @see #getTag()
 	 * @generated
 	 */
-	EOperation getJObject__GetValue__String();
+	EReference getTag_Attributes();
 
 	/**
-	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Entry <em>Entry</em>}'.
+	 * Returns the meta object for the containment reference '{@link eu.hohenegger.template.json.model.Tag#getTextNode <em>Text Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entry</em>'.
-	 * @see eu.hohenegger.template.json.model.Entry
+	 * @return the meta object for the containment reference '<em>Text Node</em>'.
+	 * @see eu.hohenegger.template.json.model.Tag#getTextNode()
+	 * @see #getTag()
 	 * @generated
 	 */
-	EClass getEntry();
+	EReference getTag_TextNode();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Entry#getKey <em>Key</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Tag#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.hohenegger.template.json.model.Tag#getName()
+	 * @see #getTag()
+	 * @generated
+	 */
+	EAttribute getTag_Name();
+
+	/**
+	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Attribute <em>Attribute</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Attribute</em>'.
+	 * @see eu.hohenegger.template.json.model.Attribute
+	 * @generated
+	 */
+	EClass getAttribute();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Attribute#getKey <em>Key</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Key</em>'.
-	 * @see eu.hohenegger.template.json.model.Entry#getKey()
-	 * @see #getEntry()
+	 * @see eu.hohenegger.template.json.model.Attribute#getKey()
+	 * @see #getAttribute()
 	 * @generated
 	 */
-	EAttribute getEntry_Key();
+	EAttribute getAttribute_Key();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link eu.hohenegger.template.json.model.Entry#getContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Content</em>'.
-	 * @see eu.hohenegger.template.json.model.Entry#getContent()
-	 * @see #getEntry()
-	 * @generated
-	 */
-	EReference getEntry_Content();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Entry#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Attribute#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see eu.hohenegger.template.json.model.Entry#getValue()
-	 * @see #getEntry()
+	 * @see eu.hohenegger.template.json.model.Attribute#getValue()
+	 * @see #getAttribute()
 	 * @generated
 	 */
-	EAttribute getEntry_Value();
+	EAttribute getAttribute_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Entry#getChild <em>Child</em>}'.
+	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.TextNode <em>Text Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Child</em>'.
-	 * @see eu.hohenegger.template.json.model.Entry#getChild()
-	 * @see #getEntry()
+	 * @return the meta object for class '<em>Text Node</em>'.
+	 * @see eu.hohenegger.template.json.model.TextNode
 	 * @generated
 	 */
-	EAttribute getEntry_Child();
+	EClass getTextNode();
 
 	/**
-	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Value <em>Value</em>}'.
+	 * Returns the meta object for the attribute list '{@link eu.hohenegger.template.json.model.TextNode#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Value</em>'.
-	 * @see eu.hohenegger.template.json.model.Value
+	 * @return the meta object for the attribute list '<em>Value</em>'.
+	 * @see eu.hohenegger.template.json.model.TextNode#getValue()
+	 * @see #getTextNode()
 	 * @generated
 	 */
-	EClass getValue();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link eu.hohenegger.template.json.model.Value#getChild <em>Child</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Child</em>'.
-	 * @see eu.hohenegger.template.json.model.Value#getChild()
-	 * @see #getValue()
-	 * @generated
-	 */
-	EReference getValue_Child();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Value#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see eu.hohenegger.template.json.model.Value#getValue()
-	 * @see #getValue()
-	 * @generated
-	 */
-	EAttribute getValue_Value();
-
-	/**
-	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Array <em>Array</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Array</em>'.
-	 * @see eu.hohenegger.template.json.model.Array
-	 * @generated
-	 */
-	EClass getArray();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.json.model.Array#getValues <em>Values</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Values</em>'.
-	 * @see eu.hohenegger.template.json.model.Array#getValues()
-	 * @see #getArray()
-	 * @generated
-	 */
-	EReference getArray_Values();
-
-	/**
-	 * Returns the meta object for the '{@link eu.hohenegger.template.json.model.Array#getValue(int) <em>Get Value</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Get Value</em>' operation.
-	 * @see eu.hohenegger.template.json.model.Array#getValue(int)
-	 * @generated
-	 */
-	EOperation getArray__GetValue__int();
+	EAttribute getTextNode_Value();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -480,40 +383,56 @@ public interface ModelPackage extends EPackage {
 		EClass NODE = eINSTANCE.getNode();
 
 		/**
-		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.JObjectImpl <em>JObject</em>}' class.
+		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.TagImpl <em>Tag</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see eu.hohenegger.template.json.model.impl.JObjectImpl
-		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getJObject()
+		 * @see eu.hohenegger.template.json.model.impl.TagImpl
+		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getTag()
 		 * @generated
 		 */
-		EClass JOBJECT = eINSTANCE.getJObject();
+		EClass TAG = eINSTANCE.getTag();
 
 		/**
-		 * The meta object literal for the '<em><b>Entries</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Sub Tags</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference JOBJECT__ENTRIES = eINSTANCE.getJObject_Entries();
+		EReference TAG__SUB_TAGS = eINSTANCE.getTag_SubTags();
 
 		/**
-		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EOperation JOBJECT___GET_VALUE__STRING = eINSTANCE.getJObject__GetValue__String();
+		EReference TAG__ATTRIBUTES = eINSTANCE.getTag_Attributes();
 
 		/**
-		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.EntryImpl <em>Entry</em>}' class.
+		 * The meta object literal for the '<em><b>Text Node</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see eu.hohenegger.template.json.model.impl.EntryImpl
-		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getEntry()
 		 * @generated
 		 */
-		EClass ENTRY = eINSTANCE.getEntry();
+		EReference TAG__TEXT_NODE = eINSTANCE.getTag_TextNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TAG__NAME = eINSTANCE.getTag_Name();
+
+		/**
+		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.AttributeImpl <em>Attribute</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see eu.hohenegger.template.json.model.impl.AttributeImpl
+		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getAttribute()
+		 * @generated
+		 */
+		EClass ATTRIBUTE = eINSTANCE.getAttribute();
 
 		/**
 		 * The meta object literal for the '<em><b>Key</b></em>' attribute feature.
@@ -521,15 +440,7 @@ public interface ModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTRY__KEY = eINSTANCE.getEntry_Key();
-
-		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ENTRY__CONTENT = eINSTANCE.getEntry_Content();
+		EAttribute ATTRIBUTE__KEY = eINSTANCE.getAttribute_Key();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -537,67 +448,25 @@ public interface ModelPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTRY__VALUE = eINSTANCE.getEntry_Value();
+		EAttribute ATTRIBUTE__VALUE = eINSTANCE.getAttribute_Value();
 
 		/**
-		 * The meta object literal for the '<em><b>Child</b></em>' attribute feature.
+		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.TextNodeImpl <em>Text Node</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see eu.hohenegger.template.json.model.impl.TextNodeImpl
+		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getTextNode()
+		 * @generated
+		 */
+		EClass TEXT_NODE = eINSTANCE.getTextNode();
+
+		/**
+		 * The meta object literal for the '<em><b>Value</b></em>' attribute list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ENTRY__CHILD = eINSTANCE.getEntry_Child();
-
-		/**
-		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.ValueImpl <em>Value</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see eu.hohenegger.template.json.model.impl.ValueImpl
-		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getValue()
-		 * @generated
-		 */
-		EClass VALUE = eINSTANCE.getValue();
-
-		/**
-		 * The meta object literal for the '<em><b>Child</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VALUE__CHILD = eINSTANCE.getValue_Child();
-
-		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VALUE__VALUE = eINSTANCE.getValue_Value();
-
-		/**
-		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.ArrayImpl <em>Array</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see eu.hohenegger.template.json.model.impl.ArrayImpl
-		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getArray()
-		 * @generated
-		 */
-		EClass ARRAY = eINSTANCE.getArray();
-
-		/**
-		 * The meta object literal for the '<em><b>Values</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARRAY__VALUES = eINSTANCE.getArray_Values();
-
-		/**
-		 * The meta object literal for the '<em><b>Get Value</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ARRAY___GET_VALUE__INT = eINSTANCE.getArray__GetValue__int();
+		EAttribute TEXT_NODE__VALUE = eINSTANCE.getTextNode_Value();
 
 	}
 
