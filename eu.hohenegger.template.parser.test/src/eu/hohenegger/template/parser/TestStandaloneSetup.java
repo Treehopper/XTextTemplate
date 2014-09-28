@@ -61,6 +61,16 @@ public class TestStandaloneSetup {
 		assertEquals("root", root.getName());
 	}
 
+
+	@Test
+	public void testAttribute() throws UnsupportedEncodingException, IOException {
+		String string = "<root foo=\"bar\"></root>";
+		Tag root = parse(string);
+
+		assertEquals("foo", root.getAttributes().get(0).getKey());
+		assertEquals("bar", root.getAttributes().get(0).getValue());
+	}
+
 	@Test
 	public void testLeaf() throws UnsupportedEncodingException, IOException {
 		String string = "<root><leaf /></root>";
