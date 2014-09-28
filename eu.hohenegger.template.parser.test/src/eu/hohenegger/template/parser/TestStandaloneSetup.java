@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
@@ -68,5 +69,12 @@ public class TestStandaloneSetup {
 		assertEquals("root", root.getName());
 		assertEquals("leaf", root.getSubTags().get(0).getName());
 	}
+	@Test
+	public void testText() throws UnsupportedEncodingException, IOException {
+		String string = "<root>zz</root>";
+		Tag root = parse(string);
 
+		assertEquals(Arrays.asList((new String[] { "z", "z" })), root
+				.getTextNode().getValue());
+	}
 }
