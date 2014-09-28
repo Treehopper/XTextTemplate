@@ -4,8 +4,11 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://www.hohenegger.eu/template/parser/JSON"
 
 Tag:
-    LD name=ID attributes+=Attribute* (('/' RD) | (RD (subTags+=Tag* | =>(textNode=TextNode)) LD '/' ID RD))  
-    
+    LD name=ID attributes+=Attribute* RD (subTags+=Tag* | =>(textNode=TextNode)) LD '/' ID RD 
+;
+
+Leaf:
+	LD name=ID attributes+=Attribute* '/' RD
 ;
 
 Attribute:

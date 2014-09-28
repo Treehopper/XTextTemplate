@@ -2,9 +2,11 @@
  */
 package eu.hohenegger.template.json.model.tests;
 
+import eu.hohenegger.template.json.model.ModelFactory;
 import eu.hohenegger.template.json.model.Node;
 
 import junit.framework.TestCase;
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->

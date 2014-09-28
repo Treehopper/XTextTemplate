@@ -3,6 +3,7 @@ package eu.hohenegger.template.parser.serializer;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import eu.hohenegger.template.json.model.Attribute;
+import eu.hohenegger.template.json.model.Leaf;
 import eu.hohenegger.template.json.model.ModelPackage;
 import eu.hohenegger.template.json.model.Tag;
 import eu.hohenegger.template.json.model.TextNode;
@@ -30,6 +31,12 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case ModelPackage.ATTRIBUTE:
 				if(context == grammarAccess.getAttributeRule()) {
 					sequence_Attribute(context, (Attribute) semanticObject); 
+					return; 
+				}
+				else break;
+			case ModelPackage.LEAF:
+				if(context == grammarAccess.getLeafRule()) {
+					sequence_Leaf(context, (Leaf) semanticObject); 
 					return; 
 				}
 				else break;
@@ -70,7 +77,16 @@ public class JSONSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID attributes+=Attribute* (subTags+=Tag* | textNode=TextNode)?)
+	 *     (name=ID attributes+=Attribute*)
+	 */
+	protected void sequence_Leaf(EObject context, Leaf semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID attributes+=Attribute* (subTags+=Tag* | textNode=TextNode))
 	 */
 	protected void sequence_Tag(EObject context, Tag semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

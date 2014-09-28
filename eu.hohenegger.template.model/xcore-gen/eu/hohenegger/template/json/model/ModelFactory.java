@@ -40,6 +40,15 @@ public interface ModelFactory extends EFactory {
 	Attribute createAttribute();
 
 	/**
+	 * Returns a new object of class '<em>Leaf</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Leaf</em>'.
+	 * @generated
+	 */
+	Leaf createLeaf();
+
+	/**
 	 * Returns a new object of class '<em>Text Node</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

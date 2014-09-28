@@ -60,4 +60,13 @@ public class TestStandaloneSetup {
 		assertEquals("root", root.getName());
 	}
 
+	@Test
+	public void testLeaf() throws UnsupportedEncodingException, IOException {
+		String string = "<root><leaf /></root>";
+		Tag root = parse(string);
+
+		assertEquals("root", root.getName());
+		assertEquals("leaf", root.getSubTags().get(0).getName());
+	}
+
 }

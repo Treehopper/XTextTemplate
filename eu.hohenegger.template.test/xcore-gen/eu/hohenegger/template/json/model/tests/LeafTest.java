@@ -2,8 +2,8 @@
  */
 package eu.hohenegger.template.json.model.tests;
 
+import eu.hohenegger.template.json.model.Leaf;
 import eu.hohenegger.template.json.model.ModelFactory;
-import eu.hohenegger.template.json.model.Tag;
 
 import junit.framework.TestCase;
 
@@ -11,11 +11,19 @@ import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Tag</b></em>'.
+ * A test case for the model object '<em><b>Leaf</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class TagTest extends LeafTest {
+public class LeafTest extends TestCase {
+
+	/**
+	 * The fixture for this Leaf test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Leaf fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -23,28 +31,37 @@ public class TagTest extends LeafTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(TagTest.class);
+		TestRunner.run(LeafTest.class);
 	}
 
 	/**
-	 * Constructs a new Tag test case with the given name.
+	 * Constructs a new Leaf test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TagTest(String name) {
+	public LeafTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Tag test case.
+	 * Sets the fixture for this Leaf test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	protected Tag getFixture() {
-		return (Tag)fixture;
+	protected void setFixture(Leaf fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
+	 * Returns the fixture for this Leaf test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Leaf getFixture() {
+		return fixture;
 	}
 
 	/**
@@ -55,7 +72,7 @@ public class TagTest extends LeafTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ModelFactory.eINSTANCE.createTag());
+		setFixture(ModelFactory.eINSTANCE.createLeaf());
 	}
 
 	/**
@@ -69,4 +86,4 @@ public class TagTest extends LeafTest {
 		setFixture(null);
 	}
 
-} //TagTest
+} //LeafTest

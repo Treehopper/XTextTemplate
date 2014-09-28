@@ -53,6 +53,7 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ModelPackage.LEAF: return createLeaf();
 			case ModelPackage.TAG: return createTag();
 			case ModelPackage.ATTRIBUTE: return createAttribute();
 			case ModelPackage.TEXT_NODE: return createTextNode();
@@ -79,6 +80,16 @@ public class ModelFactoryImpl extends EFactoryImpl implements ModelFactory {
 	public Attribute createAttribute() {
 		AttributeImpl attribute = new AttributeImpl();
 		return attribute;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Leaf createLeaf() {
+		LeafImpl leaf = new LeafImpl();
+		return leaf;
 	}
 
 	/**

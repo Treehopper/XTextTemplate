@@ -80,8 +80,8 @@ public class InternalJSONLexer extends Lexer {
         try {
             int _type = RULE_LD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:297:9: ( '<' )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:297:11: '<'
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:290:9: ( '<' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:290:11: '<'
             {
             match('<'); 
 
@@ -100,8 +100,8 @@ public class InternalJSONLexer extends Lexer {
         try {
             int _type = RULE_RD;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:299:9: ( '>' )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:299:11: '>'
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:292:9: ( '>' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:292:11: '>'
             {
             match('>'); 
 
@@ -120,11 +120,11 @@ public class InternalJSONLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:301:13: ( '\"' (~ ( '\"' ) )* '\"' )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:301:15: '\"' (~ ( '\"' ) )* '\"'
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:13: ( '\"' (~ ( '\"' ) )* '\"' )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:15: '\"' (~ ( '\"' ) )* '\"'
             {
             match('\"'); 
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:301:19: (~ ( '\"' ) )*
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:19: (~ ( '\"' ) )*
             loop1:
             do {
                 int alt1=2;
@@ -137,7 +137,7 @@ public class InternalJSONLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:301:19: ~ ( '\"' )
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:294:19: ~ ( '\"' )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -174,10 +174,10 @@ public class InternalJSONLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:303:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:303:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:296:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:296:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:303:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:296:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt2=0;
             loop2:
             do {
@@ -231,10 +231,10 @@ public class InternalJSONLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:305:9: ( ( 'a' .. 'y' )+ )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:305:11: ( 'a' .. 'y' )+
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:298:9: ( ( 'a' .. 'y' )+ )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:298:11: ( 'a' .. 'y' )+
             {
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:305:11: ( 'a' .. 'y' )+
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:298:11: ( 'a' .. 'y' )+
             int cnt3=0;
             loop3:
             do {
@@ -248,7 +248,7 @@ public class InternalJSONLexer extends Lexer {
 
                 switch (alt3) {
             	case 1 :
-            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:305:12: 'a' .. 'y'
+            	    // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:298:12: 'a' .. 'y'
             	    {
             	    matchRange('a','y'); 
 
@@ -280,8 +280,8 @@ public class InternalJSONLexer extends Lexer {
         try {
             int _type = RULE_TEXT_NODE_ELEMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:307:24: (~ ( ( '<' | '>' ) ) )
-            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:307:26: ~ ( ( '<' | '>' ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:300:24: (~ ( ( '<' | '>' ) ) )
+            // ../eu.hohenegger.template.parser/src-gen/eu/hohenegger/template/parser/parser/antlr/internal/InternalJSON.g:300:26: ~ ( ( '<' | '>' ) )
             {
             if ( (input.LA(1)>='\u0000' && input.LA(1)<=';')||input.LA(1)=='='||(input.LA(1)>='?' && input.LA(1)<='\uFFFF') ) {
                 input.consume();

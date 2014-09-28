@@ -12,14 +12,14 @@ package eu.hohenegger.template.json.model
 
 interface Node {}
 
-class Tag extends Node {
+class Leaf extends Node {
 	contains Attribute[] attributes
+	String name
+}
 
+class Tag extends Leaf {
 	contains TextNode textNode
 	contains Tag[] subTags
-	
-	String name
-	
 }
 
 class Attribute {
@@ -27,6 +27,6 @@ class Attribute {
 	String value
 }
 
-class TextNode {
+class TextNode extends Node {
 	String[] value
 }

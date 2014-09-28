@@ -93,61 +93,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getTag()
 	 * @generated
 	 */
-	int TAG = 1;
-
-	/**
-	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAG__ATTRIBUTES = NODE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Text Node</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAG__TEXT_NODE = NODE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Sub Tags</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAG__SUB_TAGS = NODE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAG__NAME = NODE_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of structural features of the '<em>Tag</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAG_FEATURE_COUNT = NODE_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of operations of the '<em>Tag</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TAG_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+	int TAG = 2;
 
 	/**
 	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.AttributeImpl <em>Attribute</em>}' class.
@@ -157,7 +103,107 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getAttribute()
 	 * @generated
 	 */
-	int ATTRIBUTE = 2;
+	int ATTRIBUTE = 3;
+
+	/**
+	 * The meta object id for the '{@link eu.hohenegger.template.json.model.impl.LeafImpl <em>Leaf</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see eu.hohenegger.template.json.model.impl.LeafImpl
+	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getLeaf()
+	 * @generated
+	 */
+	int LEAF = 1;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF__ATTRIBUTES = NODE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF__NAME = NODE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Leaf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_FEATURE_COUNT = NODE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Leaf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LEAF_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Attributes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__ATTRIBUTES = LEAF__ATTRIBUTES;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__NAME = LEAF__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Text Node</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__TEXT_NODE = LEAF_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sub Tags</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG__SUB_TAGS = LEAF_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_FEATURE_COUNT = LEAF_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Tag</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TAG_OPERATION_COUNT = LEAF_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -203,7 +249,7 @@ public interface ModelPackage extends EPackage {
 	 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getTextNode()
 	 * @generated
 	 */
-	int TEXT_NODE = 3;
+	int TEXT_NODE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute list.
@@ -212,7 +258,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_NODE__VALUE = 0;
+	int TEXT_NODE__VALUE = NODE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Text Node</em>' class.
@@ -221,7 +267,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_NODE_FEATURE_COUNT = 1;
+	int TEXT_NODE_FEATURE_COUNT = NODE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Text Node</em>' class.
@@ -230,7 +276,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TEXT_NODE_OPERATION_COUNT = 0;
+	int TEXT_NODE_OPERATION_COUNT = NODE_OPERATION_COUNT + 0;
 
 	/**
 	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Node <em>Node</em>}'.
@@ -241,6 +287,38 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getNode();
+
+	/**
+	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Leaf <em>Leaf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Leaf</em>'.
+	 * @see eu.hohenegger.template.json.model.Leaf
+	 * @generated
+	 */
+	EClass getLeaf();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.json.model.Leaf#getAttributes <em>Attributes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
+	 * @see eu.hohenegger.template.json.model.Leaf#getAttributes()
+	 * @see #getLeaf()
+	 * @generated
+	 */
+	EReference getLeaf_Attributes();
+
+	/**
+	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Leaf#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see eu.hohenegger.template.json.model.Leaf#getName()
+	 * @see #getLeaf()
+	 * @generated
+	 */
+	EAttribute getLeaf_Name();
 
 	/**
 	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Tag <em>Tag</em>}'.
@@ -264,17 +342,6 @@ public interface ModelPackage extends EPackage {
 	EReference getTag_SubTags();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link eu.hohenegger.template.json.model.Tag#getAttributes <em>Attributes</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Attributes</em>'.
-	 * @see eu.hohenegger.template.json.model.Tag#getAttributes()
-	 * @see #getTag()
-	 * @generated
-	 */
-	EReference getTag_Attributes();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link eu.hohenegger.template.json.model.Tag#getTextNode <em>Text Node</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -284,17 +351,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTag_TextNode();
-
-	/**
-	 * Returns the meta object for the attribute '{@link eu.hohenegger.template.json.model.Tag#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see eu.hohenegger.template.json.model.Tag#getName()
-	 * @see #getTag()
-	 * @generated
-	 */
-	EAttribute getTag_Name();
 
 	/**
 	 * Returns the meta object for class '{@link eu.hohenegger.template.json.model.Attribute <em>Attribute</em>}'.
@@ -383,6 +439,32 @@ public interface ModelPackage extends EPackage {
 		EClass NODE = eINSTANCE.getNode();
 
 		/**
+		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.LeafImpl <em>Leaf</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see eu.hohenegger.template.json.model.impl.LeafImpl
+		 * @see eu.hohenegger.template.json.model.impl.ModelPackageImpl#getLeaf()
+		 * @generated
+		 */
+		EClass LEAF = eINSTANCE.getLeaf();
+
+		/**
+		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference LEAF__ATTRIBUTES = eINSTANCE.getLeaf_Attributes();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute LEAF__NAME = eINSTANCE.getLeaf_Name();
+
+		/**
 		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.TagImpl <em>Tag</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -401,28 +483,12 @@ public interface ModelPackage extends EPackage {
 		EReference TAG__SUB_TAGS = eINSTANCE.getTag_SubTags();
 
 		/**
-		 * The meta object literal for the '<em><b>Attributes</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TAG__ATTRIBUTES = eINSTANCE.getTag_Attributes();
-
-		/**
 		 * The meta object literal for the '<em><b>Text Node</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference TAG__TEXT_NODE = eINSTANCE.getTag_TextNode();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute TAG__NAME = eINSTANCE.getTag_Name();
 
 		/**
 		 * The meta object literal for the '{@link eu.hohenegger.template.json.model.impl.AttributeImpl <em>Attribute</em>}' class.

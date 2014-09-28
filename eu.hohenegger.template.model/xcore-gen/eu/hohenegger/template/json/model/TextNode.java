@@ -3,7 +3,6 @@
 package eu.hohenegger.template.json.model;
 
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface TextNode extends EObject {
+public interface TextNode extends Node {
 
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute list.

@@ -72,9 +72,17 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModelPackage.LEAF: {
+				Leaf leaf = (Leaf)theEObject;
+				T result = caseLeaf(leaf);
+				if (result == null) result = caseNode(leaf);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ModelPackage.TAG: {
 				Tag tag = (Tag)theEObject;
 				T result = caseTag(tag);
+				if (result == null) result = caseLeaf(tag);
 				if (result == null) result = caseNode(tag);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -88,6 +96,7 @@ public class ModelSwitch<T> extends Switch<T> {
 			case ModelPackage.TEXT_NODE: {
 				TextNode textNode = (TextNode)theEObject;
 				T result = caseTextNode(textNode);
+				if (result == null) result = caseNode(textNode);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -107,6 +116,21 @@ public class ModelSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseNode(Node object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Leaf</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Leaf</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLeaf(Leaf object) {
 		return null;
 	}
 

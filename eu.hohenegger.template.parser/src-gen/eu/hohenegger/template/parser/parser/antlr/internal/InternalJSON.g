@@ -117,32 +117,23 @@ ruleTag returns [EObject current=null]
 	    }
 
 )
-)*((	otherlv_3='/' 
-    {
-    	newLeafNode(otherlv_3, grammarAccess.getTagAccess().getSolidusKeyword_3_0_0());
-    }
-this_RD_4=RULE_RD
+)*this_RD_3=RULE_RD
     { 
-    newLeafNode(this_RD_4, grammarAccess.getTagAccess().getRDTerminalRuleCall_3_0_1()); 
-    }
-)
-    |(this_RD_5=RULE_RD
-    { 
-    newLeafNode(this_RD_5, grammarAccess.getTagAccess().getRDTerminalRuleCall_3_1_0()); 
+    newLeafNode(this_RD_3, grammarAccess.getTagAccess().getRDTerminalRuleCall_3()); 
     }
 ((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTagAccess().getSubTagsTagParserRuleCall_3_1_1_0_0()); 
+	        newCompositeNode(grammarAccess.getTagAccess().getSubTagsTagParserRuleCall_4_0_0()); 
 	    }
-		lv_subTags_6_0=ruleTag		{
+		lv_subTags_4_0=ruleTag		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTagRule());
 	        }
        		add(
        			$current, 
        			"subTags",
-        		lv_subTags_6_0, 
+        		lv_subTags_4_0, 
         		"Tag");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -156,39 +147,41 @@ ruleTextNode
 ))=>(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTagAccess().getTextNodeTextNodeParserRuleCall_3_1_1_1_0_0()); 
+	        newCompositeNode(grammarAccess.getTagAccess().getTextNodeTextNodeParserRuleCall_4_1_0_0()); 
 	    }
-		lv_textNode_7_0=ruleTextNode		{
+		lv_textNode_5_0=ruleTextNode		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTagRule());
 	        }
        		set(
        			$current, 
        			"textNode",
-        		lv_textNode_7_0, 
+        		lv_textNode_5_0, 
         		"TextNode");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)))this_LD_8=RULE_LD
+)))this_LD_6=RULE_LD
     { 
-    newLeafNode(this_LD_8, grammarAccess.getTagAccess().getLDTerminalRuleCall_3_1_2()); 
+    newLeafNode(this_LD_6, grammarAccess.getTagAccess().getLDTerminalRuleCall_5()); 
     }
-	otherlv_9='/' 
+	otherlv_7='/' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getTagAccess().getSolidusKeyword_3_1_3());
+    	newLeafNode(otherlv_7, grammarAccess.getTagAccess().getSolidusKeyword_6());
     }
-this_ID_10=RULE_ID
+this_ID_8=RULE_ID
     { 
-    newLeafNode(this_ID_10, grammarAccess.getTagAccess().getIDTerminalRuleCall_3_1_4()); 
+    newLeafNode(this_ID_8, grammarAccess.getTagAccess().getIDTerminalRuleCall_7()); 
     }
-this_RD_11=RULE_RD
+this_RD_9=RULE_RD
     { 
-    newLeafNode(this_RD_11, grammarAccess.getTagAccess().getRDTerminalRuleCall_3_1_5()); 
+    newLeafNode(this_RD_9, grammarAccess.getTagAccess().getRDTerminalRuleCall_8()); 
     }
-)))
+)
 ;
+
+
 
 
 

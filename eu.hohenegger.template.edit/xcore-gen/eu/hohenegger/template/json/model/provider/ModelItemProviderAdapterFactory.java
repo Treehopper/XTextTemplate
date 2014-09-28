@@ -118,6 +118,29 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.Leaf} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LeafItemProvider leafItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link eu.hohenegger.template.json.model.Leaf}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLeafAdapter() {
+		if (leafItemProvider == null) {
+			leafItemProvider = new LeafItemProvider(this);
+		}
+
+		return leafItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link eu.hohenegger.template.json.model.TextNode} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -239,6 +262,7 @@ public class ModelItemProviderAdapterFactory extends ModelAdapterFactory impleme
 	 * @generated
 	 */
 	public void dispose() {
+		if (leafItemProvider != null) leafItemProvider.dispose();
 		if (tagItemProvider != null) tagItemProvider.dispose();
 		if (attributeItemProvider != null) attributeItemProvider.dispose();
 		if (textNodeItemProvider != null) textNodeItemProvider.dispose();

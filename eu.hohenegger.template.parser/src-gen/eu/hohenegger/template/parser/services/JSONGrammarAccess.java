@@ -25,28 +25,23 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cAttributesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cAttributesAttributeParserRuleCall_2_0 = (RuleCall)cAttributesAssignment_2.eContents().get(0);
-		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
-		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
-		private final Keyword cSolidusKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
-		private final RuleCall cRDTerminalRuleCall_3_0_1 = (RuleCall)cGroup_3_0.eContents().get(1);
-		private final Group cGroup_3_1 = (Group)cAlternatives_3.eContents().get(1);
-		private final RuleCall cRDTerminalRuleCall_3_1_0 = (RuleCall)cGroup_3_1.eContents().get(0);
-		private final Alternatives cAlternatives_3_1_1 = (Alternatives)cGroup_3_1.eContents().get(1);
-		private final Assignment cSubTagsAssignment_3_1_1_0 = (Assignment)cAlternatives_3_1_1.eContents().get(0);
-		private final RuleCall cSubTagsTagParserRuleCall_3_1_1_0_0 = (RuleCall)cSubTagsAssignment_3_1_1_0.eContents().get(0);
-		private final Group cGroup_3_1_1_1 = (Group)cAlternatives_3_1_1.eContents().get(1);
-		private final Assignment cTextNodeAssignment_3_1_1_1_0 = (Assignment)cGroup_3_1_1_1.eContents().get(0);
-		private final RuleCall cTextNodeTextNodeParserRuleCall_3_1_1_1_0_0 = (RuleCall)cTextNodeAssignment_3_1_1_1_0.eContents().get(0);
-		private final RuleCall cLDTerminalRuleCall_3_1_2 = (RuleCall)cGroup_3_1.eContents().get(2);
-		private final Keyword cSolidusKeyword_3_1_3 = (Keyword)cGroup_3_1.eContents().get(3);
-		private final RuleCall cIDTerminalRuleCall_3_1_4 = (RuleCall)cGroup_3_1.eContents().get(4);
-		private final RuleCall cRDTerminalRuleCall_3_1_5 = (RuleCall)cGroup_3_1.eContents().get(5);
+		private final RuleCall cRDTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Assignment cSubTagsAssignment_4_0 = (Assignment)cAlternatives_4.eContents().get(0);
+		private final RuleCall cSubTagsTagParserRuleCall_4_0_0 = (RuleCall)cSubTagsAssignment_4_0.eContents().get(0);
+		private final Group cGroup_4_1 = (Group)cAlternatives_4.eContents().get(1);
+		private final Assignment cTextNodeAssignment_4_1_0 = (Assignment)cGroup_4_1.eContents().get(0);
+		private final RuleCall cTextNodeTextNodeParserRuleCall_4_1_0_0 = (RuleCall)cTextNodeAssignment_4_1_0.eContents().get(0);
+		private final RuleCall cLDTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Keyword cSolidusKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final RuleCall cIDTerminalRuleCall_7 = (RuleCall)cGroup.eContents().get(7);
+		private final RuleCall cRDTerminalRuleCall_8 = (RuleCall)cGroup.eContents().get(8);
 		
 		//Tag:
-		//	LD name=ID attributes+=Attribute* ("/" RD | RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD);
+		//	LD name=ID attributes+=Attribute* RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD;
 		public ParserRule getRule() { return rule; }
 
-		//LD name=ID attributes+=Attribute* ("/" RD | RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD)
+		//LD name=ID attributes+=Attribute* RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD
 		public Group getGroup() { return cGroup; }
 
 		//LD
@@ -64,53 +59,78 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 		//Attribute
 		public RuleCall getAttributesAttributeParserRuleCall_2_0() { return cAttributesAttributeParserRuleCall_2_0; }
 
-		//"/" RD | RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD
-		public Alternatives getAlternatives_3() { return cAlternatives_3; }
-
-		//"/" RD
-		public Group getGroup_3_0() { return cGroup_3_0; }
-
-		//"/"
-		public Keyword getSolidusKeyword_3_0_0() { return cSolidusKeyword_3_0_0; }
-
 		//RD
-		public RuleCall getRDTerminalRuleCall_3_0_1() { return cRDTerminalRuleCall_3_0_1; }
-
-		//RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD
-		public Group getGroup_3_1() { return cGroup_3_1; }
-
-		//RD
-		public RuleCall getRDTerminalRuleCall_3_1_0() { return cRDTerminalRuleCall_3_1_0; }
+		public RuleCall getRDTerminalRuleCall_3() { return cRDTerminalRuleCall_3; }
 
 		//subTags+=Tag* | => (textNode=TextNode)
-		public Alternatives getAlternatives_3_1_1() { return cAlternatives_3_1_1; }
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
 
 		//subTags+=Tag*
-		public Assignment getSubTagsAssignment_3_1_1_0() { return cSubTagsAssignment_3_1_1_0; }
+		public Assignment getSubTagsAssignment_4_0() { return cSubTagsAssignment_4_0; }
 
 		//Tag
-		public RuleCall getSubTagsTagParserRuleCall_3_1_1_0_0() { return cSubTagsTagParserRuleCall_3_1_1_0_0; }
+		public RuleCall getSubTagsTagParserRuleCall_4_0_0() { return cSubTagsTagParserRuleCall_4_0_0; }
 
 		//=> (textNode=TextNode)
-		public Group getGroup_3_1_1_1() { return cGroup_3_1_1_1; }
+		public Group getGroup_4_1() { return cGroup_4_1; }
 
 		//textNode=TextNode
-		public Assignment getTextNodeAssignment_3_1_1_1_0() { return cTextNodeAssignment_3_1_1_1_0; }
+		public Assignment getTextNodeAssignment_4_1_0() { return cTextNodeAssignment_4_1_0; }
 
 		//TextNode
-		public RuleCall getTextNodeTextNodeParserRuleCall_3_1_1_1_0_0() { return cTextNodeTextNodeParserRuleCall_3_1_1_1_0_0; }
+		public RuleCall getTextNodeTextNodeParserRuleCall_4_1_0_0() { return cTextNodeTextNodeParserRuleCall_4_1_0_0; }
 
 		//LD
-		public RuleCall getLDTerminalRuleCall_3_1_2() { return cLDTerminalRuleCall_3_1_2; }
+		public RuleCall getLDTerminalRuleCall_5() { return cLDTerminalRuleCall_5; }
 
 		//"/"
-		public Keyword getSolidusKeyword_3_1_3() { return cSolidusKeyword_3_1_3; }
+		public Keyword getSolidusKeyword_6() { return cSolidusKeyword_6; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_3_1_4() { return cIDTerminalRuleCall_3_1_4; }
+		public RuleCall getIDTerminalRuleCall_7() { return cIDTerminalRuleCall_7; }
 
 		//RD
-		public RuleCall getRDTerminalRuleCall_3_1_5() { return cRDTerminalRuleCall_3_1_5; }
+		public RuleCall getRDTerminalRuleCall_8() { return cRDTerminalRuleCall_8; }
+	}
+
+	public class LeafElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Leaf");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cLDTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cAttributesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cAttributesAttributeParserRuleCall_2_0 = (RuleCall)cAttributesAssignment_2.eContents().get(0);
+		private final Keyword cSolidusKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final RuleCall cRDTerminalRuleCall_4 = (RuleCall)cGroup.eContents().get(4);
+		
+		//Leaf:
+		//	LD name=ID attributes+=Attribute* "/" RD;
+		public ParserRule getRule() { return rule; }
+
+		//LD name=ID attributes+=Attribute* "/" RD
+		public Group getGroup() { return cGroup; }
+
+		//LD
+		public RuleCall getLDTerminalRuleCall_0() { return cLDTerminalRuleCall_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//attributes+=Attribute*
+		public Assignment getAttributesAssignment_2() { return cAttributesAssignment_2; }
+
+		//Attribute
+		public RuleCall getAttributesAttributeParserRuleCall_2_0() { return cAttributesAttributeParserRuleCall_2_0; }
+
+		//"/"
+		public Keyword getSolidusKeyword_3() { return cSolidusKeyword_3; }
+
+		//RD
+		public RuleCall getRDTerminalRuleCall_4() { return cRDTerminalRuleCall_4; }
 	}
 
 	public class AttributeElements extends AbstractParserRuleElementFinder {
@@ -164,6 +184,7 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	private TagElements pTag;
+	private LeafElements pLeaf;
 	private AttributeElements pAttribute;
 	private TextNodeElements pTextNode;
 	private TerminalRule tLD;
@@ -204,13 +225,23 @@ public class JSONGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Tag:
-	//	LD name=ID attributes+=Attribute* ("/" RD | RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD);
+	//	LD name=ID attributes+=Attribute* RD (subTags+=Tag* | => (textNode=TextNode)) LD "/" ID RD;
 	public TagElements getTagAccess() {
 		return (pTag != null) ? pTag : (pTag = new TagElements());
 	}
 	
 	public ParserRule getTagRule() {
 		return getTagAccess().getRule();
+	}
+
+	//Leaf:
+	//	LD name=ID attributes+=Attribute* "/" RD;
+	public LeafElements getLeafAccess() {
+		return (pLeaf != null) ? pLeaf : (pLeaf = new LeafElements());
+	}
+	
+	public ParserRule getLeafRule() {
+		return getLeafAccess().getRule();
 	}
 
 	//Attribute:
